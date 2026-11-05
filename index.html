@@ -22,38 +22,10 @@
   <header class="header">
     <div class="header-container">
       <div class="header-brand">
-        <div class="brand-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-          </svg>
-        </div>
-        <div class="brand-text">
-          <div class="brand-title-row">
-            <h1 class="brand-title">CiritTerm</h1>
-            <span class="brand-badge">Sınav Atlası</span>
-          </div>
-          <p class="brand-subtitle">Tıbbi Terminoloji Hazırlık & Çalışma Platformu</p>
-        </div>
+        <h1 class="brand-title">CiritTerm</h1>
       </div>
 
       <div class="header-actions">
-        <!-- Aktif Profil / Öğrenci Seçici -->
-        <div class="profile-pill" id="btn-open-profile-modal" title="Öğrenci Profili Değiştir / Arkadaş Ekle">
-          <span class="profile-avatar" id="header-profile-avatar">S</span>
-          <div class="profile-info">
-            <span class="profile-label">Aktif Öğrenci</span>
-            <span class="profile-name" id="header-profile-name">Süleyman</span>
-          </div>
-          <svg class="profile-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-            stroke-width="2">
-            <polyline points="6 9 12 15 18 9"></polyline>
-          </svg>
-        </div>
-
         <!-- Kısayollar ve Rehber -->
         <button class="btn-icon-subtle" id="btn-open-help-modal" title="Klavye Kısayolları ve Rehber">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -140,7 +112,7 @@
             <span class="filter-count" id="count-sonek">66</span>
           </button>
           <button class="filter-chip filter-chip-fav" data-filter="favorites">
-            <span>⭐ Yıldızlılarım (<span id="user-fav-label">Süleyman</span>)</span>
+            <span>⭐ Yıldızlılarım</span>
             <span class="filter-count" id="count-favorites">0</span>
           </button>
         </div>
@@ -560,41 +532,6 @@
 
   </main>
 
-  <!-- ==================== MODAL: PROFİL / ÖĞRENCİ SEÇİCİ ==================== -->
-  <div class="modal-backdrop" id="modal-profile" style="display:none;">
-    <div class="modal-box modal-profile-box">
-      <div class="modal-header">
-        <div class="modal-title-group">
-          <h3>👥 Öğrenci Profili & Yıldızlılar</h3>
-          <p>Her arkadaşınız kendi profilini seçerek kendi yıldızlı terimlerini bağımsız olarak kaydedebilir.</p>
-        </div>
-        <button class="btn-close-modal" id="btn-close-profile-modal">✕</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="profile-current-badge">
-          <span>Şu anki aktif öğrenci:</span>
-          <strong id="modal-current-user-name">Süleyman</strong>
-        </div>
-
-        <div class="profile-list-section">
-          <label>Kullanıcı Değiştir:</label>
-          <div class="profile-items-list" id="profile-items-container">
-            <!-- Profiller JS ile listelenecek -->
-          </div>
-        </div>
-
-        <div class="profile-add-section">
-          <label for="new-profile-name-input">Yeni Arkadaş / Profil Ekle:</label>
-          <div class="profile-add-row">
-            <input type="text" id="new-profile-name-input" placeholder="Örn: Ahmet, Ayşe, Mehmet..." maxlength="20">
-            <button class="btn-primary" id="btn-add-profile">Ekle</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ==================== MODAL: KLAVYE KISAYOLLARI & REHBER ==================== -->
   <div class="modal-backdrop" id="modal-help" style="display:none;">
     <div class="modal-box">
@@ -638,7 +575,7 @@
               </tr>
               <tr>
                 <td><span class="kbd">F</span></td>
-                <td>Mevcut terimi profilinin yıldızlılarına ekle/çıkar</td>
+                <td>Mevcut terimi yıldızlılara ekle/çıkar</td>
               </tr>
               <tr>
                 <td><span class="kbd">1, 2, 3, 4</span></td>
@@ -650,14 +587,6 @@
               </tr>
             </tbody>
           </table>
-        </div>
-
-        <div class="exam-tips-card">
-          <h4>💡 Sınav Tavsiyesi</h4>
-          <p>Önce <strong>Bilgi Kartları</strong> ile terim ve ekleri tarayın, zorlandıklarınızı <strong>⭐
-              Yıldızlayın</strong>. Ardından <strong>Test & Sınav</strong> modunda <strong>100 veya 200 Soru</strong>
-            seçerek tam sınav provası yapın. Son olarak <strong>Yazma Pratiği</strong> ile Latince harf imlasını
-            pekiştirin.</p>
         </div>
       </div>
     </div>
