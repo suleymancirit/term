@@ -1,0 +1,9839 @@
+window.NORMALIZED_TERMS = [
+  {
+    "id": "med_1",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "abdomin",
+    "okunus": "abdomin",
+    "meaning": "Karın"
+  },
+  {
+    "id": "med_2",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "abdominal",
+    "okunus": "abdominal",
+    "meaning": "Karınla ilgili"
+  },
+  {
+    "id": "med_3",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "abdominocystic",
+    "okunus": "Abdominosistik",
+    "meaning": "Karın ve kese ile ilgili"
+  },
+  {
+    "id": "med_4",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "abrachia",
+    "okunus": "Abrakia",
+    "meaning": "Doğumsal kolsuzluk"
+  },
+  {
+    "id": "med_5",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "acromion",
+    "okunus": "Akromiyon",
+    "meaning": "Omuz çıkıntısı"
+  },
+  {
+    "id": "med_6",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "aesthetica",
+    "okunus": "estetik",
+    "meaning": "Estetik"
+  },
+  {
+    "id": "med_7",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "algesia / analgesia",
+    "okunus": "Analjezi",
+    "meaning": "Ağrı duyusunun algılanmaması"
+  },
+  {
+    "id": "med_8",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ambilateral",
+    "okunus": "Ambilateral",
+    "meaning": "Her iki tarafı da ilgilendiren"
+  },
+  {
+    "id": "med_9",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ambient",
+    "okunus": "ambiyans",
+    "meaning": "Çevreleyen, kuşatan, saran"
+  },
+  {
+    "id": "med_10",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "amphibious",
+    "okunus": "Amfibik/Amfibiyen",
+    "meaning": "Hem karada hem suda yaşayan"
+  },
+  {
+    "id": "med_11",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "amnion",
+    "okunus": "Amniyon",
+    "meaning": "Fetusu saran zar"
+  },
+  {
+    "id": "med_12",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "anaesthesia",
+    "okunus": "Anestezi",
+    "meaning": "Duyusuzlaştırma"
+  },
+  {
+    "id": "med_13",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "anemia",
+    "okunus": "Anemi",
+    "meaning": "Kanda alyuvar (eritrosit) sayısının veya hemoglobin miktarının normalin altına düşmesi, kansızlık"
+  },
+  {
+    "id": "med_14",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "aneurysma",
+    "okunus": "Anevrizma",
+    "meaning": "Damar duvarında torbolaşma"
+  },
+  {
+    "id": "med_15",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "angiectomy",
+    "okunus": "Anjiyektomi",
+    "meaning": "Damarın kesilip çıkarılması"
+  },
+  {
+    "id": "med_16",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "angiolipoma",
+    "okunus": "Anjiyolipom",
+    "meaning": "Damar ve yağ doku karışımı ur"
+  },
+  {
+    "id": "med_17",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "angi, vas, vasi",
+    "okunus": "anji, vas/vaz, vazi",
+    "meaning": "Damar, kanal"
+  },
+  {
+    "id": "med_18",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "antebrachium",
+    "okunus": "Antebrakiyum",
+    "meaning": "Ön kol (dirsek ile el bileği arasındaki anatomik bölge)"
+  },
+  {
+    "id": "med_19",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "anteflexio",
+    "okunus": "Antefleksiyon",
+    "meaning": "Öne bükük"
+  },
+  {
+    "id": "med_20",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "anteversio",
+    "okunus": "Anteversiyon",
+    "meaning": "Öne dönük"
+  },
+  {
+    "id": "med_21",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "anuria",
+    "okunus": "Anüri",
+    "meaning": "İdrar kesilmesi"
+  },
+  {
+    "id": "med_22",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "aorta",
+    "okunus": "Aort/aorta",
+    "meaning": "Ana atardamar"
+  },
+  {
+    "id": "med_23",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "aphasia",
+    "okunus": "Afazi",
+    "meaning": "Konuşamama"
+  },
+  {
+    "id": "med_24",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "appendic",
+    "okunus": "Apendik",
+    "meaning": "Kör bağırsağın soluncansı uzantısı"
+  },
+  {
+    "id": "med_25",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "appendicectomy",
+    "okunus": "Apendektomi",
+    "meaning": "Apendisi çıkarma ameliyatı"
+  },
+  {
+    "id": "med_26",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "appendicitis",
+    "okunus": "Apendisit",
+    "meaning": "Apendis iltihabı"
+  },
+  {
+    "id": "med_27",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "appendicolithiasis",
+    "okunus": "Apendikolitiaz",
+    "meaning": "Apendiste taş oluşması"
+  },
+  {
+    "id": "med_28",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "arthr",
+    "okunus": "Artr",
+    "meaning": "Eklem"
+  },
+  {
+    "id": "med_29",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "arthralgia",
+    "okunus": "Artralji",
+    "meaning": "Eklem ağrısı"
+  },
+  {
+    "id": "med_30",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "arthroscope",
+    "okunus": "Artroskop",
+    "meaning": "Eklem içini inceleme için kullanılan alet"
+  },
+  {
+    "id": "med_31",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "articulatio",
+    "okunus": "Artikülasyo",
+    "meaning": "Eklem (iki veya daha fazla kemiğin birbirine bağlandığı yer)"
+  },
+  {
+    "id": "med_32",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "arteria",
+    "okunus": "Arteriya",
+    "meaning": "Atardamar (kanın kalpten doku ve organlara taşınmasını sağlayan damar)"
+  },
+  {
+    "id": "med_33",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "arteriae",
+    "okunus": "Arterie",
+    "meaning": "Atardamarlar (arteria sözcüğünün çoğul hali)"
+  },
+  {
+    "id": "med_34",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "arteriola",
+    "okunus": "Arteryol",
+    "meaning": "Küçük atardamar (arterlerin kapiller damarlarla birleşen en ince dalları)"
+  },
+  {
+    "id": "med_35",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Arteritis",
+    "okunus": "Arterit",
+    "meaning": "Atardamar iltihabı"
+  },
+  {
+    "id": "med_36",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "aspermi",
+    "okunus": "Aspermi",
+    "meaning": "Sperm yokluğu"
+  },
+  {
+    "id": "med_37",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "audio",
+    "okunus": "Odyo",
+    "meaning": "İşitme, ses"
+  },
+  {
+    "id": "med_38",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "audiogram",
+    "okunus": "Odyogram",
+    "meaning": "Ses dalgalarının grafisini yapan alet"
+  },
+  {
+    "id": "med_39",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "audiometer",
+    "okunus": "Odyometre",
+    "meaning": "İşitme keskinliğini ve ses frekanslarını ölçmede kullanılan cihaz"
+  },
+  {
+    "id": "med_40",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "auris",
+    "okunus": "avris",
+    "meaning": "Kulak"
+  },
+  {
+    "id": "med_41",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "autolysis",
+    "okunus": "Otoliz",
+    "meaning": "Hücrenin kendi enzimleri tarafından sindirilerek parçalanması, erimesi"
+  },
+  {
+    "id": "med_42",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "autonomic",
+    "okunus": "Otonomik",
+    "meaning": "Kendi kendine çalışan"
+  },
+  {
+    "id": "med_43",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Azygos",
+    "okunus": "Azigos",
+    "meaning": "Tek, eşsiz, eşi olmayan"
+  },
+  {
+    "id": "med_44",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "brachium",
+    "okunus": "Brakiyum",
+    "meaning": "Kol (omuz eklemi ile dirsek arasındaki anatomik bölge)"
+  },
+  {
+    "id": "med_45",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "brachi",
+    "okunus": "Braki",
+    "meaning": "Kol"
+  },
+  {
+    "id": "med_46",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "brachiocephalic",
+    "okunus": "Brakiyosefalik",
+    "meaning": "Kol ve başla ilgili"
+  },
+  {
+    "id": "med_47",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "brachiofacial",
+    "okunus": "Brakiyofasyal",
+    "meaning": "Kol ve yüzle ilgili"
+  },
+  {
+    "id": "med_48",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bronchiostenosis",
+    "okunus": "Bronşostenoz",
+    "meaning": "Bronş lümenlerinin fazlaca daralması"
+  },
+  {
+    "id": "med_49",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bronchodilatation",
+    "okunus": "bronşodilatasyon",
+    "meaning": "Bronş lümeninin genişlemesi"
+  },
+  {
+    "id": "med_50",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Bronchus",
+    "okunus": "bronkus/bronş",
+    "meaning": "Soluman, bronş"
+  },
+  {
+    "id": "med_51",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bucca",
+    "okunus": "bukka",
+    "meaning": "Yanak"
+  },
+  {
+    "id": "med_52",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "caecum",
+    "okunus": "Çekum/sekum",
+    "meaning": "Kör bağırsak"
+  },
+  {
+    "id": "med_53",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "caesarian",
+    "okunus": "Sezaryan",
+    "meaning": "Sezaryan"
+  },
+  {
+    "id": "med_54",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "caput",
+    "okunus": "Kaput",
+    "meaning": "Baş, kafa (anatomide kemik veya organların baş kısmı)"
+  },
+  {
+    "id": "med_55",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cardia",
+    "okunus": "Kardiya",
+    "meaning": "Yürek, kalp"
+  },
+  {
+    "id": "med_56",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cardiovascularis",
+    "okunus": "Kardiyovasküler",
+    "meaning": "Kalp ve damara ait"
+  },
+  {
+    "id": "med_57",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cardi",
+    "okunus": "kardi",
+    "meaning": "Kalp"
+  },
+  {
+    "id": "med_58",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cardialgia",
+    "okunus": "Kardiyalji",
+    "meaning": "Kalp bölgesinde ağrı"
+  },
+  {
+    "id": "med_59",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cardiology",
+    "okunus": "Kardiyoloji",
+    "meaning": "Kalp ve dolaşım sistemi hastalıklarını inceleyen tıp uzmanlık dalı"
+  },
+  {
+    "id": "med_60",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cartilago",
+    "okunus": "Kartilago/Kartilaj",
+    "meaning": "Kıkırdak"
+  },
+  {
+    "id": "med_61",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cavitas",
+    "okunus": "kavitas",
+    "meaning": "Oyuk, boşluk"
+  },
+  {
+    "id": "med_62",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cellula",
+    "okunus": "Sellula",
+    "meaning": "Hücre"
+  },
+  {
+    "id": "med_63",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cephal",
+    "okunus": "sefal",
+    "meaning": "Baş"
+  },
+  {
+    "id": "med_64",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cephalalgia",
+    "okunus": "Sefalalji",
+    "meaning": "Baş ağrısı"
+  },
+  {
+    "id": "med_65",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cephalocaudal",
+    "okunus": "Sefalokodal",
+    "meaning": "Baştan kuyruğa"
+  },
+  {
+    "id": "med_66",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cephaloplegia",
+    "okunus": "Sefalopleji",
+    "meaning": "Baş ve yüz hareketini sağlayan kaslarda inme"
+  },
+  {
+    "id": "med_67",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cerebrum",
+    "okunus": "Serebrum",
+    "meaning": "Beyin"
+  },
+  {
+    "id": "med_68",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cerebr",
+    "okunus": "Serebr/Serebro",
+    "meaning": "Beyin"
+  },
+  {
+    "id": "med_69",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cerebriform",
+    "okunus": "Serebriform",
+    "meaning": "Beyin şeklinde"
+  },
+  {
+    "id": "med_70",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cerebrospinal",
+    "okunus": "Serebrospinal",
+    "meaning": "Beyin ve omurilikle ilgili"
+  },
+  {
+    "id": "med_71",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "chol",
+    "okunus": "kol",
+    "meaning": "Öd (safra)"
+  },
+  {
+    "id": "med_72",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cholecyst",
+    "okunus": "Kolesist",
+    "meaning": "Öd kesesi"
+  },
+  {
+    "id": "med_73",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cholepoiesis",
+    "okunus": "Kolepoiezis",
+    "meaning": "Karaciğerde öd oluşması"
+  },
+  {
+    "id": "med_74",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "chondr",
+    "okunus": "Kondr",
+    "meaning": "Kıkırdak"
+  },
+  {
+    "id": "med_75",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "chondric",
+    "okunus": "Kondrik",
+    "meaning": "Kıkırdaksı"
+  },
+  {
+    "id": "med_76",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "chondroblast",
+    "okunus": "Kondroblast",
+    "meaning": "Kıkırdak öncü hücresi"
+  },
+  {
+    "id": "med_77",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "chondroplasty",
+    "okunus": "Kondroplasti",
+    "meaning": "Kıkırdak üzerinde yapılan estetik operasyon"
+  },
+  {
+    "id": "med_78",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Chorda",
+    "okunus": "Korda",
+    "meaning": "Yay, kordon, tel, iplik"
+  },
+  {
+    "id": "med_79",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Chorion",
+    "okunus": "Koryon/Koriyon",
+    "meaning": "Dölörtüsü"
+  },
+  {
+    "id": "med_80",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "circumintestinal",
+    "okunus": "Sirkumintestinal",
+    "meaning": "Bağırsağı çevreleyen"
+  },
+  {
+    "id": "med_81",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "circumrenal",
+    "okunus": "Sirkumrenal",
+    "meaning": "Böbrek çevresinde, böbreği saran"
+  },
+  {
+    "id": "med_82",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "circumvascular",
+    "okunus": "sirkumvasküler",
+    "meaning": "Damar çevresinde"
+  },
+  {
+    "id": "med_83",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cilium",
+    "okunus": "Silyum",
+    "meaning": "Kirpik, kıl"
+  },
+  {
+    "id": "med_84",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "clavicula",
+    "okunus": "Klavikula",
+    "meaning": "Köprücük kemiği"
+  },
+  {
+    "id": "med_85",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "coccygis",
+    "okunus": "Koksigis/Koksiks",
+    "meaning": "Kuyruk kemiği"
+  },
+  {
+    "id": "med_86",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "coagulatio",
+    "okunus": "Koagülasyon",
+    "meaning": "Pıhtılaşma"
+  },
+  {
+    "id": "med_87",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "coeliacus",
+    "okunus": "Sölyakus",
+    "meaning": "Karın boşluğu ile ilgili"
+  },
+  {
+    "id": "med_88",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "collum",
+    "okunus": "Kollum",
+    "meaning": "Boyun (baş ile gövde arasındaki boyun bölgesi veya anatomik yapıların boyun kısmı)"
+  },
+  {
+    "id": "med_89",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "colo",
+    "okunus": "kolo/kolon",
+    "meaning": "Kalın bağırsak"
+  },
+  {
+    "id": "med_90",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "colonic",
+    "okunus": "kolonik",
+    "meaning": "Kalın bağırsakla ilgili"
+  },
+  {
+    "id": "med_91",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "coloptosis",
+    "okunus": "Koloptoz",
+    "meaning": "Kalın bağırsak sarkması"
+  },
+  {
+    "id": "med_92",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "comminus",
+    "okunus": "Komminüte",
+    "meaning": "Ortak, birlikte"
+  },
+  {
+    "id": "med_93",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "congenital",
+    "okunus": "Konjenital",
+    "meaning": "Doğuştan gelen"
+  },
+  {
+    "id": "med_94",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cor",
+    "okunus": "kor",
+    "meaning": "Yürek"
+  },
+  {
+    "id": "med_95",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "costa",
+    "okunus": "Kosta",
+    "meaning": "Kaburga kemiği"
+  },
+  {
+    "id": "med_96",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cumulative",
+    "okunus": "Kümülatif",
+    "meaning": "Birikerek oluşmuş"
+  },
+  {
+    "id": "med_97",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cutis",
+    "okunus": "kutis",
+    "meaning": "Deri"
+  },
+  {
+    "id": "med_98",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cyclus",
+    "okunus": "siklus",
+    "meaning": "Devir"
+  },
+  {
+    "id": "med_99",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cystis",
+    "okunus": "sistis",
+    "meaning": "Kese"
+  },
+  {
+    "id": "med_100",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cyst",
+    "okunus": "sist",
+    "meaning": "Kese, kist"
+  },
+  {
+    "id": "med_101",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cystidoceliotomy",
+    "okunus": "Sistidoseliyotomi",
+    "meaning": "Karın duvarından girerek idrar kesesini açma"
+  },
+  {
+    "id": "med_102",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cystitis",
+    "okunus": "Sistit",
+    "meaning": "İdrar kesesi (mesane) iltihabı"
+  },
+  {
+    "id": "med_103",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cystoma",
+    "okunus": "Sistom",
+    "meaning": "Kistlerden oluşmuş tümör"
+  },
+  {
+    "id": "med_104",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cystostomy",
+    "okunus": "Sistostomi",
+    "meaning": "Karından safra ya da idrar kesesine geçit oluşturma"
+  },
+  {
+    "id": "med_105",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cytologia",
+    "okunus": "Sitoloji",
+    "meaning": "Hücrelerin yapısını, işlevini ve hastalıklarını inceleyen hücre bilimi"
+  },
+  {
+    "id": "med_106",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "decollement",
+    "okunus": "Dekolman",
+    "meaning": "Bir organın normal tutunduğu yerden ayrılması"
+  },
+  {
+    "id": "med_107",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "defecation",
+    "okunus": "Defekasyon",
+    "meaning": "Dışkılama"
+  },
+  {
+    "id": "med_108",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "degeneration",
+    "okunus": "Dejenerasyon",
+    "meaning": "Dokuların bozulması"
+  },
+  {
+    "id": "med_109",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "dehydratation",
+    "okunus": "Dehidrasyon",
+    "meaning": "Su kaybetme"
+  },
+  {
+    "id": "med_110",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "derm",
+    "okunus": "derm",
+    "meaning": "Deri"
+  },
+  {
+    "id": "med_111",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "dermal",
+    "okunus": "dermal",
+    "meaning": "Deriyle ilgili"
+  },
+  {
+    "id": "med_112",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "dermatoplasty",
+    "okunus": "Dermatoplasti",
+    "meaning": "Deride yapılan onarma"
+  },
+  {
+    "id": "med_113",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Diaphragma",
+    "okunus": "Diyafragma/diyafram",
+    "meaning": "Diyafram"
+  },
+  {
+    "id": "med_114",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "dysphagia",
+    "okunus": "Disfaji",
+    "meaning": "Yutmada güçlük"
+  },
+  {
+    "id": "med_115",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "dysuria",
+    "okunus": "Disüri",
+    "meaning": "Ağrışı işeme"
+  },
+  {
+    "id": "med_116",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ectoderma",
+    "okunus": "ektoderma",
+    "meaning": "Dış deri"
+  },
+  {
+    "id": "med_117",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ectopic",
+    "okunus": "ektopik",
+    "meaning": "Normal yerin dışında bulunan"
+  },
+  {
+    "id": "med_118",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ectoscopy",
+    "okunus": "ektoskop/ektoskopi",
+    "meaning": "Organın dıştan incelenmesi"
+  },
+  {
+    "id": "med_119",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "emboly",
+    "okunus": "Emboli",
+    "meaning": "Damarın pıhtı ile tıkanması"
+  },
+  {
+    "id": "med_120",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "encephal",
+    "okunus": "Ensefal",
+    "meaning": "Beyin"
+  },
+  {
+    "id": "med_121",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "encephalitis",
+    "okunus": "Ensefalit",
+    "meaning": "Beyin yangısı"
+  },
+  {
+    "id": "med_122",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "encephaloma",
+    "okunus": "Ensefaloma",
+    "meaning": "Beyin uru"
+  },
+  {
+    "id": "med_123",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "encapsulation",
+    "okunus": "enkapsülasyon",
+    "meaning": "Kapsül içerisinde"
+  },
+  {
+    "id": "med_124",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "enchondral",
+    "okunus": "enkondral",
+    "meaning": "Kıkırdak içerisinde"
+  },
+  {
+    "id": "med_125",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "encranial",
+    "okunus": "enkranial",
+    "meaning": "Kafatası içerisinde"
+  },
+  {
+    "id": "med_126",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "endocardium",
+    "okunus": "endokardiyum",
+    "meaning": "Kalbin iç zarı"
+  },
+  {
+    "id": "med_127",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "endocrinocytus",
+    "okunus": "endokrinosit",
+    "meaning": "Hormon salgılayan hücre"
+  },
+  {
+    "id": "med_128",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "endoscope",
+    "okunus": "endoskop",
+    "meaning": "İç organları görüntülemede kullanılan alet"
+  },
+  {
+    "id": "med_129",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "enter",
+    "okunus": "enter",
+    "meaning": "Bağırsak"
+  },
+  {
+    "id": "med_130",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "enteritis",
+    "okunus": "Enterit",
+    "meaning": "Bağırsak iltihabı"
+  },
+  {
+    "id": "med_131",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "enterostenosis",
+    "okunus": "Enterostenoz",
+    "meaning": "Bağırsak kanalında daralma"
+  },
+  {
+    "id": "med_132",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "epigastricus",
+    "okunus": "epigastrik",
+    "meaning": "Mide üste ile ilgili"
+  },
+  {
+    "id": "med_133",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "epifis / Epiphysis",
+    "okunus": "Epifiz",
+    "meaning": "Üstte büyümüş, uzun kemiklerin ucu, epifiz bezi"
+  },
+  {
+    "id": "med_134",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "epicranialis",
+    "okunus": "epikraniyal",
+    "meaning": "Kafatası üstüyle ilgili"
+  },
+  {
+    "id": "med_135",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "epidermis",
+    "okunus": "epidermis",
+    "meaning": "Derinin üst tabakası"
+  },
+  {
+    "id": "med_136",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "euthanasia",
+    "okunus": "Ötonazi",
+    "meaning": "Acıdan kurtarma amacıyla yaşamı sonlandırma"
+  },
+  {
+    "id": "med_137",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "exocardial",
+    "okunus": "Eksokardiyal",
+    "meaning": "Kalp dışında"
+  },
+  {
+    "id": "med_138",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "exocrinus",
+    "okunus": "eksokrinus/ekzokrin",
+    "meaning": "Dış salgı"
+  },
+  {
+    "id": "med_139",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "expiratio / expiration",
+    "okunus": "ekspirasyon",
+    "meaning": "Nefes vermek"
+  },
+  {
+    "id": "med_140",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "extracellular",
+    "okunus": "ektraselüler",
+    "meaning": "Hücre dışında"
+  },
+  {
+    "id": "med_141",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "extrasensory",
+    "okunus": "Ekstrasensoriyel",
+    "meaning": "Normal duyuların ötesinde"
+  },
+  {
+    "id": "med_142",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "extrasystole",
+    "okunus": "Ekstrasistol",
+    "meaning": "Kalp kasının normal kasılma ritmine sonradan eklenen kasılma"
+  },
+  {
+    "id": "med_143",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "foetus",
+    "okunus": "fötus",
+    "meaning": "Dölüt"
+  },
+  {
+    "id": "med_144",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gastr",
+    "okunus": "gastr",
+    "meaning": "Mide"
+  },
+  {
+    "id": "med_145",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gastroduodenal",
+    "okunus": "Gastroduodenal",
+    "meaning": "Mide ve oniki parmak bağırsağı ile ilgili"
+  },
+  {
+    "id": "med_146",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gastroscope",
+    "okunus": "Gastroskop",
+    "meaning": "Mide ve duodenumun içini incelemek ve biyopsi almak için kullanılan esnek optik cihaz"
+  },
+  {
+    "id": "med_147",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gluteus",
+    "okunus": "Gluteus",
+    "meaning": "Kalça ve kaba et bölgesinde yer alan kaslar"
+  },
+  {
+    "id": "med_148",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gynecologia",
+    "okunus": "Jinekoloji",
+    "meaning": "Kadın hastalıkları bilimi"
+  },
+  {
+    "id": "med_149",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gyrus ambiens",
+    "okunus": "Sirus ambiyans",
+    "meaning": "Bir kıvrım içerisinde"
+  },
+  {
+    "id": "med_150",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "haema",
+    "okunus": "Hema",
+    "meaning": "Kan"
+  },
+  {
+    "id": "med_151",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hemal",
+    "okunus": "hemal",
+    "meaning": "Kanla ilgili"
+  },
+  {
+    "id": "med_152",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hematemesis",
+    "okunus": "Hematemez",
+    "meaning": "Mide kanaması sonucu kan kusma"
+  },
+  {
+    "id": "med_153",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hematogen",
+    "okunus": "Hematojen",
+    "meaning": "Kan yapıcı; kandan kaynaklanan veya kan yoluyla vücuda yayılan"
+  },
+  {
+    "id": "med_154",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hemialgia",
+    "okunus": "Hemialji",
+    "meaning": "Tek taraflı duyulan ağrı"
+  },
+  {
+    "id": "med_155",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hemispherium",
+    "okunus": "Hemisfer",
+    "meaning": "Yarım küre"
+  },
+  {
+    "id": "med_156",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hemiplegia",
+    "okunus": "hemipleji",
+    "meaning": "Vücudun bir yarısını etkileyen felç"
+  },
+  {
+    "id": "med_157",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepat",
+    "okunus": "hepat",
+    "meaning": "Karaciğer"
+  },
+  {
+    "id": "med_158",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepatargia",
+    "okunus": "Hepatarjya",
+    "meaning": "Karaciğer yetmezliği"
+  },
+  {
+    "id": "med_159",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepatatrophy",
+    "okunus": "Hepatatrofi",
+    "meaning": "Karaciğerin küçülmesi"
+  },
+  {
+    "id": "med_160",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepatolith",
+    "okunus": "Hepatolit",
+    "meaning": "Karaciğerde safra taşı oluşması"
+  },
+  {
+    "id": "med_161",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepatomegaly",
+    "okunus": "Hepatomegali",
+    "meaning": "Karaciğerin büyümesi"
+  },
+  {
+    "id": "med_162",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hyperpyrexia",
+    "okunus": "Hiperpireksi",
+    "meaning": "Yüksek ateş"
+  },
+  {
+    "id": "med_163",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hypertansion",
+    "okunus": "hipertansiyon",
+    "meaning": "Yüksek kan basıncı"
+  },
+  {
+    "id": "med_164",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hypertrophia",
+    "okunus": "hipertrofi",
+    "meaning": "İleri derecede büyüme"
+  },
+  {
+    "id": "med_165",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hypodermis",
+    "okunus": "Hipodermis",
+    "meaning": "Deri altı"
+  },
+  {
+    "id": "med_166",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ile",
+    "okunus": "ile",
+    "meaning": "Kıvrım bağırsak"
+  },
+  {
+    "id": "med_167",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ileectomy",
+    "okunus": "İleektomi",
+    "meaning": "Kıvrım bağırsağın ameliyatla alınması"
+  },
+  {
+    "id": "med_168",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ileorectal",
+    "okunus": "İleorektal",
+    "meaning": "Kıvrım bağırsak ve düz bağırsakla ilgili"
+  },
+  {
+    "id": "med_169",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "immature",
+    "okunus": "İmatür",
+    "meaning": "Tam gelişmemiş"
+  },
+  {
+    "id": "med_170",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "implacental",
+    "okunus": "İmplasental",
+    "meaning": "Plasentasız"
+  },
+  {
+    "id": "med_171",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "inactivus",
+    "okunus": "İnaktivus/Inaktiv(f)",
+    "meaning": "İşlevsiz, çalışmayan"
+  },
+  {
+    "id": "med_172",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "infracardiacus",
+    "okunus": "Infrakardiyak",
+    "meaning": "Kalp altı"
+  },
+  {
+    "id": "med_173",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "infrasternalis",
+    "okunus": "Infrasternal",
+    "meaning": "Göğüs kemiğinin altında olan"
+  },
+  {
+    "id": "med_174",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "infratemporalis",
+    "okunus": "Infratemporal",
+    "meaning": "Şakak kemiğinin altında olan"
+  },
+  {
+    "id": "med_175",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "infertilitas",
+    "okunus": "İnfertilite/İnfertilitas",
+    "meaning": "Kısırlık"
+  },
+  {
+    "id": "med_176",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "intercellularis",
+    "okunus": "Intersellüler",
+    "meaning": "Hücreler arasında"
+  },
+  {
+    "id": "med_177",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "intercostalis",
+    "okunus": "Interkostal",
+    "meaning": "Kaburgalar arasında"
+  },
+  {
+    "id": "med_178",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "intervertebralis",
+    "okunus": "Intervertebral",
+    "meaning": "Omurlar arasında"
+  },
+  {
+    "id": "med_179",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "intracellularis",
+    "okunus": "Intraselüler",
+    "meaning": "Hücre içi"
+  },
+  {
+    "id": "med_180",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "intramuscularis",
+    "okunus": "Intramasküler",
+    "meaning": "Kas içi"
+  },
+  {
+    "id": "med_181",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "intrapulmonary",
+    "okunus": "Intrapulmoner",
+    "meaning": "Akciğer içi"
+  },
+  {
+    "id": "med_182",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "jejun",
+    "okunus": "yeyun",
+    "meaning": "Boş bağırsak"
+  },
+  {
+    "id": "med_183",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "jejunoileitis",
+    "okunus": "Yeyunoileit",
+    "meaning": "Boş bağırsak ile kıvrım bağırsağın iltihabı"
+  },
+  {
+    "id": "med_184",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "jejunum",
+    "okunus": "yeyunum",
+    "meaning": "Boş bağırsak"
+  },
+  {
+    "id": "med_185",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "jejunostomy",
+    "okunus": "Yeyunostomi",
+    "meaning": "Karın duvarı ile boş bağırsak arasında ameliyatla geçit oluşturma"
+  },
+  {
+    "id": "med_186",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "junctura synovialis",
+    "okunus": "Yunktura sinovyalis",
+    "meaning": "Oynar eklem"
+  },
+  {
+    "id": "med_187",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "laryngeal",
+    "okunus": "Laringeal",
+    "meaning": "Gırtlakla ilgili"
+  },
+  {
+    "id": "med_188",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "laryngostenosis",
+    "okunus": "Laringostenoz",
+    "meaning": "Gırtlağın daralması"
+  },
+  {
+    "id": "med_189",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "laryngoscopy",
+    "okunus": "Laringoskopi",
+    "meaning": "Gırtlağın cihazla incelenmesi"
+  },
+  {
+    "id": "med_190",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "laryng",
+    "okunus": "laring",
+    "meaning": "Gırtlak"
+  },
+  {
+    "id": "med_191",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "leuk",
+    "okunus": "lök",
+    "meaning": "Akyuvar"
+  },
+  {
+    "id": "med_192",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "leukocytosis",
+    "okunus": "Lökositoz",
+    "meaning": "Kanda lökosit (akyuvar) sayısının normal sınırların üzerine çıkması"
+  },
+  {
+    "id": "med_193",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "leukomyelitis",
+    "okunus": "Lökomyelit",
+    "meaning": "Omurilik beyaz cevherinin iltihabı"
+  },
+  {
+    "id": "med_194",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "leukopenia",
+    "okunus": "Lökopeni",
+    "meaning": "Kanda lökosit (akyuvar) sayısının normal sınırların altına düşmesi"
+  },
+  {
+    "id": "med_195",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lien",
+    "okunus": "liyen",
+    "meaning": "Dalak"
+  },
+  {
+    "id": "med_196",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lienitis",
+    "okunus": "liyenit",
+    "meaning": "Dalağın yumuşaması"
+  },
+  {
+    "id": "med_197",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lienomalasia",
+    "okunus": "Liyenomalazi",
+    "meaning": "Dalak ve böbrekle ilgili"
+  },
+  {
+    "id": "med_198",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lienorenal",
+    "okunus": "Liyenorenal",
+    "meaning": "Dalak ve böbrekle ilgili"
+  },
+  {
+    "id": "med_199",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lingu",
+    "okunus": "lingu",
+    "meaning": "Dil"
+  },
+  {
+    "id": "med_200",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "linguofacialis",
+    "okunus": "Linguofasiyal",
+    "meaning": "Dil ve yüzle ilgili"
+  },
+  {
+    "id": "med_201",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "macrobrachia",
+    "okunus": "makrobraki",
+    "meaning": "Kolun büyük olması"
+  },
+  {
+    "id": "med_202",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "macrocephalia",
+    "okunus": "makrosefali",
+    "meaning": "Başın büyük olması"
+  },
+  {
+    "id": "med_203",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "macrocytus",
+    "okunus": "makrosit",
+    "meaning": "İri hücre"
+  },
+  {
+    "id": "med_204",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "megacardia",
+    "okunus": "megakardi",
+    "meaning": "Kalbin büyümesi"
+  },
+  {
+    "id": "med_205",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "megacaryocytus",
+    "okunus": "Megakaryosit",
+    "meaning": "Trombositlerin ana hücresi (dev hücreler)"
+  },
+  {
+    "id": "med_206",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "megacolon",
+    "okunus": "megakolon",
+    "meaning": "Anormal büyüklükteki kalın bağırsak"
+  },
+  {
+    "id": "med_207",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Melaena",
+    "okunus": "Melena",
+    "meaning": "Karadışkı"
+  },
+  {
+    "id": "med_208",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "mening",
+    "okunus": "Mening",
+    "meaning": "Beyin omurilik zarları"
+  },
+  {
+    "id": "med_209",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "meningitis",
+    "okunus": "Menenjit",
+    "meaning": "Beyin omurilik zarları yangısı"
+  },
+  {
+    "id": "med_210",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "meningorrhagia",
+    "okunus": "Meningoraji",
+    "meaning": "Beyin ve omurilik zarları içine kanama olması"
+  },
+  {
+    "id": "med_211",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Meninx",
+    "okunus": "meninks",
+    "meaning": "Beyinzarı"
+  },
+  {
+    "id": "med_212",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "menopause",
+    "okunus": "Menopoz",
+    "meaning": "Doğurganlığın sonlanması"
+  },
+  {
+    "id": "med_213",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "mesoderma",
+    "okunus": "Mezoderm",
+    "meaning": "Embriyogenez esnasında ortada olan hücre tabakası"
+  },
+  {
+    "id": "med_214",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "mesonephros",
+    "okunus": "Mezonefroz",
+    "meaning": "Embriyonel yaşamda böbreğin ikinci oluşum evresi"
+  },
+  {
+    "id": "med_215",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "metacarpus",
+    "okunus": "Metakarpus",
+    "meaning": "El tarağı kemikleri (bilek ile parmak kemikleri arasındaki 5 kemik)"
+  },
+  {
+    "id": "med_216",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "metanephros",
+    "okunus": "metanefroz",
+    "meaning": "Embriyonal dönemde böbreğin üçüncü oluşan evresi"
+  },
+  {
+    "id": "med_217",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "metaplasia",
+    "okunus": "Metaplazi",
+    "meaning": "Bir organın normal yerinin dışında gelişmesi"
+  },
+  {
+    "id": "med_218",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "micrencephaly",
+    "okunus": "Mikransefal",
+    "meaning": "Beyni küçük ya da tam gelişmemiş olması"
+  },
+  {
+    "id": "med_219",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "microcytus",
+    "okunus": "Mikrosit",
+    "meaning": "Normalden küçük olan hücre"
+  },
+  {
+    "id": "med_220",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "micromelia",
+    "okunus": "mikromeli",
+    "meaning": "El ve ayakların normalden kısa olması"
+  },
+  {
+    "id": "med_221",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "microscope",
+    "okunus": "mikroskop",
+    "meaning": "Mikroskop"
+  },
+  {
+    "id": "med_222",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "multicellularis",
+    "okunus": "multiselüler",
+    "meaning": "Çok hücreli"
+  },
+  {
+    "id": "med_223",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "multiform",
+    "okunus": "multiform",
+    "meaning": "Çok şekilli"
+  },
+  {
+    "id": "med_224",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "multipolaris",
+    "okunus": "multipolar",
+    "meaning": "Çok kutuplu"
+  },
+  {
+    "id": "med_225",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "musculus",
+    "okunus": "Muskulus",
+    "meaning": "Kas (vücutta hareket ve kuvvet üreten kas dokusu organı)"
+  },
+  {
+    "id": "med_226",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "my",
+    "okunus": "mi",
+    "meaning": "Kas"
+  },
+  {
+    "id": "med_227",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "myalgia",
+    "okunus": "Miyalji",
+    "meaning": "Kas ağrısı"
+  },
+  {
+    "id": "med_228",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "myel",
+    "okunus": "miyel",
+    "meaning": "Omurilik, kemik iliği, miyelin tabaka"
+  },
+  {
+    "id": "med_229",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "myelitis",
+    "okunus": "miyelit",
+    "meaning": "Omurilik yangısı"
+  },
+  {
+    "id": "med_230",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "myelin",
+    "okunus": "miyelin",
+    "meaning": "Sinir liflerini çevreleyen tabaka"
+  },
+  {
+    "id": "med_231",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "myelocyte",
+    "okunus": "Miyelosit",
+    "meaning": "İlik hücresi"
+  },
+  {
+    "id": "med_232",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "myelopoiesis",
+    "okunus": "Miyelopoez",
+    "meaning": "Kemik iliğinde kan hücresi oluşumu"
+  },
+  {
+    "id": "med_233",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "myometrium",
+    "okunus": "Miyometriyum",
+    "meaning": "Döl yatağının kas tabakası"
+  },
+  {
+    "id": "med_234",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nas",
+    "okunus": "nas",
+    "meaning": "Burun"
+  },
+  {
+    "id": "med_235",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nasiform",
+    "okunus": "Nasiform/naziform",
+    "meaning": "Burun şeklinde"
+  },
+  {
+    "id": "med_236",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "naso-oral",
+    "okunus": "Nazooral",
+    "meaning": "Burun ve ağızla ilgili"
+  },
+  {
+    "id": "med_237",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nephr",
+    "okunus": "nefr",
+    "meaning": "Böbrek"
+  },
+  {
+    "id": "med_238",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nephrectomy",
+    "okunus": "Nefrektomi",
+    "meaning": "Böbreğin ameliyatla çıkarılması"
+  },
+  {
+    "id": "med_239",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nephrolith",
+    "okunus": "Nefrolit",
+    "meaning": "Böbrek taşı"
+  },
+  {
+    "id": "med_240",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nephros",
+    "okunus": "nefros",
+    "meaning": "Böbrek"
+  },
+  {
+    "id": "med_241",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "neur",
+    "okunus": "nöro/nör",
+    "meaning": "Sinir"
+  },
+  {
+    "id": "med_242",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "neurectomy",
+    "okunus": "Nörektomi",
+    "meaning": "Sinirin alınması"
+  },
+  {
+    "id": "med_243",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "neuritis",
+    "okunus": "Nörit",
+    "meaning": "Sinir iltihabı"
+  },
+  {
+    "id": "med_244",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Neuroanatomy",
+    "okunus": "Nöroanatomi",
+    "meaning": "Sinir anatomi"
+  },
+  {
+    "id": "med_245",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Neuron",
+    "okunus": "nöron",
+    "meaning": "Sinir"
+  },
+  {
+    "id": "med_246",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Nidatio",
+    "okunus": "Nidasyon",
+    "meaning": "Yerleşme"
+  },
+  {
+    "id": "med_247",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "noncellularis",
+    "okunus": "Nonçellularis/Non-sellüler",
+    "meaning": "Hücre içermeyen"
+  },
+  {
+    "id": "med_248",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nonstriatus",
+    "okunus": "Nonstriatus/Non-striye",
+    "meaning": "Çizgisiz"
+  },
+  {
+    "id": "med_249",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Nuchae",
+    "okunus": "Nuke",
+    "meaning": "Ense"
+  },
+  {
+    "id": "med_250",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "occipitale",
+    "okunus": "occipitale",
+    "meaning": "Art kafa kemiği"
+  },
+  {
+    "id": "med_251",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ocul",
+    "okunus": "okul",
+    "meaning": "Göz"
+  },
+  {
+    "id": "med_252",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "oculofacial",
+    "okunus": "Okulofasiyal",
+    "meaning": "Göz ve yüzle ilgili"
+  },
+  {
+    "id": "med_253",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "oculomotor",
+    "okunus": "okülomotor",
+    "meaning": "Göz küresinin hareket"
+  },
+  {
+    "id": "med_254",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "oedama",
+    "okunus": "ödem",
+    "meaning": "Sıvı toplanması"
+  },
+  {
+    "id": "med_255",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "oesophagus",
+    "okunus": "Özofagus",
+    "meaning": "Yemek borusu"
+  },
+  {
+    "id": "med_256",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "oestrogen",
+    "okunus": "östrojen",
+    "meaning": "Yumurtalıktan salgılanan hormon"
+  },
+  {
+    "id": "med_257",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "oligomenorrhea",
+    "okunus": "Oligomenore",
+    "meaning": "Seyrek adet görme"
+  },
+  {
+    "id": "med_258",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "oligospermia",
+    "okunus": "Oligospermi",
+    "meaning": "Sperm sayısının normalin altında olması"
+  },
+  {
+    "id": "med_259",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "oliguria",
+    "okunus": "Oligüri",
+    "meaning": "İdrar miktarının azlığı"
+  },
+  {
+    "id": "med_260",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ophtalm",
+    "okunus": "Oftalm",
+    "meaning": "Göz"
+  },
+  {
+    "id": "med_261",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ophtalmic",
+    "okunus": "Oftalmik",
+    "meaning": "Gözle ilgili"
+  },
+  {
+    "id": "med_262",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ophtalmoparalysis",
+    "okunus": "Oftalmoparalizi",
+    "meaning": "Göz kaslarında felç"
+  },
+  {
+    "id": "med_263",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "organism",
+    "okunus": "Organizma",
+    "meaning": "Organizma"
+  },
+  {
+    "id": "med_264",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "os",
+    "okunus": "os",
+    "meaning": "Kemik"
+  },
+  {
+    "id": "med_265",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "os maxilla",
+    "okunus": "Os maksilla",
+    "meaning": "Üst çene kemiği"
+  },
+  {
+    "id": "med_266",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "os parietale",
+    "okunus": "Os paryetale",
+    "meaning": "Yan kafa (çeper) kemiği"
+  },
+  {
+    "id": "med_267",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "os sphenoidale",
+    "okunus": "Os sfenoidale",
+    "meaning": "Temel kemik (kafa tabanının ortasında yer alan kanatlı kemik)"
+  },
+  {
+    "id": "med_268",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "os zygomaticum",
+    "okunus": "Os zigomatikum",
+    "meaning": "Elmacık kemiği"
+  },
+  {
+    "id": "med_269",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "osseous",
+    "okunus": "Oseöz/Oseus",
+    "meaning": "Kemikli"
+  },
+  {
+    "id": "med_270",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ossiform",
+    "okunus": "Ossiform",
+    "meaning": "Kemik şeklinde"
+  },
+  {
+    "id": "med_271",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ostalgia",
+    "okunus": "Ostalji",
+    "meaning": "Kemikte ağrı"
+  },
+  {
+    "id": "med_272",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "oste",
+    "okunus": "oste",
+    "meaning": "Kemik"
+  },
+  {
+    "id": "med_273",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "osteitis",
+    "okunus": "osteit",
+    "meaning": "Kemik iltihabı"
+  },
+  {
+    "id": "med_274",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "osteocyte",
+    "okunus": "Osteosit",
+    "meaning": "Kemik hücresi"
+  },
+  {
+    "id": "med_275",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "oticus",
+    "okunus": "otikus",
+    "meaning": "Kulağa ait"
+  },
+  {
+    "id": "med_276",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "otocleisis",
+    "okunus": "Otokleiz",
+    "meaning": "Kulak tıkanması"
+  },
+  {
+    "id": "med_277",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "otalgia",
+    "okunus": "otalji",
+    "meaning": "Kulak ağrısı"
+  },
+  {
+    "id": "med_278",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "otoscope",
+    "okunus": "Otoskop/Otoskopi",
+    "meaning": "Kulak muayene aleti"
+  },
+  {
+    "id": "med_279",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "otorrhea",
+    "okunus": "otorre",
+    "meaning": "Kulak akıntısı"
+  },
+  {
+    "id": "med_280",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ot",
+    "okunus": "ot",
+    "meaning": "Kulak"
+  },
+  {
+    "id": "med_281",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "oxygen",
+    "okunus": "oksijen",
+    "meaning": "Oksijen"
+  },
+  {
+    "id": "med_282",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "panangitis",
+    "okunus": "Panangit",
+    "meaning": "Bütün damar tabakalarına yayılan iltihap"
+  },
+  {
+    "id": "med_283",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pandemia",
+    "okunus": "pandemi",
+    "meaning": "Bir hastalığın birçok ülkeye yayılması"
+  },
+  {
+    "id": "med_284",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pancreas",
+    "okunus": "Pankreas",
+    "meaning": "Pankreas iç ve dış salgı yapan bez"
+  },
+  {
+    "id": "med_285",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pancreatio",
+    "okunus": "Pankreat/Pankreato",
+    "meaning": "Pankreas"
+  },
+  {
+    "id": "med_286",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pancreatiosplenic",
+    "okunus": "Pankreatiosplenik",
+    "meaning": "Pankreas ve dalakla ilgili"
+  },
+  {
+    "id": "med_287",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pancreatogenic",
+    "okunus": "Pankreatojenik",
+    "meaning": "Pankreastan gelişen"
+  },
+  {
+    "id": "med_288",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pantophobia",
+    "okunus": "Pantofobi",
+    "meaning": "Gereksiz yere her şeyden korkma"
+  },
+  {
+    "id": "med_289",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "paranasalis",
+    "okunus": "Paranazal",
+    "meaning": "Burun boşluğuna komşu"
+  },
+  {
+    "id": "med_290",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "paraplasia",
+    "okunus": "Paraplazi",
+    "meaning": "Normal yere yakın gelişme"
+  },
+  {
+    "id": "med_291",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "paraplegia",
+    "okunus": "Parapleji",
+    "meaning": "Omurilik hasarına bağlı olarak vücudun alt yarısında (her iki bacakta) gelişen felç"
+  },
+  {
+    "id": "med_292",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "paroral",
+    "okunus": "Paroral",
+    "meaning": "Ağzına komşu"
+  },
+  {
+    "id": "med_293",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "parotid",
+    "okunus": "Parotid",
+    "meaning": "Kulağa yakın"
+  },
+  {
+    "id": "med_294",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "parathyroideus",
+    "okunus": "Paratiroid",
+    "meaning": "Tiroid bezine yakın olan"
+  },
+  {
+    "id": "med_295",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "parenchyma",
+    "okunus": "Parenkima",
+    "meaning": "Salgı bezlerinin işlevsel bölümü"
+  },
+  {
+    "id": "med_296",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "patella",
+    "okunus": "Patella",
+    "meaning": "Diz kapağı kemiği (vücudun en büyük sesamoid kemiği)"
+  },
+  {
+    "id": "med_297",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "periarterialis",
+    "okunus": "Periarteriyal",
+    "meaning": "Atardamar çevresinde"
+  },
+  {
+    "id": "med_298",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pericardium",
+    "okunus": "Perikardiyum",
+    "meaning": "Kalp çevresinde"
+  },
+  {
+    "id": "med_299",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "perfusion",
+    "okunus": "perfüzyon",
+    "meaning": "Sıvı şeklindeki ilaçları vücuda verme"
+  },
+  {
+    "id": "med_300",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "perihepatic",
+    "okunus": "Perihepatik",
+    "meaning": "Karaciğer çevresinde"
+  },
+  {
+    "id": "med_301",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "peroral",
+    "okunus": "peroral",
+    "meaning": "Ağız yoluyla"
+  },
+  {
+    "id": "med_302",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "perrectum",
+    "okunus": "perrektum",
+    "meaning": "Rektum yoluyla"
+  },
+  {
+    "id": "med_303",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Peritoneum",
+    "okunus": "Peritoniyum/periton",
+    "meaning": "Karınzarı"
+  },
+  {
+    "id": "med_304",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "phalanx",
+    "okunus": "Falanks",
+    "meaning": "El veya ayak parmak kemiği"
+  },
+  {
+    "id": "med_305",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pharyngectomy",
+    "okunus": "Faringektomi",
+    "meaning": "Yutağın ameliyatla çıkarılması"
+  },
+  {
+    "id": "med_306",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pharyngonasal",
+    "okunus": "Faringonazal",
+    "meaning": "Boğaz ve burunla ilgili"
+  },
+  {
+    "id": "med_307",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pharynx",
+    "okunus": "farinks",
+    "meaning": "Yutak"
+  },
+  {
+    "id": "med_308",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "phlebos",
+    "okunus": "Flebos",
+    "meaning": "Toplardamar"
+  },
+  {
+    "id": "med_309",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Phlegmone",
+    "okunus": "Flegmon",
+    "meaning": "Yangı"
+  },
+  {
+    "id": "med_310",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pleura",
+    "okunus": "Plevra",
+    "meaning": "Göğüs zarı"
+  },
+  {
+    "id": "med_311",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Pylorus",
+    "okunus": "Pilorus/pilor",
+    "meaning": "Kapıcı"
+  },
+  {
+    "id": "med_312",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "polygonalis",
+    "okunus": "poligonal",
+    "meaning": "Çok kenarlı"
+  },
+  {
+    "id": "med_313",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "polyphagia",
+    "okunus": "Polifaji",
+    "meaning": "Aşırı iştah ve doymak bilmez biçimde çok yeme durumu"
+  },
+  {
+    "id": "med_314",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "polynuclearis",
+    "okunus": "Polinükleer",
+    "meaning": "Çok çekirdekli"
+  },
+  {
+    "id": "med_315",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "polyuria",
+    "okunus": "Poliüri",
+    "meaning": "Sık idrar yapma"
+  },
+  {
+    "id": "med_316",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "postcapillaris",
+    "okunus": "Postkapiller",
+    "meaning": "Kılcal damar sonrası"
+  },
+  {
+    "id": "med_317",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "postnatalis",
+    "okunus": "Postnatal",
+    "meaning": "Doğum sonrası"
+  },
+  {
+    "id": "med_318",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "postoperative",
+    "okunus": "Postoperatif",
+    "meaning": "Ameliyat sonrası"
+  },
+  {
+    "id": "med_319",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "precervicalis",
+    "okunus": "Preservikal",
+    "meaning": "Boynun önünde olan"
+  },
+  {
+    "id": "med_320",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "premolaris",
+    "okunus": "Premolar",
+    "meaning": "Ön azı dişi"
+  },
+  {
+    "id": "med_321",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "prenatalis",
+    "okunus": "Prenatal",
+    "meaning": "Doğum öncesi"
+  },
+  {
+    "id": "med_322",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "processus",
+    "okunus": "Prosesus",
+    "meaning": "Kemik veya organlarda görülen anatomik çıkıntı, uzantı"
+  },
+  {
+    "id": "med_323",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pronephros",
+    "okunus": "Pronefroz",
+    "meaning": "Embriyonal gelişimde böbreğin ilk biçimi"
+  },
+  {
+    "id": "med_324",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "prophase",
+    "okunus": "profaz",
+    "meaning": "Mitoz bölünmede ilk evre"
+  },
+  {
+    "id": "med_325",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pulmo",
+    "okunus": "pulmo",
+    "meaning": "Akciğer"
+  },
+  {
+    "id": "med_326",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pulmolith",
+    "okunus": "Pulmolit",
+    "meaning": "Akciğerde oluşan taş"
+  },
+  {
+    "id": "med_327",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pulmonitis",
+    "okunus": "Pulmonit",
+    "meaning": "Akciğer iltihabı"
+  },
+  {
+    "id": "med_328",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "rect",
+    "okunus": "rekt",
+    "meaning": "Kalın bağırsağın sonu"
+  },
+  {
+    "id": "med_329",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "rectitis",
+    "okunus": "Rektit",
+    "meaning": "Rektumun iltihabı"
+  },
+  {
+    "id": "med_330",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "rectoscopy",
+    "okunus": "Rektoskopi",
+    "meaning": "Rektumun cihazla muayenesi"
+  },
+  {
+    "id": "med_331",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ren",
+    "okunus": "ren",
+    "meaning": "Böbrek"
+  },
+  {
+    "id": "med_332",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "renicapsule",
+    "okunus": "Renikapsül",
+    "meaning": "Böbrek kapsülü"
+  },
+  {
+    "id": "med_333",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "reniform",
+    "okunus": "Reniform",
+    "meaning": "Böbrek şeklinde"
+  },
+  {
+    "id": "med_334",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "renivascularis",
+    "okunus": "Renivasküler",
+    "meaning": "Böbreğin damarlarıyla ilgili"
+  },
+  {
+    "id": "med_335",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "retromandibularis",
+    "okunus": "Retromandibuler",
+    "meaning": "Alt çene kemiği ardı"
+  },
+  {
+    "id": "med_336",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "retroduodenalis",
+    "okunus": "Retroduodenal",
+    "meaning": "Onikiparmak bağırsağı arkası"
+  },
+  {
+    "id": "med_337",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "retroperitonealis",
+    "okunus": "Retroperitoneal",
+    "meaning": "Karın zarı ardı"
+  },
+  {
+    "id": "med_338",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "rhin",
+    "okunus": "rin",
+    "meaning": "Burun"
+  },
+  {
+    "id": "med_339",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "rhinitis",
+    "okunus": "Rinit",
+    "meaning": "Burun mukozası iltihabı, nezle"
+  },
+  {
+    "id": "med_340",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "rhinorrhagia",
+    "okunus": "Rinoraji",
+    "meaning": "Burun kanaması"
+  },
+  {
+    "id": "med_341",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "rhythmic",
+    "okunus": "ritmik",
+    "meaning": "Düzenli"
+  },
+  {
+    "id": "med_342",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Saphenus",
+    "okunus": "Safenus/Safen",
+    "meaning": "Saklı, gizli"
+  },
+  {
+    "id": "med_343",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "scapula",
+    "okunus": "Skapula",
+    "meaning": "Kürek kemiği"
+  },
+  {
+    "id": "med_344",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "schema",
+    "okunus": "şema",
+    "meaning": "Biçim"
+  },
+  {
+    "id": "med_345",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "schistocephalia",
+    "okunus": "Şistosefalya",
+    "meaning": "Yarık başlı"
+  },
+  {
+    "id": "med_346",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "schizophrenia",
+    "okunus": "Şizofreni",
+    "meaning": "Şizofreni"
+  },
+  {
+    "id": "med_347",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "sclera",
+    "okunus": "siklera",
+    "meaning": "Göz akı"
+  },
+  {
+    "id": "med_348",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "semiluna",
+    "okunus": "semiluna",
+    "meaning": "Yarım ay"
+  },
+  {
+    "id": "med_349",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "semiovalis",
+    "okunus": "Semioval",
+    "meaning": "Yarı oval biçimde"
+  },
+  {
+    "id": "med_350",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "semipermeabl",
+    "okunus": "semipermabil",
+    "meaning": "Yarı geçirgen"
+  },
+  {
+    "id": "med_351",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "splen",
+    "okunus": "Splen",
+    "meaning": "Dalak"
+  },
+  {
+    "id": "med_352",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "splenatrophy",
+    "okunus": "Splenatrofi",
+    "meaning": "Dalağın küçülmesi"
+  },
+  {
+    "id": "med_353",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "splenectomy",
+    "okunus": "Splenektomi",
+    "meaning": "Dalağın çıkarılması"
+  },
+  {
+    "id": "med_354",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "splenomegaly",
+    "okunus": "Splenomegali",
+    "meaning": "Dalağın büyümesi"
+  },
+  {
+    "id": "med_355",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "spatium",
+    "okunus": "Spasyum",
+    "meaning": "Aralık, oda"
+  },
+  {
+    "id": "med_356",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "subcapsullaris",
+    "okunus": "Subskapüler",
+    "meaning": "Kapsülün altında"
+  },
+  {
+    "id": "med_357",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "subcostalis",
+    "okunus": "Subkostal",
+    "meaning": "Kaburga altı"
+  },
+  {
+    "id": "med_358",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "subcutaneus",
+    "okunus": "Subkutan",
+    "meaning": "Deri altı"
+  },
+  {
+    "id": "med_359",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "supercilium",
+    "okunus": "süpersilyum",
+    "meaning": "Kaş"
+  },
+  {
+    "id": "med_360",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "superlobatio",
+    "okunus": "Süperlobasyo",
+    "meaning": "Çok loblu"
+  },
+  {
+    "id": "med_361",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "superolateral",
+    "okunus": "Süperolateral",
+    "meaning": "Üst yan tarafta"
+  },
+  {
+    "id": "med_362",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "supraorbitalis",
+    "okunus": "Supraorbital",
+    "meaning": "Göz çukurunun üstünde"
+  },
+  {
+    "id": "med_363",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "suprarenalis",
+    "okunus": "suprarenal",
+    "meaning": "Böbrek üstü"
+  },
+  {
+    "id": "med_364",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "suprascapularis",
+    "okunus": "Supraskapular",
+    "meaning": "Kürek kemiğinin üstü"
+  },
+  {
+    "id": "med_365",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "sutura",
+    "okunus": "Sutura",
+    "meaning": "Cerrahi dikiş; veya kafatası kemikleri arasındaki testere dişli oynamaz eklem hattı"
+  },
+  {
+    "id": "med_366",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "system",
+    "okunus": "sistem",
+    "meaning": "Sistem"
+  },
+  {
+    "id": "med_367",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tachycardia",
+    "okunus": "Taşikardi",
+    "meaning": "Kalp atım hızının dakikada 100 atımın üzerine çıkması (hızlı kalp atımı)"
+  },
+  {
+    "id": "med_368",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tertius",
+    "okunus": "Tersyus",
+    "meaning": "Üçüncül"
+  },
+  {
+    "id": "med_369",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "thermal",
+    "okunus": "Termal",
+    "meaning": "Isıyla ilgili"
+  },
+  {
+    "id": "med_370",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "thorac",
+    "okunus": "torak",
+    "meaning": "Göğüs"
+  },
+  {
+    "id": "med_371",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "thoracal",
+    "okunus": "Torakal",
+    "meaning": "Göğüsle ilgili"
+  },
+  {
+    "id": "med_372",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "thoracicoabdominal",
+    "okunus": "Torasikoabdominal",
+    "meaning": "Göğüs ve karınla ilgili"
+  },
+  {
+    "id": "med_373",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "thoracostomy",
+    "okunus": "Torakostomi",
+    "meaning": "Göğüs boşluğunda delik açma"
+  },
+  {
+    "id": "med_374",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "thorax",
+    "okunus": "Toraks",
+    "meaning": "Göğüs kafesi ve boşluğu"
+  },
+  {
+    "id": "med_375",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "thrombocyte",
+    "okunus": "Trombosit",
+    "meaning": "Kan pulcuğu"
+  },
+  {
+    "id": "med_376",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "thrombus",
+    "okunus": "Trombus",
+    "meaning": "Pıhtı"
+  },
+  {
+    "id": "med_377",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "thymus",
+    "okunus": "Timus",
+    "meaning": "Göğüs kemiğinin arkasında yer alan ve T lenfositlerin olgunlaştığı primer lenfoid organ"
+  },
+  {
+    "id": "med_378",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "trachea",
+    "okunus": "Trake",
+    "meaning": "Nefes borusu"
+  },
+  {
+    "id": "med_379",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "trachealgia",
+    "okunus": "Trakealji",
+    "meaning": "Soluk borusunda ağrı"
+  },
+  {
+    "id": "med_380",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tracheitis",
+    "okunus": "Trakeit",
+    "meaning": "Soluk borusu iltihabı"
+  },
+  {
+    "id": "med_381",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tracheoscope",
+    "okunus": "Trakeoskop",
+    "meaning": "Nefes borusunu (trakeayı) doğrudan incelemek için kullanılan alet"
+  },
+  {
+    "id": "med_382",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "trauma",
+    "okunus": "Travma",
+    "meaning": "Dıştan gelen fiziksel, mekanik veya kimyasal bir etki sonucu dokularda oluşan hasar, yaralanma"
+  },
+  {
+    "id": "med_383",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ureter",
+    "okunus": "üreter",
+    "meaning": "İdrar borusu"
+  },
+  {
+    "id": "med_384",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ureteritis",
+    "okunus": "Üreterit",
+    "meaning": "Üreter iltihabı"
+  },
+  {
+    "id": "med_385",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ureterolith",
+    "okunus": "Üreterolit",
+    "meaning": "Üreter taşı"
+  },
+  {
+    "id": "med_386",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "urethra",
+    "okunus": "Üretra",
+    "meaning": "İdrar yolu"
+  },
+  {
+    "id": "med_387",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ven, veno",
+    "okunus": "ven, veno",
+    "meaning": "Toplardamar"
+  },
+  {
+    "id": "med_388",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "veniplex",
+    "okunus": "Venipleks",
+    "meaning": "Toplardamar ağı"
+  },
+  {
+    "id": "med_389",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Venosclerosis",
+    "okunus": "Venoskleroz",
+    "meaning": "Toplardamar duvarının sertleşmesi"
+  },
+  {
+    "id": "med_390",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "vesica urinaria",
+    "okunus": "Vesika urinarya",
+    "meaning": "İdrar kesesi"
+  },
+  {
+    "id": "med_391",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "symbiosus",
+    "okunus": "simbiyozis",
+    "meaning": "Ortak yaşam"
+  },
+  {
+    "id": "med_392",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "sympodia",
+    "okunus": "simpodiya",
+    "meaning": "Birleşik ayaklılık"
+  },
+  {
+    "id": "med_393",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "syndrome",
+    "okunus": "sendrom",
+    "meaning": "Bir çok septomun birlikte görülmesi"
+  },
+  {
+    "id": "med_394",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "synergicus",
+    "okunus": "sinerjikus",
+    "meaning": "Birlikte aynı yönde etkili olan"
+  },
+  {
+    "id": "med_395",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tachometer",
+    "okunus": "takometre",
+    "meaning": "Kan akım hızını ölçen alet"
+  },
+  {
+    "id": "med_396",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tachypnea",
+    "okunus": "taşipne",
+    "meaning": "Hızlı solunum"
+  },
+  {
+    "id": "med_397",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bradycardia",
+    "okunus": "bradikardiya",
+    "meaning": "Kalp atım hızının normalin altında olması"
+  },
+  {
+    "id": "med_398",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bradypnea",
+    "okunus": "bradipne",
+    "meaning": "Solunum sayısının azalması"
+  },
+  {
+    "id": "med_399",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "eupnea",
+    "okunus": "Öpne",
+    "meaning": "Normal, rahat ve düzenli dinlenme solunumu"
+  },
+  {
+    "id": "med_400",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "euplasia",
+    "okunus": "Öplazi",
+    "meaning": "Dokunun normal oluşu"
+  },
+  {
+    "id": "med_401",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "normocyte",
+    "okunus": "normosit",
+    "meaning": "Normal alyuvar hücresi"
+  },
+  {
+    "id": "med_402",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "normotansiyon",
+    "okunus": "normotansiyon",
+    "meaning": "Normal kan basıncı"
+  },
+  {
+    "id": "med_403",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "normothermia",
+    "okunus": "normotermi",
+    "meaning": "Vücut ısısının normal kalışı"
+  },
+  {
+    "id": "med_404",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "orthesis",
+    "okunus": "ortez",
+    "meaning": "Eğrilik olan kısmın düzeltilmesi"
+  },
+  {
+    "id": "med_405",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "orthopedia",
+    "okunus": "ortopedi",
+    "meaning": "İskelet bozukluklarını düzelten tıp dalı"
+  },
+  {
+    "id": "med_406",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "orthodontia",
+    "okunus": "ortodonti",
+    "meaning": "Dişlerin şekil bozukluklarını düzelten tıp dalı"
+  },
+  {
+    "id": "med_407",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "malabsorption",
+    "okunus": "malabsorpsiyon",
+    "meaning": "Emilim bozukluğu"
+  },
+  {
+    "id": "med_408",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "malformation",
+    "okunus": "malformasyon",
+    "meaning": "Doğumsal bozukluk, sakatlık"
+  },
+  {
+    "id": "med_409",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "malnutrition",
+    "okunus": "malnütrisyon",
+    "meaning": "Kötü beslenme, gıdasızlık"
+  },
+  {
+    "id": "med_410",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "unilateralis",
+    "okunus": "unilateral",
+    "meaning": "Tek yanlı"
+  },
+  {
+    "id": "med_411",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "unilaminaris",
+    "okunus": "unilaminar",
+    "meaning": "Tek katlı"
+  },
+  {
+    "id": "med_412",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "unipolaris",
+    "okunus": "unipolar",
+    "meaning": "Tek kutuplu"
+  },
+  {
+    "id": "med_413",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "mononuclearis",
+    "okunus": "mononükleer",
+    "meaning": "Tek çekirdekli"
+  },
+  {
+    "id": "med_414",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "monoplegia",
+    "okunus": "monopleji",
+    "meaning": "Tek kol veya bacağın felç olması"
+  },
+  {
+    "id": "med_415",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "monarthritis",
+    "okunus": "monartrit",
+    "meaning": "Tek eklemin iltihabı"
+  },
+  {
+    "id": "med_416",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bisaxillary",
+    "okunus": "bisaksiller",
+    "meaning": "Her iki koltuk altı ile ilgili"
+  },
+  {
+    "id": "med_417",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "binoculus",
+    "okunus": "binokulus",
+    "meaning": "İki gözlü"
+  },
+  {
+    "id": "med_418",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bicuspis",
+    "okunus": "biküspis",
+    "meaning": "İki kapaklı"
+  },
+  {
+    "id": "med_419",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "diembryonicus",
+    "okunus": "Diembriyonik",
+    "meaning": "Çift embriyolu"
+  },
+  {
+    "id": "med_420",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "dicentricus",
+    "okunus": "disentrikus",
+    "meaning": "İki merkezli"
+  },
+  {
+    "id": "med_421",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "diplogenesis",
+    "okunus": "diplojenez",
+    "meaning": "Bir organın tek yerine çift olması"
+  },
+  {
+    "id": "med_422",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "trimester",
+    "okunus": "trimester",
+    "meaning": "Üç aylık süre"
+  },
+  {
+    "id": "med_423",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "trilobatus",
+    "okunus": "trilob",
+    "meaning": "Üç loblu"
+  },
+  {
+    "id": "med_424",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tricuspis",
+    "okunus": "trikuspid",
+    "meaning": "Üç kapaklı"
+  },
+  {
+    "id": "med_425",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "quadricameratus",
+    "okunus": "quadrikameratus",
+    "meaning": "Dört odaklı"
+  },
+  {
+    "id": "med_426",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "quadriceps",
+    "okunus": "Kuadriseps",
+    "meaning": "Dört başlı"
+  },
+  {
+    "id": "med_427",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "quadratus",
+    "okunus": "quadratus",
+    "meaning": "Dörtgen"
+  },
+  {
+    "id": "med_428",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "antitoxic",
+    "okunus": "antitoksik",
+    "meaning": "Toksin giderici"
+  },
+  {
+    "id": "med_429",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "antiemetic",
+    "okunus": "antiemetik",
+    "meaning": "Kusmaya karşı"
+  },
+  {
+    "id": "med_430",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "regeneratio",
+    "okunus": "rejenerasyon",
+    "meaning": "Onarma"
+  },
+  {
+    "id": "med_431",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "reabsorption",
+    "okunus": "reabsorpsiyon",
+    "meaning": "Yeniden emilme"
+  },
+  {
+    "id": "med_432",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "reanimatio",
+    "okunus": "reanimasyon",
+    "meaning": "Canlandırma"
+  },
+  {
+    "id": "med_433",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "transcutaneus",
+    "okunus": "transkutanöz",
+    "meaning": "Deri içinden"
+  },
+  {
+    "id": "med_434",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "transduodenal",
+    "okunus": "transduodenal",
+    "meaning": "Onikiparmak bağırsağı üzerinden"
+  },
+  {
+    "id": "med_435",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "isothermal",
+    "okunus": "izotermal",
+    "meaning": "Sıcaklık derecesi değişmeyen"
+  },
+  {
+    "id": "med_436",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "isogenesis",
+    "okunus": "izogenez",
+    "meaning": "Gelişimde benzerlik"
+  },
+  {
+    "id": "med_437",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "isocellular",
+    "okunus": "izoselüler",
+    "meaning": "Aynı hücrelerden oluşan"
+  },
+  {
+    "id": "med_438",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "telephase",
+    "okunus": "telofaz",
+    "meaning": "Mitozun son evresi"
+  },
+  {
+    "id": "med_439",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "telognosis",
+    "okunus": "telognozis",
+    "meaning": "Hastalığa uzaktan tanı koyma"
+  },
+  {
+    "id": "med_440",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "teleceptor",
+    "okunus": "teleseptör",
+    "meaning": "Uzaktan gelen uyartıları alan (göz, kulak)"
+  },
+  {
+    "id": "med_441",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pseudopregnancy (psödopregnansi)",
+    "okunus": "psödopregnansi",
+    "meaning": "Yalancı gebelik"
+  },
+  {
+    "id": "med_442",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pseudounipolaris",
+    "okunus": "psödounipolar",
+    "meaning": "Yalancı tek kutuplu"
+  },
+  {
+    "id": "med_443",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pseudoglanduralis",
+    "okunus": "psödoglandural",
+    "meaning": "Salgı bezi görünümünde"
+  },
+  {
+    "id": "med_444",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "autophagy",
+    "okunus": "otofaji",
+    "meaning": "Kendi kendini yeme"
+  },
+  {
+    "id": "med_445",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "autonomy",
+    "okunus": "otonomi",
+    "meaning": "Kendi kendine çalışan"
+  },
+  {
+    "id": "med_446",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "canaliculus",
+    "okunus": "kanalikulus",
+    "meaning": "Küçük kanal"
+  },
+  {
+    "id": "med_447",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lobulus",
+    "okunus": "lobulus",
+    "meaning": "Lobcuk"
+  },
+  {
+    "id": "med_448",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "glomerulus",
+    "okunus": "glomerulus",
+    "meaning": "Küçük yumak"
+  },
+  {
+    "id": "med_449",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "venula",
+    "okunus": "venul",
+    "meaning": "Küçük toplardamar"
+  },
+  {
+    "id": "med_450",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ossiculum",
+    "okunus": "ossikulum",
+    "meaning": "Kemikçik"
+  },
+  {
+    "id": "med_451",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "septulum",
+    "okunus": "septulum",
+    "meaning": "Bölmecik"
+  },
+  {
+    "id": "med_452",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "rubella",
+    "okunus": "rubella",
+    "meaning": "Kızamıkçık"
+  },
+  {
+    "id": "med_453",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "columella",
+    "okunus": "kolumella",
+    "meaning": "Sütuncuk"
+  },
+  {
+    "id": "med_454",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cerebellum",
+    "okunus": "serebellum",
+    "meaning": "Beyincik"
+  },
+  {
+    "id": "med_455",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "organellum",
+    "okunus": "organellum",
+    "meaning": "Küçük organ"
+  },
+  {
+    "id": "med_456",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "fibrilla",
+    "okunus": "fibrilla",
+    "meaning": "İplikcik"
+  },
+  {
+    "id": "med_457",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tonsilla",
+    "okunus": "Tonsilla",
+    "meaning": "Bademcik (boğazın iki yanında bulunan lenfoid doku kitlesi)"
+  },
+  {
+    "id": "med_458",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "alveolus",
+    "okunus": "alveolus",
+    "meaning": "Hava kesesi"
+  },
+  {
+    "id": "med_459",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nucleolus",
+    "okunus": "nukleolus",
+    "meaning": "Çekirdekçik"
+  },
+  {
+    "id": "med_460",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "vacuola",
+    "okunus": "vakuol",
+    "meaning": "Küçük boşluk"
+  },
+  {
+    "id": "med_461",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "dermatic",
+    "okunus": "dermatik",
+    "meaning": "Deri ile ilgili"
+  },
+  {
+    "id": "med_462",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gastric",
+    "okunus": "gastrik",
+    "meaning": "Mideye ait"
+  },
+  {
+    "id": "med_463",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "prostatic",
+    "okunus": "prostatik",
+    "meaning": "Prostat bezine ait"
+  },
+  {
+    "id": "med_464",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cephalicus",
+    "okunus": "sefalikus",
+    "meaning": "Başla ilgili"
+  },
+  {
+    "id": "med_465",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepaticus",
+    "okunus": "hepatikus",
+    "meaning": "Karaciğerle ilgili"
+  },
+  {
+    "id": "med_466",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gastricus",
+    "okunus": "gastrikus",
+    "meaning": "Mideyle ilgili"
+  },
+  {
+    "id": "med_467",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "entericus",
+    "okunus": "enterikus",
+    "meaning": "Bağırsağa ait"
+  },
+  {
+    "id": "med_468",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cardiac",
+    "okunus": "kardyak",
+    "meaning": "Kalple ilgili"
+  },
+  {
+    "id": "med_469",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "celiac",
+    "okunus": "selyak",
+    "meaning": "Karın boşluğuyla ilgili"
+  },
+  {
+    "id": "med_470",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "celiacus",
+    "okunus": "sölyakus",
+    "meaning": "Karın boşluğuyla ilgili"
+  },
+  {
+    "id": "med_471",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cardiacus",
+    "okunus": "kardyakus",
+    "meaning": "Kalple ilgili"
+  },
+  {
+    "id": "med_472",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "iliacus",
+    "okunus": "ilyakus",
+    "meaning": "Kalça ve böğüre ait"
+  },
+  {
+    "id": "med_473",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "buccal",
+    "okunus": "bukkal",
+    "meaning": "Yanakla ilgili"
+  },
+  {
+    "id": "med_474",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "jejunal",
+    "okunus": "yeyunal",
+    "meaning": "Boş bağırsağa ait"
+  },
+  {
+    "id": "med_475",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "vertebral",
+    "okunus": "vertebral",
+    "meaning": "Omura ait"
+  },
+  {
+    "id": "med_476",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "abdominalis",
+    "okunus": "abdominalis",
+    "meaning": "Karınla ilgili"
+  },
+  {
+    "id": "med_477",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "vesicalis",
+    "okunus": "vezikalis",
+    "meaning": "Keseyle ilgili"
+  },
+  {
+    "id": "med_478",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "vertebralis",
+    "okunus": "vertebralis",
+    "meaning": "Omurgaya ait"
+  },
+  {
+    "id": "med_479",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "costalis",
+    "okunus": "kostalis",
+    "meaning": "Kaburgaya ait"
+  },
+  {
+    "id": "med_480",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "renalis",
+    "okunus": "renalis",
+    "meaning": "Böbrekle ilgili"
+  },
+  {
+    "id": "med_481",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "alveolaris",
+    "okunus": "alveolaris",
+    "meaning": "Alveola ait"
+  },
+  {
+    "id": "med_482",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "submandibularis",
+    "okunus": "submandibularis",
+    "meaning": "Alt çene kemiğinin altıyla ilgili"
+  },
+  {
+    "id": "med_483",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "auditorius",
+    "okunus": "avditoryus",
+    "meaning": "İşitmeyle ilgili"
+  },
+  {
+    "id": "med_484",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "respiratorius",
+    "okunus": "respiratoryus",
+    "meaning": "Solunumla ilgili, solunuma yardımcı"
+  },
+  {
+    "id": "med_485",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cartilagineus",
+    "okunus": "kartilaginöz",
+    "meaning": "Kıkırdaksı"
+  },
+  {
+    "id": "med_486",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "sigmoideus",
+    "okunus": "sigmodöz",
+    "meaning": "‘S’ harfi biçiminde"
+  },
+  {
+    "id": "med_487",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "osseus",
+    "okunus": "ossöz",
+    "meaning": "Kemiksi"
+  },
+  {
+    "id": "med_488",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lipoid",
+    "okunus": "lipoid",
+    "meaning": "Yağa benzer"
+  },
+  {
+    "id": "med_489",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pterygoideus",
+    "okunus": "pterigoidöz",
+    "meaning": "Kanat benzeri"
+  },
+  {
+    "id": "med_490",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "dermoideus",
+    "okunus": "dermoidöz",
+    "meaning": "Derimsi"
+  },
+  {
+    "id": "med_491",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "conoideus",
+    "okunus": "konoidöz",
+    "meaning": "Koni biçiminde"
+  },
+  {
+    "id": "med_492",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bulbiformis",
+    "okunus": "bulbiformis",
+    "meaning": "Soğan biçiminde"
+  },
+  {
+    "id": "med_493",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "vermiformis",
+    "okunus": "vermiformis",
+    "meaning": "Solucan biçiminde"
+  },
+  {
+    "id": "med_494",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "piriformis",
+    "okunus": "piriformis",
+    "meaning": "Armut biçiminde"
+  },
+  {
+    "id": "med_495",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "reniformis",
+    "okunus": "reniformis",
+    "meaning": "Böbrek biçiminde"
+  },
+  {
+    "id": "med_496",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "dendriticus",
+    "okunus": "dentritikus",
+    "meaning": "Ağaç benzeri"
+  },
+  {
+    "id": "med_497",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "plasmaticus",
+    "okunus": "plazmatikus",
+    "meaning": "Plazma gibi"
+  },
+  {
+    "id": "med_498",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nephrogen",
+    "okunus": "nefrojen",
+    "meaning": "Kaynağını böbrekten alan"
+  },
+  {
+    "id": "med_499",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepatogenic",
+    "okunus": "hepatojenik",
+    "meaning": "Karaciğerden gelişen"
+  },
+  {
+    "id": "med_500",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cytogenic",
+    "okunus": "sitojenik",
+    "meaning": "Hücre oluşturan"
+  },
+  {
+    "id": "med_501",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "adenogenesis",
+    "okunus": "adenöjenez",
+    "meaning": "Salgı bezi oluşması"
+  },
+  {
+    "id": "med_502",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lithogenesis",
+    "okunus": "litojenez",
+    "meaning": "Taş oluşumu"
+  },
+  {
+    "id": "med_503",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "osteogenesis",
+    "okunus": "osteojenez",
+    "meaning": "Kemik oluşumu"
+  },
+  {
+    "id": "med_504",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "mucigenus",
+    "okunus": "musijenus",
+    "meaning": "Mukus üreten"
+  },
+  {
+    "id": "med_505",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "zymogenus",
+    "okunus": "zimojenus",
+    "meaning": "Proenzim üreten"
+  },
+  {
+    "id": "med_506",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cytogenous",
+    "okunus": "sitojenus",
+    "meaning": "Hücre oluşturan"
+  },
+  {
+    "id": "med_507",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "galactopoiesis",
+    "okunus": "galaktopoyezis",
+    "meaning": "Sütün oluşması"
+  },
+  {
+    "id": "med_508",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "erythropoiesis",
+    "okunus": "eritropoyezis",
+    "meaning": "Alyuvarların oluşması"
+  },
+  {
+    "id": "med_509",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hemocytopoiesis",
+    "okunus": "hemositopoyezis",
+    "meaning": "Kan hücrelerinin oluşması"
+  },
+  {
+    "id": "med_510",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "micrometer",
+    "okunus": "mikrometre",
+    "meaning": "Küçük cisimleri ölçen alet"
+  },
+  {
+    "id": "med_511",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "micrograph",
+    "okunus": "mikrograf",
+    "meaning": "Küçük hareketleri kaydeder"
+  },
+  {
+    "id": "med_512",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "electrocardiograph",
+    "okunus": "elektrokardyograf",
+    "meaning": "Kalp hareketlerini kaydedici alet"
+  },
+  {
+    "id": "med_513",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "electrocardiography",
+    "okunus": "elektrokardyografi",
+    "meaning": "Kalp kasının hareketlerinin kaydedilmesi"
+  },
+  {
+    "id": "med_514",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "spirography",
+    "okunus": "spirografi",
+    "meaning": "Solunum hareketlerinin kaydedilmesi"
+  },
+  {
+    "id": "med_515",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lienography",
+    "okunus": "lyenografi",
+    "meaning": "Dalak filminin X ışınlarıyla alınması"
+  },
+  {
+    "id": "med_516",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pyelography",
+    "okunus": "pyelografi",
+    "meaning": "Böbrek ve idrar torbalarının filminin alınması"
+  },
+  {
+    "id": "med_517",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "electrocardiogram",
+    "okunus": "elektrokardiyogram",
+    "meaning": "Kalbin elektriksel hareketlerinin kaydedildiği kağıt"
+  },
+  {
+    "id": "med_518",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "spirogram",
+    "okunus": "spirogram",
+    "meaning": "Solunum hareketlerinin dökümü"
+  },
+  {
+    "id": "med_519",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hemogram",
+    "okunus": "hemogram",
+    "meaning": "Kanı oluşturan maddeleri gösteren cetvel"
+  },
+  {
+    "id": "med_520",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepatogram",
+    "okunus": "hepatogram",
+    "meaning": "Karaciğer filmi"
+  },
+  {
+    "id": "med_521",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pharyngoscope",
+    "okunus": "faringoskop",
+    "meaning": "Yutağı incelemede kullanılan alet"
+  },
+  {
+    "id": "med_522",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gastroscopy",
+    "okunus": "gastroskopi",
+    "meaning": "Mideyi inceleme"
+  },
+  {
+    "id": "med_523",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "endoscopy",
+    "okunus": "endoskopi",
+    "meaning": "Vücut içini inceleme"
+  },
+  {
+    "id": "med_524",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pharyngoscopy",
+    "okunus": "faringoskopi",
+    "meaning": "Yutağın incelenmesi"
+  },
+  {
+    "id": "med_525",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "myotome",
+    "okunus": "miotom",
+    "meaning": "Kas kesme aleti"
+  },
+  {
+    "id": "med_526",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "osteotome",
+    "okunus": "osteotom",
+    "meaning": "Kemik kesme aleti"
+  },
+  {
+    "id": "med_527",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "phlebotome",
+    "okunus": "flebotom",
+    "meaning": "Toplar damar açmada kullanılan bıçak"
+  },
+  {
+    "id": "med_528",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nephrotomy",
+    "okunus": "nefrotomi",
+    "meaning": "Böbreğin açılması"
+  },
+  {
+    "id": "med_529",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cystotomy",
+    "okunus": "sistotomi",
+    "meaning": "İdrar kesesinin açılması"
+  },
+  {
+    "id": "med_530",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "enterotomy",
+    "okunus": "enterotomi",
+    "meaning": "Kesit yaparak bağırsağı açma"
+  },
+  {
+    "id": "med_531",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "colostomy",
+    "okunus": "kolostomi",
+    "meaning": "Dışkıyı almak için kolonu delme"
+  },
+  {
+    "id": "med_532",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gastrojejunostomy",
+    "okunus": "gastroyeyunostomi",
+    "meaning": "Mide ile jejunumu birleştirme"
+  },
+  {
+    "id": "med_533",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tracheostomy",
+    "okunus": "trakeostomi",
+    "meaning": "Nefes borusunu delme"
+  },
+  {
+    "id": "med_534",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "neuropathy",
+    "okunus": "nöropati",
+    "meaning": "Sinirsel hastalık"
+  },
+  {
+    "id": "med_535",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nephropathy",
+    "okunus": "nefropati",
+    "meaning": "Böbrek hastalığı"
+  },
+  {
+    "id": "med_536",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hormonotherapy",
+    "okunus": "hormonoterapi",
+    "meaning": "Hormon tedavisi"
+  },
+  {
+    "id": "med_537",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hydrotherapy",
+    "okunus": "hidroterapi",
+    "meaning": "Su kürü veya su ile tedavi"
+  },
+  {
+    "id": "med_538",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "chemotherapy",
+    "okunus": "kemoterapi",
+    "meaning": "Kanser ve enfeksiyon hastalıklarında kimyasal ilaçlarla tedavi"
+  },
+  {
+    "id": "med_539",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "aphagia",
+    "okunus": "afaji",
+    "meaning": "Yutamamazlık"
+  },
+  {
+    "id": "med_540",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "geophagy",
+    "okunus": "jeofaji",
+    "meaning": "Toprak yeme alışkanlığı"
+  },
+  {
+    "id": "med_541",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "leucocytosis",
+    "okunus": "lökositoz",
+    "meaning": "Akyuvar sayısının artması"
+  },
+  {
+    "id": "med_542",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "toxicosis",
+    "okunus": "toksikoz",
+    "meaning": "Zehirlenme"
+  },
+  {
+    "id": "med_543",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "panhidrosis",
+    "okunus": "panhidrozis",
+    "meaning": "Vücudun komple terlemesi"
+  },
+  {
+    "id": "med_544",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "leucopenia",
+    "okunus": "lökopeni",
+    "meaning": "Akyuvar sayısının azlığı"
+  },
+  {
+    "id": "med_545",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "thrombocytopenia",
+    "okunus": "Trombositopeni",
+    "meaning": "Kanda trombosit (kan pulcuğu) sayısının normalin altına düşmesi ve kanama eğilimi"
+  },
+  {
+    "id": "med_546",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "neutropenia",
+    "okunus": "nötropeni",
+    "meaning": "Kanda nötrofil azlığı"
+  },
+  {
+    "id": "med_547",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "dyspnea",
+    "okunus": "dispne",
+    "meaning": "Nefes darlığı"
+  },
+  {
+    "id": "med_548",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lithiasis",
+    "okunus": "lityazis",
+    "meaning": "Taş oluşması"
+  },
+  {
+    "id": "med_549",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "megalosplenia",
+    "okunus": "megalospleni",
+    "meaning": "Dalak büyümesi"
+  },
+  {
+    "id": "med_550",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hyperdactylia",
+    "okunus": "hiperdaktili",
+    "meaning": "Fazla parmaklılık"
+  },
+  {
+    "id": "med_551",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "glicosuria",
+    "okunus": "glukozuri",
+    "meaning": "İdrarda şeker fazlalığı"
+  },
+  {
+    "id": "med_552",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gastrorrhagia",
+    "okunus": "gastroraji",
+    "meaning": "Mide kanaması"
+  },
+  {
+    "id": "med_553",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hypoxemia",
+    "okunus": "hipoksemi",
+    "meaning": "Kanda oksijen azlığı"
+  },
+  {
+    "id": "med_554",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "glycosemia",
+    "okunus": "glikozemi",
+    "meaning": "Kanda glikoz artışı"
+  },
+  {
+    "id": "med_555",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hyperlipemia",
+    "okunus": "hiperlipemi",
+    "meaning": "Kanda aşırı yağ"
+  },
+  {
+    "id": "med_556",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hyperemia",
+    "okunus": "hiperemi",
+    "meaning": "Fazla kanama"
+  },
+  {
+    "id": "med_557",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cytolysis",
+    "okunus": "sitoliz",
+    "meaning": "Hücrenin erimesi"
+  },
+  {
+    "id": "med_558",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hemolysis",
+    "okunus": "Hemoliz",
+    "meaning": "Eritrositlerin (alyuvarların) hücre zarının parçalanması ve hemoglobinin serbest kalması"
+  },
+  {
+    "id": "med_559",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "arthrolysis",
+    "okunus": "Artroliz",
+    "meaning": "Eklem içi yapışıklıkların cerrahi olarak ayrılarak ekleme hareket yeteneğinin yeniden kazandırılması"
+  },
+  {
+    "id": "med_560",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bronchiectasia",
+    "okunus": "bronşektazi",
+    "meaning": "Bronşların genişlemesi"
+  },
+  {
+    "id": "med_561",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "enterectasis",
+    "okunus": "enterektazi",
+    "meaning": "Bağırsakların genişlemesi"
+  },
+  {
+    "id": "med_562",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ateleectasis",
+    "okunus": "atelektazi",
+    "meaning": "Alveollerin genişlemesi"
+  },
+  {
+    "id": "med_563",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gastrorrhexis",
+    "okunus": "gastroreksis",
+    "meaning": "Mide duvarının yırtılması"
+  },
+  {
+    "id": "med_564",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hysterorrhexis",
+    "okunus": "histeroreksis",
+    "meaning": "Uterusun yırtılması"
+  },
+  {
+    "id": "med_565",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gastrorrhaphy",
+    "okunus": "gastrorafi",
+    "meaning": "Mide duvarının dikilmesi"
+  },
+  {
+    "id": "med_566",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepatorrhaphy",
+    "okunus": "hepatorafi",
+    "meaning": "Karaciğerin dikilmesi"
+  },
+  {
+    "id": "med_567",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tonsilitis",
+    "okunus": "tonsilit",
+    "meaning": "Bademcik iltihabı"
+  },
+  {
+    "id": "med_568",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "sinusitis",
+    "okunus": "sinüzit",
+    "meaning": "Kemikteki boşlukların iltihabı"
+  },
+  {
+    "id": "med_569",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "splenoma",
+    "okunus": "splenoma",
+    "meaning": "Dalak tümörü"
+  },
+  {
+    "id": "med_570",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepatoma",
+    "okunus": "hepatoma",
+    "meaning": "Karaciğer tümörü"
+  },
+  {
+    "id": "med_571",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "adenoma",
+    "okunus": "adenoma",
+    "meaning": "Salgı bezi tümörü"
+  },
+  {
+    "id": "med_572",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "acroparalysis",
+    "okunus": "akroparalizi",
+    "meaning": "Kol ve bacak felci"
+  },
+  {
+    "id": "med_573",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pharyngoparalysis",
+    "okunus": "faringoparalizi",
+    "meaning": "Boğaz kaslarında felç"
+  },
+  {
+    "id": "med_574",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "quadriplegia",
+    "okunus": "kuadripleji",
+    "meaning": "Dört ekstremitede felç"
+  },
+  {
+    "id": "med_575",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pharyngoplegia",
+    "okunus": "farigopleji",
+    "meaning": "Boğaz kaslarında felç"
+  },
+  {
+    "id": "med_576",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lactifer",
+    "okunus": "laktifer",
+    "meaning": "Süt taşıyan"
+  },
+  {
+    "id": "med_577",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "sudorifer",
+    "okunus": "sudorifer",
+    "meaning": "Ter taşıyan"
+  },
+  {
+    "id": "med_578",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "seminifer",
+    "okunus": "seminifer",
+    "meaning": "Sperm taşıyan"
+  },
+  {
+    "id": "med_579",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "urinifer",
+    "okunus": "urinifer",
+    "meaning": "İdrar taşıyan"
+  },
+  {
+    "id": "med_580",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "striatus",
+    "okunus": "stryatus",
+    "meaning": "Çizgili"
+  },
+  {
+    "id": "med_581",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bifurcatus",
+    "okunus": "bifurkatus",
+    "meaning": "Çatallı"
+  },
+  {
+    "id": "med_582",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hamatus",
+    "okunus": "hamatus",
+    "meaning": "Kancalı"
+  },
+  {
+    "id": "med_583",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepatocyte",
+    "okunus": "hepatosit",
+    "meaning": "Karaciğer hücresi"
+  },
+  {
+    "id": "med_584",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "erythrocytus",
+    "okunus": "Eritrosit",
+    "meaning": "Oksijen ve karbondioksit taşıyan çekirdeksiz kırmızı kan hücresi, alyuvar"
+  },
+  {
+    "id": "med_585",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "myocytus",
+    "okunus": "Miyosit",
+    "meaning": "Kas dokusunu oluşturan özelleşmiş kas lifi hücresi"
+  },
+  {
+    "id": "med_586",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "erythroblast",
+    "okunus": "eritroblast",
+    "meaning": "Olgunlaşmamış alyuvar"
+  },
+  {
+    "id": "med_587",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "osteoblast",
+    "okunus": "osteoblast",
+    "meaning": "Kemik yapan hücre"
+  },
+  {
+    "id": "med_588",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "lymphoblast",
+    "okunus": "lenfoblast",
+    "meaning": "Olgunlaşmamış lenfosit"
+  },
+  {
+    "id": "med_589",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "biology",
+    "okunus": "biyoloji",
+    "meaning": "Canlı bilimi"
+  },
+  {
+    "id": "med_590",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "histologia",
+    "okunus": "histoloji",
+    "meaning": "Doku bilimi"
+  },
+  {
+    "id": "med_591",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tunica mucosa",
+    "okunus": "tunica mucosa",
+    "meaning": "Mukoza tabakası"
+  },
+  {
+    "id": "med_592",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "glandula duodenalis",
+    "okunus": "glandula duodenalis",
+    "meaning": "Onikiparmak bağırsağı bezi"
+  },
+  {
+    "id": "med_593",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "musculus biceps brachi",
+    "okunus": "musculus biceps brachi",
+    "meaning": "Kolun iki başı kası"
+  },
+  {
+    "id": "med_594",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "adem elması",
+    "okunus": "Prominentia laryngea (prominentiya laringea)",
+    "meaning": "Gırtlak çıkıntısı"
+  },
+  {
+    "id": "med_595",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bowman kapsülü",
+    "okunus": "Capsula glomerularis (kapsula glomerularis)",
+    "meaning": "Glomerül kapsülü"
+  },
+  {
+    "id": "med_596",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "fallopian tüpü",
+    "okunus": "Tuba uterina (tuba uterina)",
+    "meaning": "Rahim borusu"
+  },
+  {
+    "id": "med_597",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "havers kanalı",
+    "okunus": "Canalis centralis (kanalis sentralis)",
+    "meaning": "Merkezi kanal"
+  },
+  {
+    "id": "med_598",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "henle kulpu",
+    "okunus": "Ansa nephroni",
+    "meaning": "Nefron kulpu"
+  },
+  {
+    "id": "med_599",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "malpighi piramidleri",
+    "okunus": "Pyramides renalis",
+    "meaning": "Böbrek piramitleri"
+  },
+  {
+    "id": "med_600",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "rolando oluğu",
+    "okunus": "Sulcus centralis",
+    "meaning": "Merkezi oluk"
+  },
+  {
+    "id": "med_601",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "wirsung kanalı",
+    "okunus": "Ductus pancreaticus",
+    "meaning": "Pankreas kanalı"
+  },
+  {
+    "id": "med_602",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "littre bezleri",
+    "okunus": "Glandulae urethrales",
+    "meaning": "Üretra bezleri"
+  },
+  {
+    "id": "med_603",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Plummer-Vinson Sendromu",
+    "okunus": "Plummer-Vinson Sendromu",
+    "meaning": "Demir eksikliğine bağlı yutma güçlüğü"
+  },
+  {
+    "id": "med_604",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Wilms Tümörü",
+    "okunus": "Wilms Tümörü",
+    "meaning": "Kötü huylu bir böbrek tümörü"
+  },
+  {
+    "id": "med_605",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Crohn Hastalığı",
+    "okunus": "Crohn Hastalığı",
+    "meaning": "Bağırsaklarda oluşan iltihabi bir hastalık"
+  },
+  {
+    "id": "med_606",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Behçet Hastalığı",
+    "okunus": "Behçet Hastalığı",
+    "meaning": "Ağız, genital bölge ve gözde belirtileri olan otoimmun bir hastalıktır"
+  },
+  {
+    "id": "med_607",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ACTH",
+    "okunus": "Adrenokortikotrofik Hormon",
+    "meaning": "Adrenokortikotrofik hormon"
+  },
+  {
+    "id": "med_608",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ADH",
+    "okunus": "Antidiüretik Hormon",
+    "meaning": "Antidiüretik hormon"
+  },
+  {
+    "id": "med_609",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ADP",
+    "okunus": "Adenozindifosfat",
+    "meaning": "Adenozin difosfat"
+  },
+  {
+    "id": "med_610",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "AIDS",
+    "okunus": "Acquired Immun Deficiency Syndrome",
+    "meaning": "Edinilmiş Bağışıklık Eksikliği Sendromu"
+  },
+  {
+    "id": "med_611",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "BMR",
+    "okunus": "Basal Metabolic Rate",
+    "meaning": "Bazal Metabolizma Hızı"
+  },
+  {
+    "id": "med_612",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "BT",
+    "okunus": "Bilgisayarlı Tomografi",
+    "meaning": "Bilgisayarlı tomografi görüntüleme yöntemi"
+  },
+  {
+    "id": "med_613",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "CVS",
+    "okunus": "Cardiovascular System",
+    "meaning": "Kardiyovasküler sistem, kalp-damar sistemi"
+  },
+  {
+    "id": "med_614",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "EEG",
+    "okunus": "Electroencephalogram",
+    "meaning": "Elektroensefalogram"
+  },
+  {
+    "id": "med_615",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "EKG",
+    "okunus": "Elektrokardiyogram",
+    "meaning": "Kalbin elektriksel aktivitesinin kaydı"
+  },
+  {
+    "id": "med_616",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ER",
+    "okunus": "Endoplazmik Retikulum",
+    "meaning": "Endoplazmik retikulum"
+  },
+  {
+    "id": "med_617",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "LH",
+    "okunus": "Lüteinleştirici Hormon",
+    "meaning": "Lüteinleştirici hormon"
+  },
+  {
+    "id": "med_618",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "MR",
+    "okunus": "Magnetic Resonance",
+    "meaning": "Manyetik Rezonans"
+  },
+  {
+    "id": "med_619",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Vertebra cervicalis",
+    "okunus": "C",
+    "meaning": "Boyun omuru"
+  },
+  {
+    "id": "med_620",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Cancer",
+    "okunus": "Ca",
+    "meaning": "Kanser"
+  },
+  {
+    "id": "med_621",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "dexter",
+    "okunus": "Dekster",
+    "meaning": "Sağ, sağ tarafta bulunan"
+  },
+  {
+    "id": "med_622",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Distalis",
+    "okunus": "Dist.",
+    "meaning": "Uzak, uç kısım"
+  },
+  {
+    "id": "med_623",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Facies",
+    "okunus": "Fac.",
+    "meaning": "Yüz, yüzey"
+  },
+  {
+    "id": "med_624",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Glandula",
+    "okunus": "Gl., gl.",
+    "meaning": "Salgı bezi"
+  },
+  {
+    "id": "med_625",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Glandulae",
+    "okunus": "Gll., gll.",
+    "meaning": "Salgı bezleri"
+  },
+  {
+    "id": "med_626",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Hematocrit",
+    "okunus": "Hct.",
+    "meaning": "Hematokrit"
+  },
+  {
+    "id": "med_627",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Hemoglobin",
+    "okunus": "Hb",
+    "meaning": "Hemoglobin"
+  },
+  {
+    "id": "med_628",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "İntramüsküler",
+    "okunus": "İm",
+    "meaning": "Kas içi"
+  },
+  {
+    "id": "med_629",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "İntravenöz",
+    "okunus": "İv",
+    "meaning": "Damar içi"
+  },
+  {
+    "id": "med_630",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "inferior",
+    "okunus": "İnferior",
+    "meaning": "Alt, aşağıda bulunan"
+  },
+  {
+    "id": "med_631",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Interna",
+    "okunus": "Int.",
+    "meaning": "İç"
+  },
+  {
+    "id": "med_632",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Kilokalori",
+    "okunus": "Kcal",
+    "meaning": "Kilokalori"
+  },
+  {
+    "id": "med_633",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Vertebra lumbalis",
+    "okunus": "L",
+    "meaning": "Bel omuru"
+  },
+  {
+    "id": "med_634",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ligamentum",
+    "okunus": "Ligamentum",
+    "meaning": "Kemikleri birbirine bağlayan sağlam fibröz bağ dokusu bandı, eklem bağı"
+  },
+  {
+    "id": "med_635",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Lümen",
+    "okunus": "Lm",
+    "meaning": "İç boşluk"
+  },
+  {
+    "id": "med_636",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Musculi",
+    "okunus": "Mm., mm.",
+    "meaning": "Kaslar"
+  },
+  {
+    "id": "med_637",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Nervi",
+    "okunus": "Nn., nn.",
+    "meaning": "Sinirler"
+  },
+  {
+    "id": "med_638",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Nervus",
+    "okunus": "N., n.",
+    "meaning": "Sinir"
+  },
+  {
+    "id": "med_639",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Plexus",
+    "okunus": "Pl.",
+    "meaning": "Ağ, örgü (sinir veya damar ağı)"
+  },
+  {
+    "id": "med_640",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "posterior",
+    "okunus": "Posterior",
+    "meaning": "Arka, arkada bulunan"
+  },
+  {
+    "id": "med_641",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Regio",
+    "okunus": "R.",
+    "meaning": "Bölge"
+  },
+  {
+    "id": "med_642",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Tuberculosis (Tüberküloz)",
+    "okunus": "Tüberküloz",
+    "meaning": "Mycobacterium tuberculosis basilinin neden olduğu bulaşıcı enfeksiyon hastalığı (Verem)"
+  },
+  {
+    "id": "med_643",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Tele",
+    "okunus": "Tele",
+    "meaning": "Kalp görüntüleme grafisi"
+  },
+  {
+    "id": "med_644",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Vertebra sacralis",
+    "okunus": "S",
+    "meaning": "Kuyruk sokumu omuru"
+  },
+  {
+    "id": "med_645",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "vertebra thoracica",
+    "okunus": "Vertebra torasika",
+    "meaning": "Göğüs omuru (12 adet olan torakal omurların her biri)"
+  },
+  {
+    "id": "med_646",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "sinister",
+    "okunus": "Sinister",
+    "meaning": "Sol, sol tarafta bulunan"
+  },
+  {
+    "id": "med_647",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Vena",
+    "okunus": "V., v.",
+    "meaning": "Toplardamar"
+  },
+  {
+    "id": "med_648",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Stratum",
+    "okunus": "Str.",
+    "meaning": "Katman"
+  },
+  {
+    "id": "med_649",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "superior",
+    "okunus": "Süperior",
+    "meaning": "Üst, yukarıda bulunan"
+  },
+  {
+    "id": "med_650",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Venae",
+    "okunus": "Vv., vv.",
+    "meaning": "Toplardamarlar"
+  },
+  {
+    "id": "med_651",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Litre (L)",
+    "okunus": "Litre",
+    "meaning": "Hacim ölçü birimi (1 Litre = 1000 mililitre)"
+  },
+  {
+    "id": "med_652",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Desilitre (dl)",
+    "okunus": "Desilitre",
+    "meaning": "Hacim ölçü birimi (1 litrenin onda biri, 100 ml)"
+  },
+  {
+    "id": "med_653",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Mililitre (ml)",
+    "okunus": "Mililitre",
+    "meaning": "Hacim ölçü birimi (1 litrenin binde biri)"
+  },
+  {
+    "id": "med_654",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Gram (g)",
+    "okunus": "Gram",
+    "meaning": "Kütle ölçü birimi (1 kilogramın binde biri)"
+  },
+  {
+    "id": "med_655",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Gram-kalori (g-cal)",
+    "okunus": "Gram kalori",
+    "meaning": "1 gram suyun sıcaklığını 1°C artırmak için gereken enerji birimi"
+  },
+  {
+    "id": "med_656",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Miligram (mg)",
+    "okunus": "Miligram",
+    "meaning": "Kütle ölçü birimi (1 gramın binde biri, 0.001 g)"
+  },
+  {
+    "id": "med_657",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Milimetre (mm)",
+    "okunus": "Milimetre",
+    "meaning": "Uzunluk ölçü birimi (1 metrenin binde biri)"
+  },
+  {
+    "id": "med_658",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Mikrometre (µm)",
+    "okunus": "Mikrometre",
+    "meaning": "Uzunluk ölçü birimi (1 milimetrenin binde biri, mikron)"
+  },
+  {
+    "id": "med_659",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Nanometre (nm)",
+    "okunus": "Nanometre",
+    "meaning": "Uzunluk ölçü birimi (1 milimetrenin milyonda biri)"
+  },
+  {
+    "id": "med_660",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Milimetreküp (mm³)",
+    "okunus": "Milimetreküp",
+    "meaning": "Hacim ölçü birimi (özellikle kan hücre sayımlarında mikrolitreye eşdeğer hacim)"
+  },
+  {
+    "id": "med_661",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Milimol (mmol)",
+    "okunus": "Milimol",
+    "meaning": "Madde miktarı birimi (1 molün binde biri)"
+  },
+  {
+    "id": "med_662",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Mikromol (µmol)",
+    "okunus": "Mikromol",
+    "meaning": "Madde miktarı birimi (1 molün milyonda biri)"
+  },
+  {
+    "id": "med_663",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "mono- / uni-",
+    "okunus": "mono / uni",
+    "meaning": "Bir, tek (1 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_664",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "di- / bi-",
+    "okunus": "di / bi",
+    "meaning": "İki, çift (2 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_665",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tri-",
+    "okunus": "tri",
+    "meaning": "Üç (3 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_666",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tetra- / quadri-",
+    "okunus": "tetra / kvadri",
+    "meaning": "Dört (4 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_667",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "penta-",
+    "okunus": "penta",
+    "meaning": "Beş (5 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_668",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hexa- / hekza-",
+    "okunus": "hekza",
+    "meaning": "Altı (6 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_669",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "hepta-",
+    "okunus": "hepta",
+    "meaning": "Yedi (7 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_670",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "octa- / okta-",
+    "okunus": "okta",
+    "meaning": "Sekiz (8 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_671",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "nona-",
+    "okunus": "nona",
+    "meaning": "Dokuz (9 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_672",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "deca- / deka-",
+    "okunus": "deka",
+    "meaning": "On (10 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_673",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "parasentez",
+    "okunus": "abdominosentez",
+    "meaning": "Karın boşluğunda biriken sıvının boşaltılması"
+  },
+  {
+    "id": "med_674",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "amniyosentez",
+    "okunus": "amniyosentez",
+    "meaning": "Uterusta fetüsün içinde bulunduğu sıvıyı almak için kullanılan cerrahi işlem"
+  },
+  {
+    "id": "med_675",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "biyopsi",
+    "okunus": "biyopsi",
+    "meaning": "Vücuttaki bir organdan doku parçası alınması ve mikroskop altında incelenmesi"
+  },
+  {
+    "id": "med_676",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "endoskopi",
+    "okunus": "endoskopi",
+    "meaning": "İnce tüp şeklindeki bir gerecin doğal bir açıklıktan, cerrahi insizyondan veya karın duvarından sokulması"
+  },
+  {
+    "id": "med_677",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bronkoskopi",
+    "okunus": "bronkoskopi",
+    "meaning": "Hava yoluna esnek tüp sokularak bronşların içi görülmesi ve biyopsi alınması"
+  },
+  {
+    "id": "med_678",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "gastroskopi",
+    "okunus": "gastroskopi",
+    "meaning": "Midenin içinin görüntülenmesi ve biyopsi alınması için özafagustan endoskop sokularak incelenmesi"
+  },
+  {
+    "id": "med_679",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "kolonoskopi",
+    "okunus": "kolonoskopi",
+    "meaning": "Rektumdan kolona esnek bir tüp sokarak görsel inceleme yapılabilmesi ve biyopsi örneği alınabilmesi"
+  },
+  {
+    "id": "med_680",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "regio capitis",
+    "okunus": "rejyo kapitis",
+    "meaning": "Baş bölgesi"
+  },
+  {
+    "id": "med_681",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "regio facialis",
+    "okunus": "rejyo fasyalis",
+    "meaning": "Yüz bölgesi"
+  },
+  {
+    "id": "med_682",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "regio pectoralis",
+    "okunus": "rejyo pektoralis",
+    "meaning": "Pektoral bölge, göğüs ön yüz bölgesi"
+  },
+  {
+    "id": "med_683",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "regio abdominalis",
+    "okunus": "regio abdominalis",
+    "meaning": "Karın bölgesi, karın ön duvar bölgesi"
+  },
+  {
+    "id": "med_684",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "abdomen",
+    "okunus": "abdomen",
+    "meaning": "Karın boşluğu"
+  },
+  {
+    "id": "med_685",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "cubitus",
+    "okunus": "kubitus",
+    "meaning": "Dirsek"
+  },
+  {
+    "id": "med_686",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "olecranon",
+    "okunus": "olekranon",
+    "meaning": "Dirsek"
+  },
+  {
+    "id": "med_687",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "ancon",
+    "okunus": "ankon",
+    "meaning": "Dirsek"
+  },
+  {
+    "id": "med_688",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "manus",
+    "okunus": "manus",
+    "meaning": "El"
+  },
+  {
+    "id": "med_689",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "carpus",
+    "okunus": "Karpus",
+    "meaning": "El bileği (8 adet küçük kemikten oluşan el bilek bölgesi)"
+  },
+  {
+    "id": "med_690",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "crus",
+    "okunus": "Krus",
+    "meaning": "Bacak (diz eklemi ile ayak bileği arasındaki bölge)"
+  },
+  {
+    "id": "med_691",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pes",
+    "okunus": "pes",
+    "meaning": "Ayak"
+  },
+  {
+    "id": "med_692",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pedis",
+    "okunus": "pedis",
+    "meaning": "Ayak"
+  },
+  {
+    "id": "med_693",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "podos",
+    "okunus": "podos",
+    "meaning": "Ayak"
+  },
+  {
+    "id": "med_694",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "tarsus",
+    "okunus": "Tarsus",
+    "meaning": "Ayak bileği (7 adet kemikten oluşan ayak arkası bölgesi)"
+  },
+  {
+    "id": "med_695",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "truncus",
+    "okunus": "trunkus",
+    "meaning": "Gövde"
+  },
+  {
+    "id": "med_696",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "pelvis",
+    "okunus": "Pelvis",
+    "meaning": "İki kalça kemiği ve sakrumun oluşturduğu leğen kemiği çatısı ve boşluğu"
+  },
+  {
+    "id": "med_697",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "membrum superius",
+    "okunus": "membrum superius",
+    "meaning": "Üst taraf"
+  },
+  {
+    "id": "med_698",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "extremitalis superior",
+    "okunus": "ekstremitalis superior",
+    "meaning": "Üst taraf"
+  },
+  {
+    "id": "med_699",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "membrum inferius",
+    "okunus": "membrum inferius",
+    "meaning": "Alt taraf"
+  },
+  {
+    "id": "med_700",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "extremitalis inferior",
+    "okunus": "ekstremitalis inferior",
+    "meaning": "Alt taraf"
+  },
+  {
+    "id": "med_701",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "femur",
+    "okunus": "Femur",
+    "meaning": "Uyluk kemiği (vücudun en uzun, en kalın ve en güçlü kemiği)"
+  },
+  {
+    "id": "med_702",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "omos",
+    "okunus": "omos",
+    "meaning": "Omuz"
+  },
+  {
+    "id": "med_703",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "caudalis",
+    "okunus": "caudalis",
+    "meaning": "Kuyruğa ait, kuyrukla ilgili"
+  },
+  {
+    "id": "med_704",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "apicalis",
+    "okunus": "apicalis",
+    "meaning": "Tepeyle ilgili, tepeye ait"
+  },
+  {
+    "id": "med_705",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "basal",
+    "okunus": "basal",
+    "meaning": "Tabanla ilgili, tabana ait"
+  },
+  {
+    "id": "med_706",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "basilaris",
+    "okunus": "basilaris",
+    "meaning": "Tabanla ilgili, tabana ait"
+  },
+  {
+    "id": "med_707",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "externus",
+    "okunus": "externus",
+    "meaning": "Dış"
+  },
+  {
+    "id": "med_708",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "internus",
+    "okunus": "internus",
+    "meaning": "İç"
+  },
+  {
+    "id": "med_709",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "superficialis",
+    "okunus": "superficialis",
+    "meaning": "Yüzeysel"
+  },
+  {
+    "id": "med_710",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "profundus",
+    "okunus": "profundus",
+    "meaning": "Derin, derinde olan"
+  },
+  {
+    "id": "med_711",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "anterior",
+    "okunus": "anterior",
+    "meaning": "Ön"
+  },
+  {
+    "id": "med_712",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "symptom",
+    "okunus": "semptom",
+    "meaning": "Hastalıkta görülen belirtiler, hastanın kendinde duyduğu ve gözlediği yakınmalar"
+  },
+  {
+    "id": "med_713",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "muayene",
+    "okunus": "muayene",
+    "meaning": "Hastalığın tanısı için yapılan işlemlerin tümü"
+  },
+  {
+    "id": "med_714",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "diagnosis",
+    "okunus": "diyagnoz",
+    "meaning": "Tanı, teşhis"
+  },
+  {
+    "id": "med_715",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "operation",
+    "okunus": "operasyon",
+    "meaning": "Cerrahi işlem, girişim, ameliyat"
+  },
+  {
+    "id": "med_716",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "sciatalgia (şiyatalji)",
+    "okunus": "şiyatalji",
+    "meaning": "Siyatik sinirinin baskı altında kalmasıyla kalçadan bacağa yayılan şiddetli ağrı"
+  },
+  {
+    "id": "med_717",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Metatarsalgia",
+    "okunus": "Metatarsalji",
+    "meaning": "Ayak tarağında hissedilen ağrı"
+  },
+  {
+    "id": "med_718",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Contracture",
+    "okunus": "Kontraktür",
+    "meaning": "Kasın devamlı kasılma halinde olması"
+  },
+  {
+    "id": "med_719",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "amyotrophia (kas atrofisi)",
+    "okunus": "amyotrofi",
+    "meaning": "Kas dokusu kitlesinin küçülmesi ve erimesi"
+  },
+  {
+    "id": "med_720",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Crepitation",
+    "okunus": "Krepitasyon",
+    "meaning": "Kırık kemiğin uçlarının birbirine sürtünmesinden çıkan ses"
+  },
+  {
+    "id": "med_721",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Fracture",
+    "okunus": "Fraktür",
+    "meaning": "Kırık"
+  },
+  {
+    "id": "med_722",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Retracture",
+    "okunus": "Retraktür",
+    "meaning": "Eski bir kırıktan sonra kaynayan kemiğin yeniden kırılması"
+  },
+  {
+    "id": "med_723",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Dislocation",
+    "okunus": "Dislokasyon",
+    "meaning": "Çıkık"
+  },
+  {
+    "id": "med_724",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Myorrhexis",
+    "okunus": "Miyoreksis",
+    "meaning": "Kas yırtılması"
+  },
+  {
+    "id": "med_725",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Hematoma",
+    "okunus": "Hematom",
+    "meaning": "Damarlarda görülen lezyonlar sonucu bir bölgede kan birikmesi"
+  },
+  {
+    "id": "med_726",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Hemarthrosis",
+    "okunus": "Hemartroz",
+    "meaning": "Eklem boşluğunda kanama, eklem boşluğunda kan toplanması"
+  },
+  {
+    "id": "med_727",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Distortion",
+    "okunus": "Distorsiyon",
+    "meaning": "Eklem kapsülü yırtılması / Burkulma, dönme, bükülme"
+  },
+  {
+    "id": "med_728",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Pes Planus",
+    "okunus": "Pes Planus",
+    "meaning": "Doğumsal kökenli düz tabanlılık"
+  },
+  {
+    "id": "med_729",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Pes Valgus",
+    "okunus": "Pes Valgus",
+    "meaning": "Dışa bükük ayak"
+  },
+  {
+    "id": "med_730",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Pes Equinovarus (Pes Ekinovarus)",
+    "okunus": "Pes ekinovarus",
+    "meaning": "Çarpık ayak (ayağın içe ve aşağı dönük olması deformitesi)"
+  },
+  {
+    "id": "med_731",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Pes Cavus",
+    "okunus": "Pes Kavus",
+    "meaning": "Çukur ayak"
+  },
+  {
+    "id": "med_732",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Subluxation",
+    "okunus": "Sublüksasyon",
+    "meaning": "Eklem yüzlerinin birbirinden kısmen uzaklaşması, tam olmayan çıkık"
+  },
+  {
+    "id": "med_733",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Osteosclerosis",
+    "okunus": "Osteosklerozis",
+    "meaning": "Yerel kemik kalınlaşması"
+  },
+  {
+    "id": "med_734",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Osteomalacia",
+    "okunus": "Osteomalasia",
+    "meaning": "Kalsifikasyon yetersizliğine bağlı kemiklerin yumuşaması"
+  },
+  {
+    "id": "med_735",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "calcificatio (kalsifikasyon)",
+    "okunus": "kalsifikasyon",
+    "meaning": "Dokularda kalsiyum tuzlarının birikmesi, kireçlenme"
+  },
+  {
+    "id": "med_736",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Arthrorisis",
+    "okunus": "Artroriz",
+    "meaning": "Cerrahi girişimle eklemin hareket açısının küçültülmesi"
+  },
+  {
+    "id": "med_737",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "bone graft (kemik grefti)",
+    "okunus": "kemik grefti",
+    "meaning": "Kemik dokusu nakli, bir kemiğin başka bir bölgeye cerrahi olarak aktarılması"
+  },
+  {
+    "id": "med_738",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Myorrhaphy",
+    "okunus": "Myorafi",
+    "meaning": "Kasta oluşan yırtığı dikme"
+  },
+  {
+    "id": "med_739",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Tenotomy",
+    "okunus": "Tenotomi",
+    "meaning": "Cerrahi girişimle tendon kesilmesi"
+  },
+  {
+    "id": "med_740",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Tenorrhaphy",
+    "okunus": "Tenorafi",
+    "meaning": "Kesik tendonun dikilmesi"
+  },
+  {
+    "id": "med_741",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Tenolysis",
+    "okunus": "Tenoliz",
+    "meaning": "Tendon yapışıklıklarının cerrahi yolla giderilmesi"
+  },
+  {
+    "id": "med_742",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Arthroscopy",
+    "okunus": "Artroskopi",
+    "meaning": "Eklem içini incelemek için yapılan girişim"
+  },
+  {
+    "id": "med_743",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Effusion",
+    "okunus": "Efüzyon",
+    "meaning": "Vücut boşluklarında veya doku içerisinde sıvı birikmesi"
+  },
+  {
+    "id": "med_744",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Contusion",
+    "okunus": "Kontüzyon",
+    "meaning": "Ezik, çürük, bere"
+  },
+  {
+    "id": "med_745",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Intact",
+    "okunus": "Intact",
+    "meaning": "Sağlam, kusursuz, bozulmamış"
+  },
+  {
+    "id": "med_746",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Debridement",
+    "okunus": "Debridman",
+    "meaning": "Yara yüzeyinden ölü dokuyu kesip çıkarma, ölü dokuyu cerrahi yolla temizleme"
+  },
+  {
+    "id": "med_747",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Elevation",
+    "okunus": "Elevasyon",
+    "meaning": "Bir vücut parçasını yukarıya doğru kaldırma"
+  },
+  {
+    "id": "med_748",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Periosteum",
+    "okunus": "Periost",
+    "meaning": "Kemiklerin dış yüzlerini sıkıca saran ve sıkı bağ dokudan yapılmış zar"
+  },
+  {
+    "id": "med_749",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Endosteum",
+    "okunus": "Endosteum",
+    "meaning": "Kemik içindeki boşluklarda yüzeyi örten bağ dokudan zar"
+  },
+  {
+    "id": "med_750",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Substantia Compacta",
+    "okunus": "Substansya Kompakta",
+    "meaning": "Sıkı (kompakt) olarak adlandırılan kemik yapısı"
+  },
+  {
+    "id": "med_751",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Substantia Spongiosa",
+    "okunus": "Substansyaspongylosa",
+    "meaning": "Spongyos (süngersi) kemik"
+  },
+  {
+    "id": "med_752",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Os Longum",
+    "okunus": "Os Longum",
+    "meaning": "Uzun kemik"
+  },
+  {
+    "id": "med_753",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Os Breve",
+    "okunus": "Os Breve",
+    "meaning": "Kısa kemik"
+  },
+  {
+    "id": "med_754",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Os planum",
+    "okunus": "Os planum",
+    "meaning": "Yassı kemik"
+  },
+  {
+    "id": "med_755",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Os Irregulare",
+    "okunus": "Os İrregülar",
+    "meaning": "Düzensiz kemik"
+  },
+  {
+    "id": "med_756",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Cavitas Medullaris",
+    "okunus": "Kavitas Medullaris",
+    "meaning": "Kemiklerin ortasında bulunan ilik boşluğu"
+  },
+  {
+    "id": "med_757",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Osteoblastocytus",
+    "okunus": "Osteoblast",
+    "meaning": "Kemik yapan hücreler"
+  },
+  {
+    "id": "med_758",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Osteocytus",
+    "okunus": "Osteosit",
+    "meaning": "Kemik hücresi"
+  },
+  {
+    "id": "med_759",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Osteoclastocytus",
+    "okunus": "Osteoklast",
+    "meaning": "Kemik yiyen hücre"
+  },
+  {
+    "id": "med_760",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Os Occipitale",
+    "okunus": "Os Oksipital",
+    "meaning": "Art kafa kemiği"
+  },
+  {
+    "id": "med_761",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Os Frontale",
+    "okunus": "Os Frontal",
+    "meaning": "Alın kemiği"
+  },
+  {
+    "id": "med_762",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Os Temporale",
+    "okunus": "Os Temporal",
+    "meaning": "Şakak kemiği"
+  },
+  {
+    "id": "med_763",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Os Mandibula",
+    "okunus": "Os Mandibula",
+    "meaning": "Alt çene kemiği"
+  },
+  {
+    "id": "med_764",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Calvaria",
+    "okunus": "Kalvarya",
+    "meaning": "Kafa tavanı"
+  },
+  {
+    "id": "med_765",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Os Nasale",
+    "okunus": "Os Nazal",
+    "meaning": "Burun kemiği"
+  },
+  {
+    "id": "med_766",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Orbita",
+    "okunus": "Orbita",
+    "meaning": "Gözlerin bulunduğu boşluk"
+  },
+  {
+    "id": "med_767",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Fonticulus",
+    "okunus": "Fontikulus",
+    "meaning": "Bıngıldak, fontanella"
+  },
+  {
+    "id": "med_768",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Columna Vertebralis",
+    "okunus": "Kolumna Vertebralis",
+    "meaning": "Omurga"
+  },
+  {
+    "id": "med_769",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Cervical Vertebra",
+    "okunus": "Servikal Vertebra",
+    "meaning": "Boyun omuru"
+  },
+  {
+    "id": "med_770",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Lumbal Vertebra",
+    "okunus": "Lumbal Vertebra",
+    "meaning": "Bel omuru"
+  },
+  {
+    "id": "med_771",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Sternum",
+    "okunus": "Sternum",
+    "meaning": "Göğüs kemiği"
+  },
+  {
+    "id": "med_772",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Humerus",
+    "okunus": "Humerus",
+    "meaning": "Kol kemiği"
+  },
+  {
+    "id": "med_773",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Radius",
+    "okunus": "Radius",
+    "meaning": "Ön kolda döner kemik"
+  },
+  {
+    "id": "med_774",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Ulna",
+    "okunus": "Ulna",
+    "meaning": "Ön kolda dirsek kemiği"
+  },
+  {
+    "id": "med_775",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Coxa",
+    "okunus": "Koksa",
+    "meaning": "Kalça"
+  },
+  {
+    "id": "med_776",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Fibula",
+    "okunus": "Fibula",
+    "meaning": "Kamış kemik"
+  },
+  {
+    "id": "med_777",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Tibia",
+    "okunus": "Tibia",
+    "meaning": "Kaval kemiği"
+  },
+  {
+    "id": "med_778",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Talus",
+    "okunus": "Talus",
+    "meaning": "Aşık kemiği"
+  },
+  {
+    "id": "med_779",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Calcaneus",
+    "okunus": "Kalkanöz",
+    "meaning": "Topuk kemiği"
+  },
+  {
+    "id": "med_780",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Metatarsus",
+    "okunus": "Metatarsus",
+    "meaning": "Ayak tarağı kemikleri"
+  },
+  {
+    "id": "med_781",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Pes / Pedis",
+    "okunus": "Pes / Pedis",
+    "meaning": "Ayak"
+  },
+  {
+    "id": "med_782",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Digitus",
+    "okunus": "Dijitus",
+    "meaning": "Parmak"
+  },
+  {
+    "id": "med_783",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Dactylus",
+    "okunus": "Daktilus",
+    "meaning": "Parmak"
+  },
+  {
+    "id": "med_784",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Arthron",
+    "okunus": "Arton",
+    "meaning": "Eklem"
+  },
+  {
+    "id": "med_785",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Arthrologia",
+    "okunus": "Artroloji",
+    "meaning": "Eklem bilimi"
+  },
+  {
+    "id": "med_786",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Gomphosis",
+    "okunus": "Gomfozis",
+    "meaning": "Dişlerle çene kemiklerindeki alveol kemik duvarları arasında meydana gelen eklem"
+  },
+  {
+    "id": "med_787",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Cartilago Articularis",
+    "okunus": "Kartilago Artikularis",
+    "meaning": "Eklem kıkırdağı"
+  },
+  {
+    "id": "med_788",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Capsula Articularis",
+    "okunus": "Kapsula Artikularis",
+    "meaning": "Eklem kapsülü"
+  },
+  {
+    "id": "med_789",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Cavitas Articularis",
+    "okunus": "Kavitas Artikularis",
+    "meaning": "Eklem boşluğu"
+  },
+  {
+    "id": "med_790",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Fascia",
+    "okunus": "Fasya",
+    "meaning": "Kaslar arasında, kasları birbirinden ayıran ince saydam zar"
+  },
+  {
+    "id": "med_791",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Sarcoplasma",
+    "okunus": "Sarkoplazma",
+    "meaning": "Kas hücresi sitoplazması"
+  },
+  {
+    "id": "med_792",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Fibramuscularis",
+    "okunus": "Fibramuskularis",
+    "meaning": "Kas teli"
+  },
+  {
+    "id": "med_793",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Myofibrilla",
+    "okunus": "Miyofibril",
+    "meaning": "Kas hücresi sarkoplazması içinde uzanan ince iplikçikler"
+  },
+  {
+    "id": "med_794",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Periarthritis",
+    "okunus": "Periartrit",
+    "meaning": "Eklem çevresindeki dokuların iltihabı"
+  },
+  {
+    "id": "med_795",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Lordosis",
+    "okunus": "Lordoz",
+    "meaning": "Öne doğru kamburluk"
+  },
+  {
+    "id": "med_796",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Kyphosis",
+    "okunus": "Kifoz",
+    "meaning": "Arkaya doğru kamburluk"
+  },
+  {
+    "id": "med_797",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Juvenile Kyphosis",
+    "okunus": "Juvenil Kifoz",
+    "meaning": "Genç ve adolesan yaşlarda görülen vücut duruş bozukluğu"
+  },
+  {
+    "id": "med_798",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Scoliosis",
+    "okunus": "Skolyoz",
+    "meaning": "Omurganın yanlara doğru çarpıklığı"
+  },
+  {
+    "id": "med_799",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Osteoma",
+    "okunus": "Osteoma",
+    "meaning": "Kemik doku tümörü"
+  },
+  {
+    "id": "med_800",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Chondroma",
+    "okunus": "Kondroma",
+    "meaning": "Kemiğin, kıkırdak hücrelerinden oluşan iyicil tümörü"
+  },
+  {
+    "id": "med_801",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Osteogenic Sarcoma",
+    "okunus": "Osteojenik Sarkoma",
+    "meaning": "Kemik hücrelerinden köken alan kötücül kemik tümörü"
+  },
+  {
+    "id": "med_802",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Cervical Strain",
+    "okunus": "Servikal Strain",
+    "meaning": "Boyunda zorlanma sonucu oluşan incinme"
+  },
+  {
+    "id": "med_803",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Osteoporosis",
+    "okunus": "Osteoporoz",
+    "meaning": "Kemik dokusunda atrofi gelişmesi ile belirgin durum"
+  },
+  {
+    "id": "med_804",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Hallux Valgus Bunion",
+    "okunus": "Halluks Valgus Bunyon",
+    "meaning": "Dışa çarpık ayak baş parmağı"
+  },
+  {
+    "id": "med_805",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Claudication",
+    "okunus": "Klodikasyon",
+    "meaning": "Topallık, topallama"
+  },
+  {
+    "id": "med_806",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Achondroplasia",
+    "okunus": "Akondroplazi",
+    "meaning": "Ekstremitelerin kısalığı sonucu cücelik"
+  },
+  {
+    "id": "med_807",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Ankylosis",
+    "okunus": "Ankiloz",
+    "meaning": "Eklemin bükülmemesi"
+  },
+  {
+    "id": "med_808",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Arthritis",
+    "okunus": "Artrit",
+    "meaning": "Eklemin iltihabı"
+  },
+  {
+    "id": "med_809",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Arthropathy",
+    "okunus": "Artropati",
+    "meaning": "Eklemin herhangi bir hastalığı"
+  },
+  {
+    "id": "med_810",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Bunion",
+    "okunus": "Bünyon",
+    "meaning": "Ayak başparmağındaki bursun iltihabı ve şişmesi"
+  },
+  {
+    "id": "med_811",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Deformity",
+    "okunus": "Deformite",
+    "meaning": "Şekil bozukluğu"
+  },
+  {
+    "id": "med_812",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Disuse Atrophy",
+    "okunus": "Disyuz Atrofi",
+    "meaning": "Adelenin egzersiz yapmama veya az kullanılma sebebiyle zayıflaması"
+  },
+  {
+    "id": "med_813",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Epiphysiolysis",
+    "okunus": "Epifizyoliz",
+    "meaning": "Epifizin kemikten ayrılması"
+  },
+  {
+    "id": "med_814",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Epiphysitis",
+    "okunus": "Epifizit",
+    "meaning": "Epifizin iltihabı"
+  },
+  {
+    "id": "med_815",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Epulis",
+    "okunus": "Epulis",
+    "meaning": "Diş etinde oluşan fibröz tümör"
+  },
+  {
+    "id": "med_816",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Exostosis",
+    "okunus": "Ekzostoz",
+    "meaning": "Kemik tümörü, osteom"
+  },
+  {
+    "id": "med_817",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Fasciitis",
+    "okunus": "Fasit",
+    "meaning": "Fasya iltihabı"
+  },
+  {
+    "id": "med_818",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Fibrositis",
+    "okunus": "Fibrozit",
+    "meaning": "Fibröz (lif) dokunun iltihabı, müsküler romatizma"
+  },
+  {
+    "id": "med_819",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Giant Cell Tumor",
+    "okunus": "Giant Cell Tumor",
+    "meaning": "Dev hücreli tümör"
+  },
+  {
+    "id": "med_820",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Graphospasm",
+    "okunus": "Grafospazm",
+    "meaning": "Yazı yazmayı önleyen adele spazmı"
+  },
+  {
+    "id": "med_821",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Herniation of Nucleus Pulposus",
+    "okunus": "Herniation of Nucleus Pulposus",
+    "meaning": "Bel fıtığı, vertebralar arasındaki diskin kayması"
+  },
+  {
+    "id": "med_822",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Paralysis",
+    "okunus": "Paralizi",
+    "meaning": "Felç, geçici veya sürekli bir zaman için duygunun ve istekli hareketlerin kaybı"
+  },
+  {
+    "id": "med_823",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Periostitis",
+    "okunus": "Periostit",
+    "meaning": "Kemiğin üst tabakasının iltihabı"
+  },
+  {
+    "id": "med_824",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Pott's Disease",
+    "okunus": "Pott Hastalığı",
+    "meaning": "Bel kemiğinin tüberkülozu"
+  },
+  {
+    "id": "med_825",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Rhabdomyoma",
+    "okunus": "Rabdomiyom",
+    "meaning": "Çizgili kas tümörü"
+  },
+  {
+    "id": "med_826",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Rickets",
+    "okunus": "Rikets",
+    "meaning": "Raşitizm, çocuklukta D vitamini eksikliğine bağlanan kemikleşme bozukluğu"
+  },
+  {
+    "id": "med_827",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Sequestration",
+    "okunus": "Sekestrasyon",
+    "meaning": "Bir kemik parçasının etrafındaki dokulardan ayrılması"
+  },
+  {
+    "id": "med_828",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Spondylitis",
+    "okunus": "Spondilit",
+    "meaning": "Bel kemiğinin tüberkülozu"
+  },
+  {
+    "id": "med_829",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Talipes",
+    "okunus": "Talips",
+    "meaning": "Ayağın doğuştan deformitesi"
+  },
+  {
+    "id": "med_830",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Medulla Ossea Rubra",
+    "okunus": "Medulla Ossea Rubra",
+    "meaning": "Kırmızı kemik iliği"
+  },
+  {
+    "id": "med_831",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Medulla Ossea Flava",
+    "okunus": "Medulla Ossea Flava",
+    "meaning": "Sarı kemik iliği"
+  },
+  {
+    "id": "med_832",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Leukocytus",
+    "okunus": "Lökosit",
+    "meaning": "Akyuvarlar"
+  },
+  {
+    "id": "med_833",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Thrombocytus",
+    "okunus": "Trombosit",
+    "meaning": "Kan pulcuğu"
+  },
+  {
+    "id": "med_834",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Lympha",
+    "okunus": "Lenf",
+    "meaning": "Ak kan"
+  },
+  {
+    "id": "med_835",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Nodus Lymphaticus",
+    "okunus": "Nodus Lemfatikus",
+    "meaning": "Lenf düğümü"
+  },
+  {
+    "id": "med_836",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Lymphonodus",
+    "okunus": "Lemfonodus",
+    "meaning": "Lenf düğümü"
+  },
+  {
+    "id": "med_837",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Icterus",
+    "okunus": "İkter",
+    "meaning": "Sarılık"
+  },
+  {
+    "id": "med_838",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Lymphocytopenia",
+    "okunus": "Lenfositopeni",
+    "meaning": "Lenfosit azlığı"
+  },
+  {
+    "id": "med_839",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Erythropenia",
+    "okunus": "Eritropeni",
+    "meaning": "Kanda alyuvar sayısının azalması"
+  },
+  {
+    "id": "med_840",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Erythrocytosis",
+    "okunus": "Eritrositoz",
+    "meaning": "Kanda alyuvar sayısının artması"
+  },
+  {
+    "id": "med_841",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Anoxemia",
+    "okunus": "Anoksemi",
+    "meaning": "Kanda yeterli oksijenin bulunmaması, oksijen azlığı"
+  },
+  {
+    "id": "med_842",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Hemorrhagia",
+    "okunus": "Hemoraji",
+    "meaning": "Kanama"
+  },
+  {
+    "id": "med_843",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Macrocytosis",
+    "okunus": "Makrositoz",
+    "meaning": "Eritrositlerin normalden büyük olması"
+  },
+  {
+    "id": "med_844",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Microcytosis",
+    "okunus": "Mikrositoz",
+    "meaning": "Eritrositlerin normalden küçük olması"
+  },
+  {
+    "id": "med_845",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Leukemia",
+    "okunus": "Lösemi",
+    "meaning": "Kan yapan dokuların ve lökosit serisinin öncül hücrelerinin neoplastik hastalığı"
+  },
+  {
+    "id": "med_846",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Myelocytic leukemia",
+    "okunus": "Miyolositik lökemia",
+    "meaning": "Kemik iliği ile ilgili dokudan kaynaklanan lösemi"
+  },
+  {
+    "id": "med_847",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Hemangioma",
+    "okunus": "Hemanjiom",
+    "meaning": "Kan damarları tümörü"
+  },
+  {
+    "id": "med_848",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Polycythemia",
+    "okunus": "Polisitemi",
+    "meaning": "Kanda eritrosit sayısının aşırı artması"
+  },
+  {
+    "id": "med_849",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Hemophilia",
+    "okunus": "Hemofili",
+    "meaning": "Pıhtılaşma faktörlerinin kalıtsal eksikliği veya kusuru nedeniyle oluşan kanama hastalığı"
+  },
+  {
+    "id": "med_850",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Lymph edema",
+    "okunus": "Lenf ödem",
+    "meaning": "Lenf damarlarının tıkanmasına bağlı olarak lenf sıvısının deri altında birikmesi"
+  },
+  {
+    "id": "med_851",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Lymphadenitis",
+    "okunus": "Lenfadenit",
+    "meaning": "Bir veya daha çok lenf düğümü iltihabı"
+  },
+  {
+    "id": "med_852",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Lymphangioma",
+    "okunus": "Lenfanjiyom",
+    "meaning": "Lenf sisteminin iyi huylu tümörü"
+  },
+  {
+    "id": "med_853",
+    "type": "terim",
+    "category": "Tıbbi Terim",
+    "subCategory": "Genel Terimler",
+    "term": "Lymphangitis",
+    "okunus": "Lenfanjit",
+    "meaning": "Lenf damarlarının iltihabı"
+  },
+  {
+    "id": "med_854",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Durumlar ve Belirtiler",
+    "term": "-algia",
+    "okunus": "algia",
+    "meaning": "Ağrı"
+  },
+  {
+    "id": "med_855",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Durumlar ve Belirtiler",
+    "term": "-itis",
+    "okunus": "itis",
+    "meaning": "İltihap, yangı"
+  },
+  {
+    "id": "med_856",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Durumlar ve Belirtiler",
+    "term": "-oma",
+    "okunus": "oma",
+    "meaning": "Tümör, ur"
+  },
+  {
+    "id": "med_857",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Durumlar ve Belirtiler",
+    "term": "-malacia",
+    "okunus": "malazi",
+    "meaning": "Yumuşama (dokunun anormal yumuşaması)"
+  },
+  {
+    "id": "med_858",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Durumlar ve Belirtiler",
+    "term": "-megaly",
+    "okunus": "megaly",
+    "meaning": "Büyüme"
+  },
+  {
+    "id": "med_859",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "İnceleme ve Ölçüm Aletleri",
+    "term": "-scope",
+    "okunus": "scope",
+    "meaning": "Bir bölgeyi cihazla inceleme / muayene aleti"
+  },
+  {
+    "id": "med_860",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "İnceleme ve Ölçüm Aletleri",
+    "term": "-gram",
+    "okunus": "gram",
+    "meaning": "Grafik yazdırma, kayıt alma"
+  },
+  {
+    "id": "med_861",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "İnceleme ve Ölçüm Aletleri",
+    "term": "-meter",
+    "okunus": "meter",
+    "meaning": "Ölçüm cihazı"
+  },
+  {
+    "id": "med_862",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Cerrahi İşlemler",
+    "term": "-ectomy",
+    "okunus": "ectomy",
+    "meaning": "Kesip çıkarma, ameliyatla alma"
+  },
+  {
+    "id": "med_863",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Cerrahi İşlemler",
+    "term": "-stomy",
+    "okunus": "stomy",
+    "meaning": "Ağızlaştırma, yeni bir geçit/delik açma"
+  },
+  {
+    "id": "med_864",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Cerrahi İşlemler",
+    "term": "-plasty",
+    "okunus": "plasty",
+    "meaning": "Onarma, estetik operasyon"
+  },
+  {
+    "id": "med_865",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Yapısal ve Benzerlik Ekleri",
+    "term": "-al / -aris / -icus",
+    "okunus": "al / -aris / -icus",
+    "meaning": "... ile ilgili"
+  },
+  {
+    "id": "med_866",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Yapısal ve Benzerlik Ekleri",
+    "term": "-form",
+    "okunus": "form",
+    "meaning": "... şeklinde/benzeyen"
+  },
+  {
+    "id": "med_867",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Yapısal ve Benzerlik Ekleri",
+    "term": "-cyte",
+    "okunus": "cyte",
+    "meaning": "Hücre"
+  },
+  {
+    "id": "med_868",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Azaltma ve Küçültme Ekleri",
+    "term": "-ulus, -ula, -ulum",
+    "okunus": "ulus, ula, ulum",
+    "meaning": "Azaltma, küçültme"
+  },
+  {
+    "id": "med_869",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Azaltma ve Küçültme Ekleri",
+    "term": "-ella, -ellum",
+    "okunus": "ella, ellum",
+    "meaning": "Azaltma, küçültme"
+  },
+  {
+    "id": "med_870",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Azaltma ve Küçültme Ekleri",
+    "term": "-illa",
+    "okunus": "illa",
+    "meaning": "Azaltma, küçültme"
+  },
+  {
+    "id": "med_871",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Azaltma ve Küçültme Ekleri",
+    "term": "-olus, -ola",
+    "okunus": "olus, ola",
+    "meaning": "Azaltma, küçültme"
+  },
+  {
+    "id": "med_872",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "İlgi ve Aitlik Ekleri",
+    "term": "-ic",
+    "okunus": "ic",
+    "meaning": "İlgili"
+  },
+  {
+    "id": "med_873",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "İlgi ve Aitlik Ekleri",
+    "term": "-icus",
+    "okunus": "icus",
+    "meaning": "İlgili, ait, benzeri, -imsi"
+  },
+  {
+    "id": "med_874",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "İlgi ve Aitlik Ekleri",
+    "term": "-ac",
+    "okunus": "ac",
+    "meaning": "İlgili, ait"
+  },
+  {
+    "id": "med_875",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "İlgi ve Aitlik Ekleri",
+    "term": "-acus",
+    "okunus": "acus",
+    "meaning": "İlgili, ait"
+  },
+  {
+    "id": "med_876",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "İlgi ve Aitlik Ekleri",
+    "term": "-al",
+    "okunus": "al",
+    "meaning": "İlgili, ait"
+  },
+  {
+    "id": "med_877",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "İlgi ve Aitlik Ekleri",
+    "term": "-alis",
+    "okunus": "alis",
+    "meaning": "İlgili, ilintili, ait"
+  },
+  {
+    "id": "med_878",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "İlgi ve Aitlik Ekleri",
+    "term": "-aris",
+    "okunus": "aris",
+    "meaning": "İlgili, ait"
+  },
+  {
+    "id": "med_879",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "İlgi ve Aitlik Ekleri",
+    "term": "-orius",
+    "okunus": "orius",
+    "meaning": "Ait olmak, ilişkili olmak"
+  },
+  {
+    "id": "med_880",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Benzerlik ve Biçim Ekleri",
+    "term": "-eus",
+    "okunus": "eus",
+    "meaning": "Benzerimsi, -imsi, -si"
+  },
+  {
+    "id": "med_881",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Benzerlik ve Biçim Ekleri",
+    "term": "-oid, -oideus, -ideus",
+    "okunus": "oid, oideus, ideus",
+    "meaning": "Biçiminde, benzer"
+  },
+  {
+    "id": "med_882",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Benzerlik ve Biçim Ekleri",
+    "term": "-formis",
+    "okunus": "formis",
+    "meaning": "Biçiminde"
+  },
+  {
+    "id": "med_883",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Benzerlik ve Biçim Ekleri",
+    "term": "-icus",
+    "okunus": "icus",
+    "meaning": "Benzeri, -imsi, ait"
+  },
+  {
+    "id": "med_884",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Oluşma ve Yapım Ekleri",
+    "term": "-gen, -genic",
+    "okunus": "gen, genic",
+    "meaning": "Oluşturucu veya sebep olucu etken"
+  },
+  {
+    "id": "med_885",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Oluşma ve Yapım Ekleri",
+    "term": "-genesis",
+    "okunus": "genesis",
+    "meaning": "Oluşma, meydana gelme"
+  },
+  {
+    "id": "med_886",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Oluşma ve Yapım Ekleri",
+    "term": "-genus, -genous",
+    "okunus": "genus, genous",
+    "meaning": "Yapan, eden, üreten"
+  },
+  {
+    "id": "med_887",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Oluşma ve Yapım Ekleri",
+    "term": "-poiesis, -poesis",
+    "okunus": "poiesis, poesis",
+    "meaning": "Oluşma, meydana gelme"
+  },
+  {
+    "id": "med_888",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Alet ve Cihaz Ekleri",
+    "term": "-meter",
+    "okunus": "meter",
+    "meaning": "Ölçen alet"
+  },
+  {
+    "id": "med_889",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Alet ve Cihaz Ekleri",
+    "term": "-graph",
+    "okunus": "graph",
+    "meaning": "Kaydedici alet"
+  },
+  {
+    "id": "med_890",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Alet ve Cihaz Ekleri",
+    "term": "-graphy",
+    "okunus": "graphy",
+    "meaning": "Grafik halinde kaydetme"
+  },
+  {
+    "id": "med_891",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Alet ve Cihaz Ekleri",
+    "term": "-gram",
+    "okunus": "gram",
+    "meaning": "Yazım, döküm, kayıt, film"
+  },
+  {
+    "id": "med_892",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Alet ve Cihaz Ekleri",
+    "term": "-scope",
+    "okunus": "scope",
+    "meaning": "İnceleme aracı"
+  },
+  {
+    "id": "med_893",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Alet ve Cihaz Ekleri",
+    "term": "-scopy",
+    "okunus": "scopy",
+    "meaning": "Araçla inceleme"
+  },
+  {
+    "id": "med_894",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Alet ve Cihaz Ekleri",
+    "term": "-tome",
+    "okunus": "tome",
+    "meaning": "Kesme aracı"
+  },
+  {
+    "id": "med_895",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Alet ve Cihaz Ekleri",
+    "term": "-tomy",
+    "okunus": "tomy",
+    "meaning": "Kesme"
+  },
+  {
+    "id": "med_896",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Alet ve Cihaz Ekleri",
+    "term": "-stomy",
+    "okunus": "stomy",
+    "meaning": "Bir organa delik açma, birleştirme"
+  },
+  {
+    "id": "med_897",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-pathy",
+    "okunus": "pathy",
+    "meaning": "Hastalık, normal dışı durum"
+  },
+  {
+    "id": "med_898",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-therapy",
+    "okunus": "terapi",
+    "meaning": "Tedavi, iyileştirme yöntemi"
+  },
+  {
+    "id": "med_899",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-phagia, -phagy",
+    "okunus": "phagia, phagy",
+    "meaning": "Yeme, yutma"
+  },
+  {
+    "id": "med_900",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-osis",
+    "okunus": "osis",
+    "meaning": "Hastalık, artış"
+  },
+  {
+    "id": "med_901",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-penia",
+    "okunus": "penia",
+    "meaning": "Azlık, eksiklik"
+  },
+  {
+    "id": "med_902",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-pnea",
+    "okunus": "pnea",
+    "meaning": "Solunum"
+  },
+  {
+    "id": "med_903",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-ia, -iasis",
+    "okunus": "ia, iasis",
+    "meaning": "Olgu, durum"
+  },
+  {
+    "id": "med_904",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-rrhagia",
+    "okunus": "rrhagia",
+    "meaning": "Kanama"
+  },
+  {
+    "id": "med_905",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-emia",
+    "okunus": "emia",
+    "meaning": "Kan ile ilgili olgu, durum"
+  },
+  {
+    "id": "med_906",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-lysis",
+    "okunus": "lysis",
+    "meaning": "Erime, çözülme"
+  },
+  {
+    "id": "med_907",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-ectasia, -ectasis",
+    "okunus": "ectasia, ectasis",
+    "meaning": "Genişleme"
+  },
+  {
+    "id": "med_908",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-rrhexis",
+    "okunus": "rrhexis",
+    "meaning": "Yırtılma, yarılma"
+  },
+  {
+    "id": "med_909",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-rrhaphy",
+    "okunus": "rrhaphy",
+    "meaning": "Dikme"
+  },
+  {
+    "id": "med_910",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-algia",
+    "okunus": "algia",
+    "meaning": "Ağrı"
+  },
+  {
+    "id": "med_911",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-itis",
+    "okunus": "itis",
+    "meaning": "İltihap"
+  },
+  {
+    "id": "med_912",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-oma",
+    "okunus": "oma",
+    "meaning": "Ur, tümör, kitle"
+  },
+  {
+    "id": "med_913",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-paralysis",
+    "okunus": "paralysis",
+    "meaning": "Felç"
+  },
+  {
+    "id": "med_914",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Hastalık ve Tedavi Ekleri",
+    "term": "-plegia, -plege",
+    "okunus": "plegia, plege",
+    "meaning": "Felç"
+  },
+  {
+    "id": "med_915",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Diğer Son Ekler",
+    "term": "-ifer, -fer",
+    "okunus": "ifer, fer",
+    "meaning": "Taşıyan, götüren"
+  },
+  {
+    "id": "med_916",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Diğer Son Ekler",
+    "term": "-atus",
+    "okunus": "atus",
+    "meaning": "Varlı, onlu"
+  },
+  {
+    "id": "med_917",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Diğer Son Ekler",
+    "term": "-cyte, -cytus",
+    "okunus": "cyte, cytus",
+    "meaning": "Hücre"
+  },
+  {
+    "id": "med_918",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Diğer Son Ekler",
+    "term": "-blast",
+    "okunus": "blast",
+    "meaning": "Genç, öncü hücre"
+  },
+  {
+    "id": "med_919",
+    "type": "sonek",
+    "category": "Son Ek",
+    "subCategory": "Diğer Son Ekler",
+    "term": "-logy, -logia",
+    "okunus": "logy, logia",
+    "meaning": "Bilim"
+  },
+  {
+    "id": "med_920",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Olumsuzluk ve Yokluk Ön Ekleri",
+    "term": "a-",
+    "okunus": "a",
+    "meaning": "-sız, -siz, yokluk"
+  },
+  {
+    "id": "med_921",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Olumsuzluk ve Yokluk Ön Ekleri",
+    "term": "an-",
+    "okunus": "an",
+    "meaning": "Olumsuzluk, yokluk"
+  },
+  {
+    "id": "med_922",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Olumsuzluk ve Yokluk Ön Ekleri",
+    "term": "dys-",
+    "okunus": "dys",
+    "meaning": "Engel, olumsuzluk, bozukluk, zorluk"
+  },
+  {
+    "id": "med_923",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Olumsuzluk ve Yokluk Ön Ekleri",
+    "term": "im-, in-",
+    "okunus": "im- / in",
+    "meaning": "Olumsuzluk, yokluk, içeriye, içine"
+  },
+  {
+    "id": "med_924",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Olumsuzluk ve Yokluk Ön Ekleri",
+    "term": "non-",
+    "okunus": "non",
+    "meaning": "Hayır, olumsuz, ret"
+  },
+  {
+    "id": "med_925",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Olumsuzluk ve Yokluk Ön Ekleri",
+    "term": "de-",
+    "okunus": "de",
+    "meaning": "Yok etme, kaybetme, aşağıda"
+  },
+  {
+    "id": "med_926",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Çevre ve Konum Ön Ekleri",
+    "term": "par-, para-",
+    "okunus": "par- / para",
+    "meaning": "Yan, yanında"
+  },
+  {
+    "id": "med_927",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Çevre ve Konum Ön Ekleri",
+    "term": "amb-, ambi-",
+    "okunus": "amb- / ambi",
+    "meaning": "Çevresinde, yakınında, her iki yanda"
+  },
+  {
+    "id": "med_928",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Çevre ve Konum Ön Ekleri",
+    "term": "amphi-",
+    "okunus": "amphi",
+    "meaning": "Çevresinde, çift olarak, her ikisi de"
+  },
+  {
+    "id": "med_929",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Çevre ve Konum Ön Ekleri",
+    "term": "circum-",
+    "okunus": "circum",
+    "meaning": "Çevresinde"
+  },
+  {
+    "id": "med_930",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Çevre ve Konum Ön Ekleri",
+    "term": "peri-",
+    "okunus": "peri",
+    "meaning": "Çevresinde"
+  },
+  {
+    "id": "med_931",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Zaman ve Sıra Ön Ekleri",
+    "term": "ante-",
+    "okunus": "ante",
+    "meaning": "Önce, ön, önünde"
+  },
+  {
+    "id": "med_932",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Zaman ve Sıra Ön Ekleri",
+    "term": "pre-",
+    "okunus": "pre",
+    "meaning": "Ön, önünde"
+  },
+  {
+    "id": "med_933",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Zaman ve Sıra Ön Ekleri",
+    "term": "pro-",
+    "okunus": "pro",
+    "meaning": "Ön, önce"
+  },
+  {
+    "id": "med_934",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Zaman ve Sıra Ön Ekleri",
+    "term": "post-",
+    "okunus": "post",
+    "meaning": "Sonra, ardından, arka"
+  },
+  {
+    "id": "med_935",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Zaman ve Sıra Ön Ekleri",
+    "term": "retro-",
+    "okunus": "retro",
+    "meaning": "Arka, geri"
+  },
+  {
+    "id": "med_936",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Zaman ve Sıra Ön Ekleri",
+    "term": "meta-",
+    "okunus": "meta",
+    "meaning": "Sonrasında, ötesinde, devamında"
+  },
+  {
+    "id": "med_937",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "İç ve Dış Bildiren Ön Ekler",
+    "term": "en-, em-",
+    "okunus": "en- / em",
+    "meaning": "İçerisinde"
+  },
+  {
+    "id": "med_938",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "İç ve Dış Bildiren Ön Ekler",
+    "term": "endo-",
+    "okunus": "endo",
+    "meaning": "İç, içerisinde"
+  },
+  {
+    "id": "med_939",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "İç ve Dış Bildiren Ön Ekler",
+    "term": "intra-",
+    "okunus": "intra",
+    "meaning": "İçerisinde"
+  },
+  {
+    "id": "med_940",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "İç ve Dış Bildiren Ön Ekler",
+    "term": "per-",
+    "okunus": "per",
+    "meaning": "İçerisinde, arasında, aracılığıyla"
+  },
+  {
+    "id": "med_941",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "İç ve Dış Bildiren Ön Ekler",
+    "term": "ecto-",
+    "okunus": "ecto",
+    "meaning": "Dışarıda, dış tarafta"
+  },
+  {
+    "id": "med_942",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "İç ve Dış Bildiren Ön Ekler",
+    "term": "ex-, exo-",
+    "okunus": "ex- / exo",
+    "meaning": "Dış, dışta, bitmiş, tamam"
+  },
+  {
+    "id": "med_943",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "İç ve Dış Bildiren Ön Ekler",
+    "term": "extra-",
+    "okunus": "extra",
+    "meaning": "Dışında, ötesinde, fazladan"
+  },
+  {
+    "id": "med_944",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Derece ve Miktar Ön Ekleri",
+    "term": "epi-",
+    "okunus": "epi",
+    "meaning": "Üst, üstünde"
+  },
+  {
+    "id": "med_945",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Derece ve Miktar Ön Ekleri",
+    "term": "supra-",
+    "okunus": "supra",
+    "meaning": "Üzerinde, üstünde"
+  },
+  {
+    "id": "med_946",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Derece ve Miktar Ön Ekleri",
+    "term": "hyper-",
+    "okunus": "hyper",
+    "meaning": "Üst, yukarı, fazla"
+  },
+  {
+    "id": "med_947",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Derece ve Miktar Ön Ekleri",
+    "term": "super-",
+    "okunus": "super",
+    "meaning": "Fazla, çok, üst"
+  },
+  {
+    "id": "med_948",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Derece ve Miktar Ön Ekleri",
+    "term": "mult-, multi-",
+    "okunus": "mult- / multi",
+    "meaning": "Çok"
+  },
+  {
+    "id": "med_949",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Derece ve Miktar Ön Ekleri",
+    "term": "poly-",
+    "okunus": "poly",
+    "meaning": "Çok"
+  },
+  {
+    "id": "med_950",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Derece ve Miktar Ön Ekleri",
+    "term": "olig-, oligo-",
+    "okunus": "olig- / oligo",
+    "meaning": "Az, seyrek, yetersiz"
+  },
+  {
+    "id": "med_951",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Derece ve Miktar Ön Ekleri",
+    "term": "infra-",
+    "okunus": "infra",
+    "meaning": "Alt, altında"
+  },
+  {
+    "id": "med_952",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Derece ve Miktar Ön Ekleri",
+    "term": "sub-",
+    "okunus": "sub",
+    "meaning": "Alt, altında"
+  },
+  {
+    "id": "med_953",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Derece ve Miktar Ön Ekleri",
+    "term": "inter-",
+    "okunus": "inter",
+    "meaning": "Arasında"
+  },
+  {
+    "id": "med_954",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Orta ve Ara Bildiren Ön Ekler",
+    "term": "meso-",
+    "okunus": "meso",
+    "meaning": "Arasında, ortada"
+  },
+  {
+    "id": "med_955",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Boyut Bildiren Ön Ekler",
+    "term": "micr-, micro-",
+    "okunus": "micr- / micro",
+    "meaning": "Küçük, kısa"
+  },
+  {
+    "id": "med_956",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Boyut Bildiren Ön Ekler",
+    "term": "macro-",
+    "okunus": "macro",
+    "meaning": "Büyük, iri"
+  },
+  {
+    "id": "med_957",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Boyut Bildiren Ön Ekler",
+    "term": "mega-",
+    "okunus": "mega",
+    "meaning": "Büyük"
+  },
+  {
+    "id": "med_958",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Bütünlük Ön Ekleri",
+    "term": "pan-, pas-, pasa-, panto-",
+    "okunus": "pan- / pas- / pasa- / panto",
+    "meaning": "Tüm, bütün"
+  },
+  {
+    "id": "med_959",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Bütünlük Ön Ekleri",
+    "term": "hemi-",
+    "okunus": "hemi",
+    "meaning": "Yarım"
+  },
+  {
+    "id": "med_960",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Bütünlük Ön Ekleri",
+    "term": "semi-",
+    "okunus": "semi",
+    "meaning": "Yarım, yarı"
+  },
+  {
+    "id": "med_961",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Birliktelik Ön Ekleri",
+    "term": "co-, com-, con-, cum-",
+    "okunus": "co- / com- / con- / cum",
+    "meaning": "Ortaklaşa, ile birlikte"
+  },
+  {
+    "id": "med_962",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Birliktelik Ön Ekleri",
+    "term": "sym-, syn-",
+    "okunus": "sym- / syn",
+    "meaning": "Ortak, ile, birlikte"
+  },
+  {
+    "id": "med_963",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Hız Bildiren Ön Ekler",
+    "term": "tacho-, tachy-",
+    "okunus": "tacho- / tachy",
+    "meaning": "Çabuk, hızlı"
+  },
+  {
+    "id": "med_964",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Hız Bildiren Ön Ekler",
+    "term": "brady-",
+    "okunus": "brady",
+    "meaning": "Ağır, yavaş"
+  },
+  {
+    "id": "med_965",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Nitelik Ön Ekleri",
+    "term": "eu-",
+    "okunus": "eu",
+    "meaning": "Normal, iyi, sağlıklı"
+  },
+  {
+    "id": "med_966",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Nitelik Ön Ekleri",
+    "term": "normo-",
+    "okunus": "normo",
+    "meaning": "Normal"
+  },
+  {
+    "id": "med_967",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Nitelik Ön Ekleri",
+    "term": "orth-",
+    "okunus": "orth",
+    "meaning": "Normal, düzgün"
+  },
+  {
+    "id": "med_968",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Nitelik Ön Ekleri",
+    "term": "mal-, mallus-",
+    "okunus": "mal- / mallus",
+    "meaning": "Kötü, bozuk, hasta"
+  },
+  {
+    "id": "med_969",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "uni-, unus-",
+    "okunus": "uni- / unus",
+    "meaning": "Bir, tek"
+  },
+  {
+    "id": "med_970",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "mon-, mono-",
+    "okunus": "mon- / mono",
+    "meaning": "Bir, tek"
+  },
+  {
+    "id": "med_971",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "bi-, bin-, bis-",
+    "okunus": "bi- / bin- / bis",
+    "meaning": "İki, çift"
+  },
+  {
+    "id": "med_972",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "di-, diplo-",
+    "okunus": "di- / diplo",
+    "meaning": "İki"
+  },
+  {
+    "id": "med_973",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "tri-",
+    "okunus": "tri",
+    "meaning": "Üç"
+  },
+  {
+    "id": "med_974",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "quadri-",
+    "okunus": "quadri",
+    "meaning": "Dört"
+  },
+  {
+    "id": "med_975",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Diğer Ön Ekler",
+    "term": "anti-",
+    "okunus": "anti",
+    "meaning": "Karşı, zıt"
+  },
+  {
+    "id": "med_976",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Diğer Ön Ekler",
+    "term": "re-",
+    "okunus": "re",
+    "meaning": "Yenileme"
+  },
+  {
+    "id": "med_977",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Diğer Ön Ekler",
+    "term": "trans-",
+    "okunus": "trans",
+    "meaning": "Bir baştan diğer başa aktarma"
+  },
+  {
+    "id": "med_978",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Diğer Ön Ekler",
+    "term": "iso-",
+    "okunus": "iso",
+    "meaning": "Eşit, aynı"
+  },
+  {
+    "id": "med_979",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Diğer Ön Ekler",
+    "term": "tele-, telo-",
+    "okunus": "tele- / telo",
+    "meaning": "Uzak, uzaktan, son"
+  },
+  {
+    "id": "med_980",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Diğer Ön Ekler",
+    "term": "pseudo-",
+    "okunus": "pseudo",
+    "meaning": "Yalancı"
+  },
+  {
+    "id": "med_981",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Diğer Ön Ekler",
+    "term": "auto-",
+    "okunus": "auto",
+    "meaning": "Kendi"
+  },
+  {
+    "id": "med_982",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Terimler",
+    "term": "Adem elması (Prominentia laryngea)",
+    "okunus": "prominensiya laringea",
+    "meaning": "Gırtlak çıkıntısı (Tiroid kıkırdağın boyun ön yüzünde yaptığı belirgin çıkıntı)"
+  },
+  {
+    "id": "med_983",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Terimler",
+    "term": "Bowman kapsülü (Capsula glomerularis)",
+    "okunus": "kapsula glomerularis",
+    "meaning": "Böbrekte nefronun kılcal damar yumağını (glomerül) saran çift katlı kadeh şeklindeki kapsül"
+  },
+  {
+    "id": "med_984",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Terimler",
+    "term": "Fallopian tüpü (Tuba uterina)",
+    "okunus": "tuba uterina",
+    "meaning": "Yumurtalık ile rahim arasındaki kanal, döllenmenin gerçekleştiği rahim borusu"
+  },
+  {
+    "id": "med_985",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Terimler",
+    "term": "Havers kanalı (Canalis centralis)",
+    "okunus": "kanalis sentralis",
+    "meaning": "Sert kemik dokusunda kan damarları ve sinirlerin geçtiği boyuna merkezi kanal"
+  },
+  {
+    "id": "med_986",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Terimler",
+    "term": "Henle kulpu (Ansa nephroni)",
+    "okunus": "ansa nefroni",
+    "meaning": "Böbrek nefronlarında su ve tuz geri emilimini sağlayan U şeklindeki borucuk"
+  },
+  {
+    "id": "med_987",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Terimler",
+    "term": "Malpighi piramidleri (Pyramides renalis)",
+    "okunus": "piramides renalis",
+    "meaning": "Böbreğin iç (medulla) tabakasında yer alan piramit şeklindeki anatomik doku kütleleri"
+  },
+  {
+    "id": "med_988",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Terimler",
+    "term": "Rolando oluğu (Sulcus centralis)",
+    "okunus": "sulkus sentralis",
+    "meaning": "Beyin yarım kürelerinde frontal lob ile parietal lobu ayıran merkezi yarık"
+  },
+  {
+    "id": "med_989",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Terimler",
+    "term": "Wirsung kanalı (Ductus pancreaticus)",
+    "okunus": "duktus pankreatikus",
+    "meaning": "Pankreas enzimlerini ve salgılarını onikiparmak bağırsağına taşıyan ana pankreas kanalı"
+  },
+  {
+    "id": "med_990",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Terimler",
+    "term": "Littre bezleri (Glandulae urethrales)",
+    "okunus": "glandule üretrales",
+    "meaning": "Üretra mukozasında bulunan ve üretrayı nemlendiren müköz salgı bezleri"
+  },
+  {
+    "id": "med_991",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Hastalıklar",
+    "term": "Plummer-Vinson Sendromu",
+    "okunus": "Plamır Vinsın Sendromu",
+    "meaning": "Demir eksikliği anemisi, yutma güçlüğü (disfaji) ve özofagus ağı üçlüsüyle seyreden klinik tablo"
+  },
+  {
+    "id": "med_992",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Hastalıklar",
+    "term": "Wilms Tümörü (Nefroblastom)",
+    "okunus": "Vilms tümörü",
+    "meaning": "Çocukluk çağında böbrekte en sık görülen malign (kötü huylu) embriyonel tümör"
+  },
+  {
+    "id": "med_993",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Hastalıklar",
+    "term": "Crohn Hastalığı",
+    "okunus": "Kron hastalığı",
+    "meaning": "Ağızdan anüse kadar sindirim kanalının herhangi bir bölümünü tutabilen kronik granülomatöz inflamatuvar bağırsak hastalığı"
+  },
+  {
+    "id": "med_994",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Eponim Hastalıklar",
+    "term": "Behçet Hastalığı",
+    "okunus": "Behçet hastalığı",
+    "meaning": "Ağızda tekrarlayan aftlar, genital ülserler ve gözde üveit ile karakterize otoimmün sistemik vaskülit"
+  },
+  {
+    "id": "med_995",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "ACTH",
+    "okunus": "A-Se-Te-Ha",
+    "meaning": "Adrenokortikotropik Hormon (Böbrek üstü bezi kabuğunu uyararak kortizol salgılatan hipofiz ön lobu hormonu)"
+  },
+  {
+    "id": "med_996",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "ADH",
+    "okunus": "A-De-Ha",
+    "meaning": "Antidiüretik Hormon / Vazopressin (Böbreklerden su geri emilimini sağlayarak idrarı azaltan ve tansiyonu düzenleyen hipotalamus hormonu)"
+  },
+  {
+    "id": "med_997",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "ADP",
+    "okunus": "A-De-Pe",
+    "meaning": "Adenozindifosfat (Hücre enerji metabolizmasında ATP parçalanması sonucu açığa çıkan nükleotit)"
+  },
+  {
+    "id": "med_998",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "AIDS",
+    "okunus": "Eyds",
+    "meaning": "Edinilmiş Bağışıklık Yetersizliği Sendromu (HIV virüsünün bağışıklık sistemini çökertmesiyle gelişen sendrom)"
+  },
+  {
+    "id": "med_999",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "BMR",
+    "okunus": "Be-Me-Re",
+    "meaning": "Bazal Metabolizma Hızı (Vücudun tam dinlenme halindeyken hayati işlevleri sürdürmek için harcadığı minimum enerji)"
+  },
+  {
+    "id": "med_1000",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "BT (Tomografi)",
+    "okunus": "Be-Te",
+    "meaning": "Bilgisayarlı Tomografi (X ışınları ve bilgisayar yardımıyla vücudun ayrıntılı kesit görüntülerini oluşturan yöntem)"
+  },
+  {
+    "id": "med_1001",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "CVS",
+    "okunus": "Se-Ve-Se",
+    "meaning": "Kardiyovasküler Sistem (Kalp ve damarlardan oluşan kan dolaşım sistemi)"
+  },
+  {
+    "id": "med_1002",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "EEG",
+    "okunus": "E-E-Ge",
+    "meaning": "Elektroensefalografi (Beyin kabuğundaki nöronların elektriksel aktivitelerinin kafa derisi üzerinden kaydedilmesi)"
+  },
+  {
+    "id": "med_1003",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "EKG",
+    "okunus": "E-Ka-Ge",
+    "meaning": "Elektrokardiyografi (Kalp kasının kasılma ve gevşeme evrelerindeki elektriksel aktivitesinin kaydedilmesi)"
+  },
+  {
+    "id": "med_1004",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "ER",
+    "okunus": "E-Re",
+    "meaning": "Endoplazmik Retikulum (Hücre sitoplazmasında protein ve lipit sentezinden sorumlu organel)"
+  },
+  {
+    "id": "med_1005",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "LH",
+    "okunus": "Le-Ha",
+    "meaning": "Lüteinleştirici Hormon (Kadınlarda ovülasyonu, erkeklerde testosteron salgısını uyaran hipofiz hormonu)"
+  },
+  {
+    "id": "med_1006",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Akronimler",
+    "term": "MR / MRG",
+    "okunus": "Em-Ar",
+    "meaning": "Manyetik Rezonans Görüntüleme (Manyetik alan ve radyo dalgalarıyla yumuşak doku kesitleri oluşturan radyolojik tanı yöntemi)"
+  },
+  {
+    "id": "med_1007",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "A., a.",
+    "okunus": "A., a.",
+    "meaning": "Arteria"
+  },
+  {
+    "id": "med_1008",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Aa., aa.",
+    "okunus": "Aa., aa.",
+    "meaning": "Arteriae"
+  },
+  {
+    "id": "med_1009",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Art.",
+    "okunus": "Art.",
+    "meaning": "Articulatio"
+  },
+  {
+    "id": "med_1010",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "C",
+    "okunus": "C",
+    "meaning": "Vertebra cervicalis"
+  },
+  {
+    "id": "med_1011",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Ca",
+    "okunus": "Ca",
+    "meaning": "Cancer"
+  },
+  {
+    "id": "med_1012",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Dext.",
+    "okunus": "Dext.",
+    "meaning": "Dexter"
+  },
+  {
+    "id": "med_1013",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Dist.",
+    "okunus": "Dist.",
+    "meaning": "Distalis"
+  },
+  {
+    "id": "med_1014",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "F",
+    "okunus": "F",
+    "meaning": "Fransızca"
+  },
+  {
+    "id": "med_1015",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Fac.",
+    "okunus": "Fac.",
+    "meaning": "Facies"
+  },
+  {
+    "id": "med_1016",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "G",
+    "okunus": "G",
+    "meaning": "Grekçe"
+  },
+  {
+    "id": "med_1017",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Gl., gl.",
+    "okunus": "Gl., gl.",
+    "meaning": "Glandula"
+  },
+  {
+    "id": "med_1018",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Gll., gll.",
+    "okunus": "Gll., gll.",
+    "meaning": "Glandulae"
+  },
+  {
+    "id": "med_1019",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Hct.",
+    "okunus": "Hct.",
+    "meaning": "Hematocrit"
+  },
+  {
+    "id": "med_1020",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Hb",
+    "okunus": "Hb",
+    "meaning": "Hemoglobin"
+  },
+  {
+    "id": "med_1021",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "İ",
+    "okunus": "İ",
+    "meaning": "İngilizce"
+  },
+  {
+    "id": "med_1022",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Im",
+    "okunus": "Im",
+    "meaning": "İntramuscüler"
+  },
+  {
+    "id": "med_1023",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Iv",
+    "okunus": "Iv",
+    "meaning": "İntravenöz"
+  },
+  {
+    "id": "med_1024",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Inf.",
+    "okunus": "Inf.",
+    "meaning": "İnferior"
+  },
+  {
+    "id": "med_1025",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Int.",
+    "okunus": "Int.",
+    "meaning": "İnterna"
+  },
+  {
+    "id": "med_1026",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Kcal",
+    "okunus": "Kcal",
+    "meaning": "Kilokalori"
+  },
+  {
+    "id": "med_1027",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "L",
+    "okunus": "L",
+    "meaning": "Latince, Vertebra Lumbalis"
+  },
+  {
+    "id": "med_1028",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Lig.",
+    "okunus": "Lig.",
+    "meaning": "Ligamentum"
+  },
+  {
+    "id": "med_1029",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Lm",
+    "okunus": "Lm",
+    "meaning": "Lümen"
+  },
+  {
+    "id": "med_1030",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "M., m.",
+    "okunus": "M., m.",
+    "meaning": "Musculus"
+  },
+  {
+    "id": "med_1031",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Mm., mm.",
+    "okunus": "Mm., mm.",
+    "meaning": "Musculi"
+  },
+  {
+    "id": "med_1032",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Nn., nn.",
+    "okunus": "Nn., nn.",
+    "meaning": "Nervi"
+  },
+  {
+    "id": "med_1033",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "N., n.",
+    "okunus": "N., n.",
+    "meaning": "Nervus"
+  },
+  {
+    "id": "med_1034",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Pl.",
+    "okunus": "Pl.",
+    "meaning": "Plexus"
+  },
+  {
+    "id": "med_1035",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Post.",
+    "okunus": "Post.",
+    "meaning": "Posterior"
+  },
+  {
+    "id": "med_1036",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Proc.",
+    "okunus": "Proc.",
+    "meaning": "Processus"
+  },
+  {
+    "id": "med_1037",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "R.",
+    "okunus": "R.",
+    "meaning": "Regio"
+  },
+  {
+    "id": "med_1038",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "S",
+    "okunus": "S",
+    "meaning": "Vertebra Sacralis"
+  },
+  {
+    "id": "med_1039",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Sin.",
+    "okunus": "Sin.",
+    "meaning": "Sinister"
+  },
+  {
+    "id": "med_1040",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Str.",
+    "okunus": "Str.",
+    "meaning": "Stratum"
+  },
+  {
+    "id": "med_1041",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Sup.",
+    "okunus": "Sup.",
+    "meaning": "Superior"
+  },
+  {
+    "id": "med_1042",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Tbc",
+    "okunus": "Tbc",
+    "meaning": "Tüberküloz (Verem)"
+  },
+  {
+    "id": "med_1043",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Tele",
+    "okunus": "Tele",
+    "meaning": "Kalp görüntüleme grafisi"
+  },
+  {
+    "id": "med_1044",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "T",
+    "okunus": "T",
+    "meaning": "Thoracal vertebra"
+  },
+  {
+    "id": "med_1045",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "V., v.",
+    "okunus": "V., v.",
+    "meaning": "Vena"
+  },
+  {
+    "id": "med_1046",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Tıbbi Kısaltmalar",
+    "term": "Vv., vv.",
+    "okunus": "Vv., vv.",
+    "meaning": "Venae"
+  },
+  {
+    "id": "med_1047",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Litre (L)",
+    "okunus": "Litre",
+    "meaning": "Hacim ölçü birimi (1 Litre = 1000 mililitre)"
+  },
+  {
+    "id": "med_1048",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Desilitre (dl)",
+    "okunus": "Desilitre",
+    "meaning": "Hacim ölçü birimi (1 litrenin onda biri, 100 ml)"
+  },
+  {
+    "id": "med_1049",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Mililitre (ml)",
+    "okunus": "Mililitre",
+    "meaning": "Hacim ölçü birimi (1 litrenin binde biri)"
+  },
+  {
+    "id": "med_1050",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Gram (g)",
+    "okunus": "Gram",
+    "meaning": "Kütle ölçü birimi (1 kilogramın binde biri)"
+  },
+  {
+    "id": "med_1051",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Gram-kalori (g-cal)",
+    "okunus": "Gram kalori",
+    "meaning": "1 gram suyun sıcaklığını 1°C artırmak için gereken enerji birimi"
+  },
+  {
+    "id": "med_1052",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Miligram (mg)",
+    "okunus": "Miligram",
+    "meaning": "Kütle ölçü birimi (1 gramın binde biri, 0.001 g)"
+  },
+  {
+    "id": "med_1053",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Milimetre (mm)",
+    "okunus": "Milimetre",
+    "meaning": "Uzunluk ölçü birimi (1 metrenin binde biri)"
+  },
+  {
+    "id": "med_1054",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Mikrometre (µm)",
+    "okunus": "Mikrometre",
+    "meaning": "Uzunluk ölçü birimi (1 milimetrenin binde biri, mikron)"
+  },
+  {
+    "id": "med_1055",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Nanometre (nm)",
+    "okunus": "Nanometre",
+    "meaning": "Uzunluk ölçü birimi (1 milimetrenin milyonda biri)"
+  },
+  {
+    "id": "med_1056",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Milimetreküp (mm³)",
+    "okunus": "Milimetreküp",
+    "meaning": "Hacim ölçü birimi (özellikle kan hücre sayımlarında mikrolitreye eşdeğer hacim)"
+  },
+  {
+    "id": "med_1057",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Milimol (mmol)",
+    "okunus": "Milimol",
+    "meaning": "Madde miktarı birimi (1 molün binde biri)"
+  },
+  {
+    "id": "med_1058",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Ölçü Birimleri",
+    "term": "Mikromol (µmol)",
+    "okunus": "Mikromol",
+    "meaning": "Madde miktarı birimi (1 molün milyonda biri)"
+  },
+  {
+    "id": "med_1059",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "mono- / uni-",
+    "okunus": "mono / uni",
+    "meaning": "Bir, tek (1 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_1060",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "di- / bi-",
+    "okunus": "di / bi",
+    "meaning": "İki, çift (2 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_1061",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "tri-",
+    "okunus": "tri",
+    "meaning": "Üç (3 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_1062",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "tetra- / quadri-",
+    "okunus": "tetra / kvadri",
+    "meaning": "Dört (4 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_1063",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "penta-",
+    "okunus": "penta",
+    "meaning": "Beş (5 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_1064",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "hexa- / hekza-",
+    "okunus": "hekza",
+    "meaning": "Altı (6 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_1065",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "hepta-",
+    "okunus": "hepta",
+    "meaning": "Yedi (7 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_1066",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "octa- / okta-",
+    "okunus": "okta",
+    "meaning": "Sekiz (8 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_1067",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "nona-",
+    "okunus": "nona",
+    "meaning": "Dokuz (9 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_1068",
+    "type": "onek",
+    "category": "Ön Ek",
+    "subCategory": "Sayısal Ön Ekler",
+    "term": "deca- / deka-",
+    "okunus": "deka",
+    "meaning": "On (10 sayısı ile ilgili ön ek)"
+  },
+  {
+    "id": "med_1069",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Klinik Terimler",
+    "term": "Parasentez (abdominosentez)",
+    "okunus": "Parasentez",
+    "meaning": "Karın boşluğunda biriken sıvının boşaltılması"
+  },
+  {
+    "id": "med_1070",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Klinik Terimler",
+    "term": "Amniyosentez",
+    "okunus": "Amniyosentez",
+    "meaning": "Uterusta (döl yatağı) fetüsün içinde bulunduğu sıvıyı (amnion) almak için kullanılan cerrahi işlem"
+  },
+  {
+    "id": "med_1071",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Klinik Terimler",
+    "term": "Biyopsi",
+    "okunus": "Biyopsi",
+    "meaning": "Vücuttaki bir organdan doku parçası alınması ve mikroskop altında incelenmesi"
+  },
+  {
+    "id": "med_1072",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Klinik Terimler",
+    "term": "Endoskopi",
+    "okunus": "Endoskopi",
+    "meaning": "İnce tüp şeklindeki bir gerecin (endoskop) doğal bir açıklıktan, cerrahi insizyondan veya karın duvarından sokulması"
+  },
+  {
+    "id": "med_1073",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Klinik Terimler",
+    "term": "Bronkoskopi",
+    "okunus": "Bronkoskopi",
+    "meaning": "Hava yoluna esnek tüp sokularak yapılır. Bronşların içi görülür ve biyopsi için doku alınabilir. Tüp ağızdan sokulur"
+  },
+  {
+    "id": "med_1074",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Klinik Terimler",
+    "term": "Gastroskopi",
+    "okunus": "Gastroskopi",
+    "meaning": "Midenin içinin görüntülenmesi ve biyopsi alınması için özafagustan endoskop sokularak incelenmesi"
+  },
+  {
+    "id": "med_1075",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Klinik Terimler",
+    "term": "Kolonoskopi",
+    "okunus": "Kolonoskopi",
+    "meaning": "Rektumdan kolona esnek bir tüp sokarak görsel inceleme yapılabilmesi ve biyopsi örneği alınabilmesi"
+  },
+  {
+    "id": "med_1076",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "Superior",
+    "okunus": "Superior",
+    "meaning": "Üst"
+  },
+  {
+    "id": "med_1077",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "İnferior",
+    "okunus": "İnferior",
+    "meaning": "Alt"
+  },
+  {
+    "id": "med_1078",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "Caudalis",
+    "okunus": "Caudalis",
+    "meaning": "Kuyruğa ait, kuyrukla ilgili"
+  },
+  {
+    "id": "med_1079",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "Apicalis",
+    "okunus": "Apicalis",
+    "meaning": "Tepeyle ilgili, tepeye ait"
+  },
+  {
+    "id": "med_1080",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "Basal, basilaris",
+    "okunus": "Basal, basilaris",
+    "meaning": "Tabanla ilgili, tabana ait"
+  },
+  {
+    "id": "med_1081",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "Externus",
+    "okunus": "Externus",
+    "meaning": "Dış"
+  },
+  {
+    "id": "med_1082",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "İnternus",
+    "okunus": "İnternus",
+    "meaning": "İç"
+  },
+  {
+    "id": "med_1083",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "Superficialis",
+    "okunus": "Superficialis",
+    "meaning": "Yüzeysel"
+  },
+  {
+    "id": "med_1084",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "Profundus",
+    "okunus": "Profundus",
+    "meaning": "Derin, derinde olan"
+  },
+  {
+    "id": "med_1085",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "Anterior",
+    "okunus": "Anterior",
+    "meaning": "Ön"
+  },
+  {
+    "id": "med_1086",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "Posterior",
+    "okunus": "Posterior",
+    "meaning": "Arka"
+  },
+  {
+    "id": "med_1087",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "Dexter",
+    "okunus": "Dexter",
+    "meaning": "Sağ"
+  },
+  {
+    "id": "med_1088",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Yön Belirten Terimler",
+    "term": "Sinister",
+    "okunus": "Sinister",
+    "meaning": "Sol"
+  },
+  {
+    "id": "med_1089",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Genel Kavramlar",
+    "term": "Symptom",
+    "okunus": "Symptom",
+    "meaning": "Hastalıkta görülen belirtiler. Hastanın kendinde duyduğu ve gözlediği yakınmalar"
+  },
+  {
+    "id": "med_1090",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Genel Kavramlar",
+    "term": "Muayene",
+    "okunus": "Muayene",
+    "meaning": "Hastalığın tanısı için yapılan işlemlerin tümü"
+  },
+  {
+    "id": "med_1091",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Genel Kavramlar",
+    "term": "Diagnosis",
+    "okunus": "Diagnosis",
+    "meaning": "Diyagnoz, tanı, teşhis"
+  },
+  {
+    "id": "med_1092",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Genel Kavramlar",
+    "term": "Operation",
+    "okunus": "Operation",
+    "meaning": "Cerrahi işlem, girişim, ameliyat"
+  },
+  {
+    "id": "med_1093",
+    "type": "terim",
+    "category": "Genel & Klinik",
+    "subCategory": "Genel Kavramlar",
+    "term": "Trauma",
+    "okunus": "Trauma",
+    "meaning": "Yaralanma, incinme, zedelenme, harabiyet"
+  }
+];

@@ -1,0 +1,1919 @@
+/* ===================================================================
+   CiritTerm - Tıbbi Terminoloji Sınav Hazırlık Platformu
+   Tasarım Sistemi & Stil Dosyası
+   Geliştirici & Hazırlayan: Süleyman Cirit
+   =================================================================== */
+
+:root {
+  /* Renk Paleti - Modern Medikal Koyu Tema */
+  --bg-primary: #090d16;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #1e293b;
+  --bg-card: rgba(15, 23, 42, 0.85);
+  --bg-card-hover: rgba(30, 41, 59, 0.95);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(56, 189, 248, 0.4);
+  --border-active: #0ea5e9;
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  /* Vurgu Renkleri */
+  --primary: #0ea5e9;
+  --primary-glow: rgba(14, 165, 233, 0.25);
+  --cyan: #06b6d4;
+  --emerald: #10b981;
+  --emerald-glow: rgba(16, 185, 129, 0.2);
+  --amber: #f59e0b;
+  --amber-glow: rgba(245, 158, 11, 0.2);
+  --rose: #f43f5e;
+  --rose-glow: rgba(244, 63, 94, 0.2);
+  --purple: #8b5cf6;
+
+  /* Tipografi */
+  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Kart Boyutları */
+  --card-width: 600px;
+  --card-height: 380px;
+
+  /* Gölgeler & Yarıçaplar */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--border-subtle);
+  --shadow-glow: 0 0 25px -5px var(--primary-glow);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(14, 165, 233, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.06) 0%, transparent 40%);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==================== ÜST BAŞLIK (HEADER) ==================== */
+.header {
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--primary), #0284c7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+.brand-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(to right, #ffffff, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: rgba(14, 165, 233, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  text-transform: uppercase;
+}
+
+.brand-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Profil Seçici Buton */
+.profile-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem 0.35rem 0.4rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-pill:hover {
+  border-color: var(--primary);
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.profile-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.profile-label {
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.profile-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.profile-chevron {
+  color: var(--text-muted);
+}
+
+.btn-icon-subtle {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-icon-subtle:hover {
+  color: var(--text-main);
+  border-color: var(--primary);
+}
+
+/* ==================== SEKMELER (NAV TABS) ==================== */
+.nav-container {
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(15, 23, 42, 0.6);
+  position: sticky;
+  top: 61px;
+  z-index: 40;
+  backdrop-filter: blur(8px);
+}
+
+.nav-tabs {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.nav-tab-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.nav-tab-btn:hover {
+  color: var(--text-main);
+}
+
+.nav-tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.nav-tab-badge {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-tertiary);
+  color: var(--text-dim);
+}
+
+.nav-tab-btn.active .nav-tab-badge {
+  background: rgba(14, 165, 233, 0.15);
+  color: var(--primary);
+}
+
+/* ==================== ANA ALAN ==================== */
+.main-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+  flex: 1;
+  width: 100%;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ==================== FİLTRE ÇİPLERİ ==================== */
+.filters-wrapper {
+  margin-bottom: 1.25rem;
+}
+
+.filters-scroll {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  scrollbar-width: none;
+}
+
+.filter-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+  color: var(--text-main);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-chip.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.filter-chip-fav.active {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-color: #f59e0b;
+}
+
+.filter-count {
+  font-size: 0.72rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.25);
+  opacity: 0.85;
+}
+
+/* ==================== TAB 1: BİLGİ KARTLARI ==================== */
+.fc-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.fc-counter-wrapper {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.fc-counter-current {
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+
+.fc-counter-separator {
+  color: var(--text-dim);
+  margin: 0 0.25rem;
+}
+
+.fc-counter-total {
+  color: var(--text-muted);
+}
+
+.fc-tools {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-tool {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-tool:hover {
+  color: var(--text-main);
+  border-color: var(--primary);
+}
+
+.btn-tool.active {
+  background: rgba(14, 165, 233, 0.15);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.fc-progress-track {
+  width: 100%;
+  height: 4px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.fc-progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--primary), var(--cyan));
+  transition: width 0.3s ease;
+}
+
+/* 3D Bilgi Kartı Sahnesi */
+.fc-scene {
+  max-width: var(--card-width);
+  min-height: var(--card-height);
+  margin: 0 auto 1.5rem auto;
+  perspective: 1000px;
+}
+
+.fc-card {
+  width: 100%;
+  min-height: var(--card-height);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.fc-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.fc-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: var(--card-height);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+}
+
+.fc-face:hover {
+  border-color: var(--border-hover);
+}
+
+.fc-front {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.85));
+}
+
+.fc-back {
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.9));
+  transform: rotateY(180deg);
+}
+
+.card-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-badge-type {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(14, 165, 233, 0.12);
+  color: var(--primary);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  letter-spacing: 0.04em;
+}
+
+.card-btn-star {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.card-btn-star:hover {
+  color: #f59e0b;
+  transform: scale(1.15);
+}
+
+.card-btn-star.starred {
+  color: #f59e0b;
+}
+
+.card-btn-star.starred svg {
+  fill: #f59e0b;
+}
+
+.card-center-body {
+  text-align: center;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.card-term {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  word-break: break-word;
+}
+
+.card-pronunciation-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.pronounce-label {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.card-term-small {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--primary);
+}
+
+.card-meaning-box {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--border-subtle);
+  width: 100%;
+}
+
+.card-meaning-text {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.45;
+}
+
+.card-footer-hint {
+  display: flex;
+  justify-content: center;
+}
+
+.flip-hint-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.kbd {
+  font-family: var(--font-mono);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Navigasyon Aksiyonları */
+.fc-nav-actions {
+  max-width: var(--card-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0.75rem;
+}
+
+.btn-fc-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-tertiary);
+  color: var(--text-main);
+  transition: all 0.18s ease;
+}
+
+.btn-fc-nav:hover {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: var(--border-hover);
+}
+
+.btn-fc-flip {
+  background: rgba(14, 165, 233, 0.12);
+  color: var(--primary);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+
+.btn-fc-flip:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ==================== TAB 2: TEST & SINAV ==================== */
+.quiz-setup-card {
+  max-width: 640px;
+  margin: 1rem auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.setup-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.setup-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.setup-header h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+
+.setup-header p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.setup-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.setup-field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  font-size: 0.92rem;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.form-select:focus {
+  border-color: var(--primary);
+}
+
+.btn-primary-large {
+  width: 100%;
+  padding: 0.95rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--primary), #0284c7);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 14px var(--primary-glow);
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.btn-primary-large:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* Aktif Sınav */
+.quiz-active-card {
+  max-width: 680px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+}
+
+.quiz-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.quiz-counter {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.quiz-timer-box {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.15);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+}
+
+.quiz-score-badge {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.score-val {
+  font-weight: 700;
+  color: var(--emerald);
+}
+
+.btn-quit-quiz {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.btn-quit-quiz:hover {
+  color: var(--rose);
+}
+
+.quiz-progress-track {
+  width: 100%;
+  height: 4px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  margin-bottom: 1.75rem;
+  overflow: hidden;
+}
+
+.quiz-progress-fill {
+  height: 100%;
+  background: var(--primary);
+  transition: width 0.25s ease;
+}
+
+.quiz-question-box {
+  text-align: center;
+  margin-bottom: 1.75rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.quiz-prompt-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-question-text {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.35;
+}
+
+.quiz-subtext-pronounce {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+.quiz-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.quiz-opt-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  width: 100%;
+}
+
+.quiz-opt-btn:hover:not(:disabled) {
+  border-color: var(--border-hover);
+  background: rgba(30, 41, 59, 0.95);
+  transform: translateX(3px);
+}
+
+.quiz-opt-letter {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.quiz-opt-btn.correct {
+  background: rgba(16, 185, 129, 0.15) !important;
+  border-color: var(--emerald) !important;
+  color: #fff !important;
+}
+
+.quiz-opt-btn.correct .quiz-opt-letter {
+  background: var(--emerald);
+  color: #fff;
+}
+
+.quiz-opt-btn.wrong {
+  background: rgba(244, 63, 94, 0.15) !important;
+  border-color: var(--rose) !important;
+  color: #fff !important;
+}
+
+.quiz-opt-btn.wrong .quiz-opt-letter {
+  background: var(--rose);
+  color: #fff;
+}
+
+.quiz-footer-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.quiz-status-feedback {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.quiz-status-feedback.correct {
+  color: var(--emerald);
+}
+
+.quiz-status-feedback.wrong {
+  color: var(--rose);
+}
+
+.btn-next-question {
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Sınav Karnesi */
+.quiz-results-card {
+  max-width: 680px;
+  margin: 1rem auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.results-trophy {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.results-header h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.results-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.metric-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.metric-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-top: 0.25rem;
+}
+
+.metric-correct {
+  color: var(--emerald);
+}
+
+.metric-wrong {
+  color: var(--rose);
+}
+
+.results-mistakes-section {
+  text-align: left;
+  margin: 1.5rem 0;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.25rem;
+}
+
+.results-mistakes-section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--rose);
+}
+
+.mistakes-list {
+  max-height: 250px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mistake-item {
+  background: rgba(244, 63, 94, 0.08);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.85rem;
+}
+
+.mistake-term {
+  font-weight: 700;
+  color: #fff;
+}
+
+.mistake-answer {
+  color: var(--emerald);
+  margin-top: 0.2rem;
+}
+
+.results-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.btn-secondary-large {
+  padding: 0.95rem 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ==================== TAB 3: EŞLEŞTİRME OYUNU ==================== */
+.match-mode-selector {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.mode-btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mode-btn.active {
+  background: rgba(14, 165, 233, 0.15);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.match-stats-bar {
+  max-width: 780px;
+  margin: 0 auto 1.25rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+}
+
+.mstat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mstat-label {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.mstat-val {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.btn-restart-match {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.match-duo-container {
+  max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.duo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.match-tile {
+  min-height: 60px;
+  padding: 0.75rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.15s ease;
+}
+
+.match-tile:hover {
+  border-color: var(--border-hover);
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.match-tile.selected {
+  border-color: var(--primary) !important;
+  background: rgba(14, 165, 233, 0.2) !important;
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+.match-tile.matched {
+  border-color: var(--emerald) !important;
+  background: rgba(16, 185, 129, 0.2) !important;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.match-tile.wrong-shake {
+  border-color: var(--rose) !important;
+  background: rgba(244, 63, 94, 0.25) !important;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.match-grid-container {
+  max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+/* ==================== TAB 4: YAZMA PRATİĞİ ==================== */
+.spelling-card {
+  max-width: 680px;
+  margin: 1rem auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.spelling-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.spelling-header-info h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.spelling-header-info p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.spelling-counter-badge {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--primary);
+  background: rgba(14, 165, 233, 0.12);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.spelling-prompt-container {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.spelling-type-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  background: rgba(14, 165, 233, 0.12);
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.spelling-target-term-box {
+  margin: 0.5rem 0 1rem 0;
+}
+
+.target-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  display: block;
+}
+
+.spelling-target-term {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #38bdf8;
+  letter-spacing: -0.01em;
+  font-family: var(--font-mono);
+}
+
+.spelling-target-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.detail-label {
+  color: var(--text-dim);
+}
+
+.detail-value {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.spelling-input-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.spelling-input-field {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-subtle);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-align: center;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.spelling-input-field:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 16px var(--primary-glow);
+}
+
+.spelling-input-field.input-correct {
+  border-color: var(--emerald) !important;
+  background: rgba(16, 185, 129, 0.15) !important;
+}
+
+.spelling-input-field.input-wrong {
+  border-color: var(--rose) !important;
+  background: rgba(244, 63, 94, 0.15) !important;
+}
+
+.spelling-live-feedback {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.spelling-controls-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.btn-subtle {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.btn-subtle:hover {
+  color: var(--text-main);
+  border-color: var(--border-hover);
+}
+
+.btn-primary {
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  color: #fff;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.spelling-tips-box {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+/* ==================== TAB 5: SÖZLÜK & ATLAS ==================== */
+.dict-top-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.dict-search-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dict-search-wrapper svg {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-dim);
+}
+
+.dict-search-input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 2.75rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.dict-search-input:focus {
+  border-color: var(--primary);
+}
+
+.btn-clear-search {
+  position: absolute;
+  right: 0.85rem;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.dict-alphabet-bar {
+  display: flex;
+  gap: 0.25rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  scrollbar-width: none;
+}
+
+.alpha-btn {
+  min-width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.alpha-btn:hover {
+  color: var(--text-main);
+  border-color: var(--border-hover);
+}
+
+.alpha-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.dict-results-info {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.dict-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.85rem;
+}
+
+.dict-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.dict-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  background: var(--bg-card-hover);
+}
+
+.dict-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dict-card-term {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  word-break: break-word;
+}
+
+.dict-card-pronounce {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+}
+
+.dict-card-meaning {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dict-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.dict-type-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+/* ==================== MODALLAR ==================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  max-width: 540px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  padding: 1.75rem;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.modal-title-group h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.modal-title-group p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.btn-close-modal {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.btn-close-modal:hover {
+  color: #fff;
+}
+
+/* Profil Modalı */
+.profile-current-badge {
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  font-size: 0.88rem;
+}
+
+.profile-current-badge strong {
+  color: var(--primary);
+  font-size: 1.05rem;
+}
+
+.profile-list-section label,
+.profile-add-section label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.profile-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.profile-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.profile-item-row:hover {
+  border-color: var(--primary);
+}
+
+.profile-item-row.active {
+  border-color: var(--primary);
+  background: rgba(14, 165, 233, 0.15);
+}
+
+.profile-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.profile-item-badge {
+  font-size: 0.75rem;
+  color: #f59e0b;
+}
+
+.profile-add-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.profile-add-row input {
+  flex: 1;
+  padding: 0.65rem 0.85rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  outline: none;
+}
+
+.profile-add-row input:focus {
+  border-color: var(--primary);
+}
+
+/* Rehber & Kısayollar Modalı */
+.credits-banner {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(139, 92, 246, 0.15));
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.credits-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #38bdf8;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.35rem;
+}
+
+.credits-name {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+
+.credits-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.shortcuts-table-wrapper {
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.shortcuts-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.shortcuts-table th,
+.shortcuts-table td {
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.shortcuts-table th {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.exam-tips-card {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem;
+  font-size: 0.82rem;
+}
+
+.exam-tips-card h4 {
+  color: var(--emerald);
+  margin-bottom: 0.25rem;
+}
+
+.exam-tips-card p {
+  color: var(--text-muted);
+}
+
+/* Terim Detay Modalı */
+.modal-term-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.modal-term-name {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.modal-dt-pronounce-row {
+  font-family: var(--font-mono);
+  color: #38bdf8;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.modal-dt-meaning-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.modal-dt-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.modal-dt-meaning-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.modal-dt-category-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.modal-dt-badge {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Toast Bildirimi */
+.toast-notification {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--bg-tertiary);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-subtle);
+  font-size: 0.88rem;
+  font-weight: 600;
+  z-index: 1000;
+  display: none;
+  transform: translateY(20px);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.toast-notification.show {
+  display: block;
+  transform: translateY(0);
+}
+
+.toast-notification.success {
+  border-color: var(--emerald);
+  background: rgba(16, 185, 129, 0.95);
+}
+
+.toast-notification.info {
+  border-color: var(--primary);
+  background: rgba(14, 165, 233, 0.95);
+}
+
+/* ==================== MOBİL UYUMLULUK (RESPONSIVE) ==================== */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .main-container {
+    padding: 1rem 0.75rem;
+  }
+
+  :root {
+    --card-width: 100%;
+    --card-height: 340px;
+  }
+
+  .card-term {
+    font-size: 1.75rem;
+  }
+
+  .card-meaning-text {
+    font-size: 1.15rem;
+  }
+
+  .match-duo-container {
+    grid-template-columns: 1fr;
+  }
+
+  .match-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .spelling-target-term {
+    font-size: 1.65rem;
+  }
+
+  .results-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

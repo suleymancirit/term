@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiritTerm - Tıbbi Terminoloji Sınav Hazırlık Platformu</title>
+  <meta name="description"
+    content="Süleyman Cirit ve arkadaşları için geliştirilmiş modern, hızlı ve kapsamlı tıbbi terminoloji sınav hazırlık platformu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🩺</text></svg>">
+</head>
+
+<body>
+  <!-- Üst Başlık (Header) -->
+  <header class="header">
+    <div class="header-container">
+      <div class="header-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-title-row">
+            <h1 class="brand-title">CiritTerm</h1>
+            <span class="brand-badge">Sınav Atlası</span>
+          </div>
+          <p class="brand-subtitle">Tıbbi Terminoloji Hazırlık & Çalışma Platformu</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Aktif Profil / Öğrenci Seçici -->
+        <div class="profile-pill" id="btn-open-profile-modal" title="Öğrenci Profili Değiştir / Arkadaş Ekle">
+          <span class="profile-avatar" id="header-profile-avatar">S</span>
+          <div class="profile-info">
+            <span class="profile-label">Aktif Öğrenci</span>
+            <span class="profile-name" id="header-profile-name">Süleyman</span>
+          </div>
+          <svg class="profile-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+
+        <!-- Kısayollar ve Rehber -->
+        <button class="btn-icon-subtle" id="btn-open-help-modal" title="Klavye Kısayolları ve Rehber">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Ana Sekmeler (Nav Tabs) -->
+  <nav class="nav-container">
+    <div class="nav-tabs" role="tablist">
+      <button class="nav-tab-btn active" data-tab="flashcards" id="tab-flashcards">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+        <span>Bilgi Kartları</span>
+        <span class="nav-tab-badge" id="badge-total-terms">1093</span>
+      </button>
+
+      <button class="nav-tab-btn" data-tab="quiz" id="tab-quiz">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+        <span>Test & Sınav</span>
+      </button>
+
+      <button class="nav-tab-btn" data-tab="match" id="tab-match">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7" />
+          <rect x="14" y="3" width="7" height="7" />
+          <rect x="14" y="14" width="7" height="7" />
+          <rect x="3" y="14" width="7" height="7" />
+        </svg>
+        <span>Eşleştirme Oyunu</span>
+      </button>
+
+      <button class="nav-tab-btn" data-tab="spelling" id="tab-spelling">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 20h9" />
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+        </svg>
+        <span>Yazma Pratiği</span>
+      </button>
+
+      <button class="nav-tab-btn" data-tab="dictionary" id="tab-dictionary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        </svg>
+        <span>Sözlük & Atlas</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Ana İçerik Alanı -->
+  <main class="main-container">
+
+    <!-- ==================== TAB 1: BİLGİ KARTLARI ==================== -->
+    <section class="tab-content active" id="tab-content-flashcards">
+      <!-- Filtre Çipleri -->
+      <div class="filters-wrapper">
+        <div class="filters-scroll">
+          <button class="filter-chip active" data-filter="all">
+            <span>Tüm Terimler</span>
+            <span class="filter-count" id="count-all">1093</span>
+          </button>
+          <button class="filter-chip" data-filter="terim">
+            <span>Tıbbi Terimler</span>
+            <span class="filter-count" id="count-terim">853</span>
+          </button>
+          <button class="filter-chip" data-filter="onek">
+            <span>Ön Ekler</span>
+            <span class="filter-count" id="count-onek">72</span>
+          </button>
+          <button class="filter-chip" data-filter="sonek">
+            <span>Son Ekler</span>
+            <span class="filter-count" id="count-sonek">66</span>
+          </button>
+          <button class="filter-chip filter-chip-fav" data-filter="favorites">
+            <span>⭐ Yıldızlılarım (<span id="user-fav-label">Süleyman</span>)</span>
+            <span class="filter-count" id="count-favorites">0</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Kart Kontrolleri ve İlerleme -->
+      <div class="fc-controls-bar">
+        <div class="fc-counter-wrapper">
+          <span class="fc-counter-current" id="fc-current-index">1</span>
+          <span class="fc-counter-separator">/</span>
+          <span class="fc-counter-total" id="fc-total-count">1093</span>
+        </div>
+
+        <div class="fc-tools">
+          <button class="btn-tool" id="btn-fc-shuffle" title="Kartları Karıştır">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 3 21 3 21 8" />
+              <line x1="4" y1="20" x2="21" y2="3" />
+              <polyline points="21 16 21 21 16 21" />
+              <line x1="15" y1="15" x2="21" y2="21" />
+              <line x1="4" y1="4" x2="9" y2="9" />
+            </svg>
+            <span>Karıştır</span>
+          </button>
+          <button class="btn-tool" id="btn-fc-autoplay" title="Otomatik Oynat">
+            <svg id="icon-autoplay-play" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            <svg id="icon-autoplay-pause" style="display:none;" viewBox="0 0 24 24" width="16" height="16" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <rect x="6" y="4" width="4" height="16" />
+              <rect x="14" y="4" width="4" height="16" />
+            </svg>
+            <span id="text-fc-autoplay">Otomatik Slayt</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- İlerleme Çubuğu -->
+      <div class="fc-progress-track">
+        <div class="fc-progress-fill" id="fc-progress-bar" style="width: 0.1%;"></div>
+      </div>
+
+      <!-- 3D Bilgi Kartı Sahnesi -->
+      <div class="fc-scene">
+        <div class="fc-card" id="main-flashcard">
+          <!-- ÖN YÜZ -->
+          <div class="fc-face fc-front">
+            <div class="card-header-bar">
+              <span class="card-badge-type" id="fc-badge-type">Tıbbi Terim</span>
+              <button class="card-btn-star" id="btn-fc-star" title="Yıldızlılara Ekle / Çıkar (F)">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="card-center-body">
+              <h2 class="card-term" id="fc-term">abdomin</h2>
+              <div class="card-pronunciation-pill">
+                <span class="pronounce-label">Okunuş:</span>
+                <span class="pronounce-text" id="fc-okunus">abdomin</span>
+              </div>
+            </div>
+
+            <div class="card-footer-hint">
+              <span class="flip-hint-badge">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                  <path d="M3 3v5h5" />
+                  <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+                  <path d="M16 21h5v-5" />
+                </svg>
+                <span>Kartı Çevir (Boşluk Tuşu veya Tıkla)</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- ARKA YÜZ -->
+          <div class="fc-face fc-back">
+            <div class="card-header-bar">
+              <span class="card-badge-type" id="fc-back-type">Türkçe Karşılığı</span>
+              <span class="card-term-small" id="fc-back-term">abdomin</span>
+            </div>
+
+            <div class="card-center-body">
+              <div class="card-meaning-box">
+                <p class="card-meaning-text" id="fc-meaning">Karın</p>
+              </div>
+            </div>
+
+            <div class="card-footer-hint">
+              <span class="flip-hint-badge">
+                <span class="kbd">Boşluk</span> Terime Geri Dön
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hızlı Navigasyon Butonları -->
+      <div class="fc-nav-actions">
+        <button class="btn-fc-nav btn-fc-prev" id="btn-fc-prev" title="Önceki Terim (← Sol Ok)">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Önceki Kart</span>
+        </button>
+
+        <button class="btn-fc-nav btn-fc-flip" id="btn-fc-flip" title="Kartı Çevir (Boşluk)">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+            <path d="M3 3v5h5" />
+            <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+            <path d="M16 21h5v-5" />
+          </svg>
+          <span>Çevir</span>
+        </button>
+
+        <button class="btn-fc-nav btn-fc-next" id="btn-fc-next" title="Sonraki Terim (→ Sağ Ok)">
+          <span>Sonraki Kart</span>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 2: TEST & SINAV ==================== -->
+    <section class="tab-content" id="tab-content-quiz">
+      <!-- Quiz Başlangıç Ayarları -->
+      <div class="quiz-setup-card" id="quiz-setup-view">
+        <div class="setup-header">
+          <div class="setup-icon">🎯</div>
+          <h2>Tıbbi Terminoloji Test & Sınav Modu</h2>
+          <p>Sınava hazırlık için soru sayısını ve kapsamı belirleyin, kendinizi test edin.</p>
+        </div>
+
+        <div class="setup-grid">
+          <!-- Kapsam Seçimi -->
+          <div class="setup-field">
+            <label for="quiz-scope">Sınav Kapsamı:</label>
+            <select class="form-select" id="quiz-scope">
+              <option value="all">Tüm Konular (1093 Terim ve Ek)</option>
+              <option value="terim">Yalnızca Tıbbi Terimler (853 Terim)</option>
+              <option value="onek">Yalnızca Ön Ekler (72 Ön Ek)</option>
+              <option value="sonek">Yalnızca Son Ekler (66 Son Ek)</option>
+              <option value="favorites">⭐ Yıldızlı Terimlerim</option>
+            </select>
+          </div>
+
+          <!-- Soru Sayısı Seçimi (10, 25, 50, 100, 200) -->
+          <div class="setup-field">
+            <label for="quiz-count">Soru Sayısı:</label>
+            <select class="form-select" id="quiz-count">
+              <option value="10">10 Soru (Hızlı Tekrar)</option>
+              <option value="25" selected>25 Soru (Standart Quiz)</option>
+              <option value="50">50 Soru (Kapsamlı Test)</option>
+              <option value="100">100 Soru (Büyük Sınav Provası)</option>
+              <option value="200">200 Soru (Maraton Sınavı)</option>
+            </select>
+          </div>
+
+          <!-- Soru Yönü -->
+          <div class="setup-field">
+            <label for="quiz-type">Soru Türü:</label>
+            <select class="form-select" id="quiz-type">
+              <option value="both">Karışık (Terimden Anlama & Anlamdan Terime)</option>
+              <option value="term_to_meaning">Terim Verilir -> Anlam Sorulur</option>
+              <option value="meaning_to_term">Anlam Verilir -> Tıbbi Terim Sorulur</option>
+            </select>
+          </div>
+
+          <!-- Süre Modu -->
+          <div class="setup-field">
+            <label for="quiz-timer">Süre Kısıtlaması:</label>
+            <select class="form-select" id="quiz-timer">
+              <option value="0">Süresiz (Rahat Çalışma)</option>
+              <option value="15">Soru Başına 15 Saniye (Sınav Baskısı)</option>
+              <option value="30">Soru Başına 30 Saniye</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn-primary-large" id="btn-start-quiz">
+          <span>Sınavı Başlat</span>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="5 3 19 12 5 21 5 3" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Aktif Sınav Ekranı -->
+      <div class="quiz-active-card" id="quiz-active-view" style="display:none;">
+        <div class="quiz-top-bar">
+          <div class="quiz-counter">
+            Soru <span id="quiz-q-current">1</span> / <span id="quiz-q-total">25</span>
+          </div>
+
+          <div class="quiz-timer-box" id="quiz-timer-display" style="display:none;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            <span id="quiz-timer-seconds">15</span>s
+          </div>
+
+          <div class="quiz-score-badge">
+            <span class="score-label">Doğru:</span>
+            <span class="score-val" id="quiz-score-val">0</span>
+          </div>
+
+          <button class="btn-quit-quiz" id="btn-quit-quiz" title="Sınavı Bitir">Çıkış</button>
+        </div>
+
+        <div class="quiz-progress-track">
+          <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+        </div>
+
+        <div class="quiz-question-box">
+          <span class="quiz-prompt-badge" id="quiz-prompt-badge">Bu Tıbbi Terimin Anlamı Nedir?</span>
+          <h3 class="quiz-question-text" id="quiz-question-text">abdominocystic</h3>
+          <span class="quiz-subtext-pronounce" id="quiz-question-pronounce"></span>
+        </div>
+
+        <div class="quiz-options-grid" id="quiz-options-container">
+          <!-- 4 Seçenek Dinamik Olarak Gelir -->
+        </div>
+
+        <div class="quiz-footer-status" id="quiz-footer-status" style="display:none;">
+          <div class="quiz-status-feedback" id="quiz-feedback-text"></div>
+          <button class="btn-next-question" id="btn-next-question">Sonraki Soru →</button>
+        </div>
+      </div>
+
+      <!-- Sınav Sonuç Karnesi -->
+      <div class="quiz-results-card" id="quiz-results-view" style="display:none;">
+        <div class="results-header">
+          <div class="results-trophy" id="results-icon">🏆</div>
+          <h2>Sınav Tamamlandı!</h2>
+          <p id="results-subtitle">Tıbbi terminoloji sınav sonucunuz:</p>
+        </div>
+
+        <div class="results-metrics-grid">
+          <div class="metric-card">
+            <span class="metric-label">Başarı Oranı</span>
+            <span class="metric-value" id="res-percentage">80%</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Doğru Sayısı</span>
+            <span class="metric-value metric-correct" id="res-correct">20</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Yanlış Sayısı</span>
+            <span class="metric-value metric-wrong" id="res-wrong">5</span>
+          </div>
+        </div>
+
+        <!-- Yanlış Cevaplar İnceleme Listesi -->
+        <div class="results-mistakes-section" id="results-mistakes-container">
+          <h3>Hatalı Yapılan Sorular ve Doğru Cevapları</h3>
+          <div class="mistakes-list" id="results-mistakes-list"></div>
+        </div>
+
+        <div class="results-actions">
+          <button class="btn-primary-large" id="btn-restart-quiz">Yeniden Sınav Yap</button>
+          <button class="btn-secondary-large" id="btn-go-flashcards">Bilgi Kartlarına Dön</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 3: EŞLEŞTİRME OYUNU ==================== -->
+    <section class="tab-content" id="tab-content-match">
+      <div class="match-mode-selector">
+        <button class="mode-btn active" id="btn-mode-duo">
+          <span>⚡ Duolingo Akışı (Match Madness)</span>
+        </button>
+        <button class="mode-btn" id="btn-mode-grid">
+          <span>🧩 12'li Izgara Modu</span>
+        </button>
+      </div>
+
+      <!-- Eşleştirme İstatistik Barı -->
+      <div class="match-stats-bar">
+        <div class="mstat-item">
+          <span class="mstat-label">Süre</span>
+          <span class="mstat-val" id="match-timer">00:00</span>
+        </div>
+        <div class="mstat-item">
+          <span class="mstat-label">Eşleşen</span>
+          <span class="mstat-val" id="match-score">0</span>
+        </div>
+        <div class="mstat-item">
+          <span class="mstat-label">Seri (Kombo)</span>
+          <span class="mstat-val" id="match-combo">0x</span>
+        </div>
+        <button class="btn-restart-match" id="btn-restart-match" title="Oyunu Yeniden Başlat">Yenile</button>
+      </div>
+
+      <!-- Mod 1: Duolingo Akışı -->
+      <div class="match-duo-container" id="match-duo-view">
+        <div class="duo-column" id="duo-col-left">
+          <!-- Sol Sütun: Tıbbi Terimler -->
+        </div>
+        <div class="duo-column" id="duo-col-right">
+          <!-- Sağ Sütun: Türkçe Anlamlar -->
+        </div>
+      </div>
+
+      <!-- Mod 2: Klasik Izgara -->
+      <div class="match-grid-container" id="match-grid-view" style="display:none;">
+        <!-- 12 Karo Grid -->
+      </div>
+    </section>
+
+    <!-- ==================== TAB 4: YAZMA PRATİĞİ (BAKA BAKA YAZMA) ==================== -->
+    <section class="tab-content" id="tab-content-spelling">
+      <div class="spelling-card">
+        <div class="spelling-header">
+          <div class="spelling-header-info">
+            <h2>✍️ Bakarak Yazma & Ezber Pratiği</h2>
+            <p>Terime bakarak klavyeden aynısını yazın; harf harf görsel ve motor hafızanızı geliştirin.</p>
+          </div>
+          <div class="spelling-counter-badge">
+            <span id="spell-current-idx">1</span> / <span id="spell-total-count">1093</span>
+          </div>
+        </div>
+
+        <!-- Terim Ekranı (Doğrudan Gösterim) -->
+        <div class="spelling-prompt-container">
+          <span class="spelling-type-pill" id="spell-type-badge">Tıbbi Terim</span>
+
+          <div class="spelling-target-term-box">
+            <span class="target-label">Yazılacak Terim:</span>
+            <h1 class="spelling-target-term" id="spell-target-term">abdominocystic</h1>
+          </div>
+
+          <div class="spelling-target-details">
+            <div class="detail-item">
+              <span class="detail-label">Okunuş:</span>
+              <span class="detail-value" id="spell-target-okunus">Abdominosistik</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Türkçe Anlamı:</span>
+              <span class="detail-value" id="spell-target-meaning">Karın ve kese ile ilgili</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yazma Alanı -->
+        <div class="spelling-input-wrapper">
+          <label for="spell-user-input" class="visually-hidden">Terimi Buraya Yazın:</label>
+          <input type="text" class="spelling-input-field" id="spell-user-input"
+            placeholder="Yukarıdaki terimi aynen buraya yazın ve Enter'a basın..." autocomplete="off" autocorrect="off"
+            autocapitalize="off" spellcheck="false">
+          <div class="spelling-live-feedback" id="spell-feedback-indicator">
+            <span id="spell-feedback-msg">Yazmaya başlayın...</span>
+          </div>
+        </div>
+
+        <!-- Navigasyon & Yardımcı Butonlar -->
+        <div class="spelling-controls-row">
+          <button class="btn-subtle" id="btn-spell-prev">← Önceki Terim</button>
+          <button class="btn-subtle" id="btn-spell-shuffle">🔀 Karıştır</button>
+          <button class="btn-primary" id="btn-spell-skip">Sonraki Terim (Enter) →</button>
+        </div>
+
+        <div class="spelling-tips-box">
+          <span class="kbd">İpucu:</span> Terimi doğru tamamladığınızda otomatik onaylanır veya doğrudan <span
+            class="kbd">Enter</span> tuşuna basarak sıradakine geçebilirsiniz.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 5: SÖZLÜK & ATLAS ==================== -->
+    <section class="tab-content" id="tab-content-dictionary">
+      <div class="dict-top-bar">
+        <div class="dict-search-wrapper">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" class="dict-search-input" id="dict-search-input"
+            placeholder="1093 terim, ek veya Türkçe anlam ara... (Örn: kardio, -itis, iltihap)">
+          <button class="btn-clear-search" id="btn-dict-clear" style="display:none;">✕</button>
+        </div>
+
+        <div class="dict-filter-group">
+          <select class="form-select" id="dict-category-filter">
+            <option value="all">Tüm Kategoriler</option>
+            <option value="terim">Tıbbi Terimler</option>
+            <option value="onek">Ön Ekler</option>
+            <option value="sonek">Son Ekler</option>
+            <option value="favorites">⭐ Yıldızlılarım</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- A-Z Alfabetik Şerit -->
+      <div class="dict-alphabet-bar" id="dict-alphabet-bar">
+        <!-- JS ile dolacak -->
+      </div>
+
+      <div class="dict-results-info">
+        <span id="dict-result-count">1093 terim listeleniyor</span>
+      </div>
+
+      <!-- Sözlük Kartları Izgarası -->
+      <div class="dict-cards-grid" id="dict-cards-grid">
+        <!-- 1093 Terim Kartı Dinamik Render Edilecek -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== MODAL: PROFİL / ÖĞRENCİ SEÇİCİ ==================== -->
+  <div class="modal-backdrop" id="modal-profile" style="display:none;">
+    <div class="modal-box modal-profile-box">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3>👥 Öğrenci Profili & Yıldızlılar</h3>
+          <p>Her arkadaşınız kendi profilini seçerek kendi yıldızlı terimlerini bağımsız olarak kaydedebilir.</p>
+        </div>
+        <button class="btn-close-modal" id="btn-close-profile-modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="profile-current-badge">
+          <span>Şu anki aktif öğrenci:</span>
+          <strong id="modal-current-user-name">Süleyman</strong>
+        </div>
+
+        <div class="profile-list-section">
+          <label>Kullanıcı Değiştir:</label>
+          <div class="profile-items-list" id="profile-items-container">
+            <!-- Profiller JS ile listelenecek -->
+          </div>
+        </div>
+
+        <div class="profile-add-section">
+          <label for="new-profile-name-input">Yeni Arkadaş / Profil Ekle:</label>
+          <div class="profile-add-row">
+            <input type="text" id="new-profile-name-input" placeholder="Örn: Ahmet, Ayşe, Mehmet..." maxlength="20">
+            <button class="btn-primary" id="btn-add-profile">Ekle</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: KLAVYE KISAYOLLARI & REHBER ==================== -->
+  <div class="modal-backdrop" id="modal-help" style="display:none;">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3>🩺 CiritTerm Sınav Rehberi & Kısayollar</h3>
+          <p>Tıbbi Terminoloji sınav hazırlık sistemi kullanım ipuçları</p>
+        </div>
+        <button class="btn-close-modal" id="btn-close-help-modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="credits-banner">
+          <div class="credits-badge">Geliştirici & Hazırlayan</div>
+          <h4 class="credits-name">Süleyman Cirit</h4>
+          <p class="credits-desc">Tıbbi terminoloji sınavlarına hazırlanan öğrenciler için özel olarak optimize
+            edilmiştir. 1.093 doğrulanmış tıbbi terim, ön ek, son ek ve klinik kavram içerir.</p>
+        </div>
+
+        <h4 style="margin: 1.5rem 0 0.5rem 0; color: var(--text-main);">⌨️ Klavye Kısayolları</h4>
+        <div class="shortcuts-table-wrapper">
+          <table class="shortcuts-table">
+            <thead>
+              <tr>
+                <th>Tuş</th>
+                <th>İşlev</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="kbd">Boşluk (Space)</span></td>
+                <td>Bilgi kartını ön/arka yüzüne çevir</td>
+              </tr>
+              <tr>
+                <td><span class="kbd">Sağ Ok (→)</span></td>
+                <td>Sonraki bilgi kartına geç</td>
+              </tr>
+              <tr>
+                <td><span class="kbd">Sol Ok (←)</span></td>
+                <td>Önceki bilgi kartına dön</td>
+              </tr>
+              <tr>
+                <td><span class="kbd">F</span></td>
+                <td>Mevcut terimi profilinin yıldızlılarına ekle/çıkar</td>
+              </tr>
+              <tr>
+                <td><span class="kbd">1, 2, 3, 4</span></td>
+                <td>Test modunda A, B, C, D şıklarını seç</td>
+              </tr>
+              <tr>
+                <td><span class="kbd">Enter</span></td>
+                <td>Yazma pratiğinde sonraki terime geç</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="exam-tips-card">
+          <h4>💡 Sınav Tavsiyesi</h4>
+          <p>Önce <strong>Bilgi Kartları</strong> ile terim ve ekleri tarayın, zorlandıklarınızı <strong>⭐
+              Yıldızlayın</strong>. Ardından <strong>Test & Sınav</strong> modunda <strong>100 veya 200 Soru</strong>
+            seçerek tam sınav provası yapın. Son olarak <strong>Yazma Pratiği</strong> ile Latince harf imlasını
+            pekiştirin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: TERİM DETAY PENCERESİ ==================== -->
+  <div class="modal-backdrop" id="modal-term-detail" style="display:none;">
+    <div class="modal-box modal-term-box">
+      <div class="modal-header">
+        <span class="card-badge-type" id="modal-dt-type">Tıbbi Terim</span>
+        <button class="btn-close-modal" id="btn-close-detail-modal">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-term-heading-row">
+          <h2 class="modal-term-name" id="modal-dt-term">abdominocystic</h2>
+          <button class="card-btn-star" id="modal-dt-star" title="Yıldızla">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-dt-pronounce-row">
+          <span class="modal-dt-label">Telaffuz / Okunuş:</span>
+          <span class="modal-dt-val" id="modal-dt-okunus">Abdominosistik</span>
+        </div>
+
+        <div class="modal-dt-meaning-card">
+          <span class="modal-dt-label">Türkçe Anlamı & Tanımı:</span>
+          <p class="modal-dt-meaning-text" id="modal-dt-meaning">Karın ve kese ile ilgili</p>
+        </div>
+
+        <div class="modal-dt-category-row">
+          <span class="modal-dt-label">Kategori:</span>
+          <span class="modal-dt-badge" id="modal-dt-category">Tıbbi Terim &bull; Genel Terimler</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Bildirimi -->
+  <div class="toast-notification" id="toast-notification"></div>
+
+  <!-- Scriptler -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
