@@ -897,65 +897,147 @@
     }, 1000);
   }
 
-  // Duolingo Akışı
+  // Duolingo Akışı - Gelişmiş Versiyon (sütun karıştırma + animasyon)
+  let duoIsBusy = false; // Animasyon sırasında tıklamaları engeller
+
   function initDuoMode(pool) {
     duoSelectedLeftId = null;
     duoSelectedRightId = null;
+    duoIsBusy = false;
     duoRemainingPool = [...pool];
 
     duoCurrentLeft = duoRemainingPool.splice(0, 5);
+    // Sağ sütun karıştırılmış olarak başlasın
     duoCurrentRight = [...duoCurrentLeft].sort(() => 0.5 - Math.random());
+    // Karşı karşıya aynı satıra denk gelmesin
+    _ensureRightSideNotAligned();
 
-    renderDuoColumns();
+    renderDuoColumns(true);
   }
 
-  function renderDuoColumns() {
+  // Sağ sütundaki anlamların sol sütunla aynı index'te aynı ID'ye sahip olmamasını garanti eder
+  function _ensureRightSideNotAligned() {
+    if (duoCurrentLeft.length <= 1) return;
+    for (let pass = 0; pass < 3; pass++) {
+      for (let i = 0; i < duoCurrentLeft.length; i++) {
+        if (duoCurrentLeft[i] && duoCurrentRight[i] && duoCurrentLeft[i].id === duoCurrentRight[i].id) {
+          const swapWith = (i + 1) % duoCurrentRight.length;
+          const temp = duoCurrentRight[i];
+          duoCurrentRight[i] = duoCurrentRight[swapWith];
+          duoCurrentRight[swapWith] = temp;
+        }
+      }
+    }
+  }
+
+  function renderDuoColumns(animatePop = false) {
     const colLeft = document.getElementById('duo-col-left');
     const colRight = document.getElementById('duo-col-right');
+    if (!colLeft || !colRight) return;
     colLeft.innerHTML = '';
     colRight.innerHTML = '';
 
+    // Sol sütun: tıbbi terimler (okunuş varsa ℹ️ ikonuyla)
     duoCurrentLeft.forEach(item => {
       const tile = document.createElement('div');
-      tile.className = 'match-tile';
+      tile.className = 'match-tile duo-tile-left';
+      if (animatePop) tile.classList.add('pop-in');
       tile.setAttribute('data-id', item.id);
-      tile.textContent = item.term;
+
+      // Uzun metin uyarısı
+      if (item.term.length > 20) tile.classList.add('long-text');
+
+      let hasOkunus = false;
+      let cleanOkunus = '';
+      if (item.okunus && typeof item.okunus === 'string' && item.okunus.trim()) {
+        cleanOkunus = item.okunus.replace(/^[(\[]|[)\]]$/g, '').trim();
+        if (cleanOkunus) hasOkunus = true;
+      }
+
+      const infoBtn = hasOkunus
+        ? `<button class="tile-info-btn" title="Okunuşu göster" tabindex="-1">
+             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+               <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="8"/><line x1="12" y1="12" x2="12" y2="16"/>
+             </svg>
+           </button>
+           <span class="tile-pronounce-tooltip" aria-hidden="true">${escapeHTML(cleanOkunus)}</span>`
+        : '';
+
+      tile.innerHTML = `
+        ${infoBtn}
+        <span class="tile-term-main">${escapeHTML(item.term)}</span>
+      `;
+
+      // ℹ️ butonuna tıklamada tooltip aç/kapat (kart seçimini tetikleme)
+      if (hasOkunus) {
+        const btn = tile.querySelector('.tile-info-btn');
+        const tooltip = tile.querySelector('.tile-pronounce-tooltip');
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = tooltip.classList.toggle('visible');
+          btn.classList.toggle('active', isOpen);
+          // 2.5 saniye sonra otomatik kapat
+          if (isOpen) {
+            clearTimeout(btn._tooltipTimer);
+            btn._tooltipTimer = setTimeout(() => {
+              tooltip.classList.remove('visible');
+              btn.classList.remove('active');
+            }, 2500);
+          }
+        });
+      }
+
       tile.addEventListener('click', () => handleDuoSelect('left', item.id, tile));
       colLeft.appendChild(tile);
     });
 
+    // Sağ sütun: Türkçe anlamlar
     duoCurrentRight.forEach(item => {
       const tile = document.createElement('div');
-      tile.className = 'match-tile';
+      tile.className = 'match-tile duo-tile-right';
+      if (animatePop) tile.classList.add('pop-in');
       tile.setAttribute('data-id', item.id);
-      tile.textContent = item.meaning;
+      
+      if (item.meaning.length > 25) tile.classList.add('long-text');
+
+      tile.innerHTML = `<span class="tile-meaning-main">${escapeHTML(item.meaning)}</span>`;
       tile.addEventListener('click', () => handleDuoSelect('right', item.id, tile));
       colRight.appendChild(tile);
     });
   }
 
   function handleDuoSelect(side, id, tileEl) {
+    // Meşgul veya eşleşmiş karta tıklandıysa yoksay
+    if (duoIsBusy || tileEl.classList.contains('matched')) return;
+
     if (side === 'left') {
       if (duoSelectedLeftId === id) {
-        duoSelectedLeftId = null;
+        // Zaten seçili ise seçimi kaldır
         tileEl.classList.remove('selected');
-      } else {
-        document.querySelectorAll('#duo-col-left .match-tile').forEach(t => t.classList.remove('selected'));
-        duoSelectedLeftId = id;
-        tileEl.classList.add('selected');
+        duoSelectedLeftId = null;
+        return;
       }
+      // Önceki sol seçimi kaldır
+      const prevLeft = document.querySelector('#duo-col-left .match-tile.selected');
+      if (prevLeft) prevLeft.classList.remove('selected');
+
+      duoSelectedLeftId = id;
+      tileEl.classList.add('selected');
     } else {
       if (duoSelectedRightId === id) {
-        duoSelectedRightId = null;
         tileEl.classList.remove('selected');
-      } else {
-        document.querySelectorAll('#duo-col-right .match-tile').forEach(t => t.classList.remove('selected'));
-        duoSelectedRightId = id;
-        tileEl.classList.add('selected');
+        duoSelectedRightId = null;
+        return;
       }
+      const prevRight = document.querySelector('#duo-col-right .match-tile.selected');
+      if (prevRight) prevRight.classList.remove('selected');
+
+      duoSelectedRightId = id;
+      tileEl.classList.add('selected');
     }
 
-    if (duoSelectedLeftId && duoSelectedRightId) {
+    // İki taraf da seçildiyse kontrol et
+    if (duoSelectedLeftId !== null && duoSelectedRightId !== null) {
       checkDuoMatch();
     }
   }
@@ -964,56 +1046,71 @@
     const leftEl = document.querySelector(`#duo-col-left .match-tile[data-id="${duoSelectedLeftId}"]`);
     const rightEl = document.querySelector(`#duo-col-right .match-tile[data-id="${duoSelectedRightId}"]`);
 
+    if (!leftEl || !rightEl) return;
+
     if (duoSelectedLeftId === duoSelectedRightId) {
-      // Doğru eşleşme
+      // === DOĞRU EŞLEŞME ===
+      const matchedId = duoSelectedLeftId;
       matchScore++;
       matchCombo++;
       document.getElementById('match-score').textContent = matchScore;
       document.getElementById('match-combo').textContent = `${matchCombo}x`;
 
-      if (leftEl) leftEl.classList.add('matched');
-      if (rightEl) rightEl.classList.add('matched');
+      leftEl.classList.remove('selected');
+      rightEl.classList.remove('selected');
+      leftEl.classList.add('matched');
+      rightEl.classList.add('matched');
 
-      // Kuyruktan yeni terim doldur
+      duoSelectedLeftId = null;
+      duoSelectedRightId = null;
+      duoIsBusy = true;
+
       setTimeout(() => {
+        // Kuyruktan yeni terim doldur
         if (duoRemainingPool.length > 0) {
           const nextItem = duoRemainingPool.shift();
-          duoCurrentLeft = duoCurrentLeft.map(x => x.id === duoSelectedLeftId ? nextItem : x);
-          duoCurrentRight = duoCurrentRight.map(x => x.id === duoSelectedRightId ? nextItem : x);
+          duoCurrentLeft = duoCurrentLeft.map(x => x.id === matchedId ? nextItem : x);
+          // Sağ sütundaki eşleşen öğeyi de değiştir ve yeniden karıştır
+          duoCurrentRight = duoCurrentRight.map(x => x.id === matchedId ? nextItem : x);
+          // Sağ sütunu yeniden karıştır (Duolingo tarzı)
+          duoCurrentRight = [...duoCurrentRight].sort(() => 0.5 - Math.random());
+          _ensureRightSideNotAligned();
         } else {
-          duoCurrentLeft = duoCurrentLeft.filter(x => x.id !== duoSelectedLeftId);
-          duoCurrentRight = duoCurrentRight.filter(x => x.id !== duoSelectedRightId);
+          duoCurrentLeft = duoCurrentLeft.filter(x => x.id !== matchedId);
+          duoCurrentRight = duoCurrentRight.filter(x => x.id !== matchedId);
         }
-        duoSelectedLeftId = null;
-        duoSelectedRightId = null;
-        renderDuoColumns();
 
+        // Oyun bitti mi?
         if (duoCurrentLeft.length === 0) {
           clearInterval(matchTimerInterval);
-          showToast(`Tebrikler! ${matchScore} eşleşmeyi ${document.getElementById('match-timer').textContent} sürede tamamladınız!`, 'success');
+          showToast(`🏆 Tebrikler! ${matchScore} eşleşmeyi ${document.getElementById('match-timer').textContent} sürede tamamladınız!`, 'success');
+          duoIsBusy = false;
+          return;
         }
-      }, 250);
+
+        // Yeni kartları animasyonla çiz
+        renderDuoColumns(true);
+        duoIsBusy = false;
+      }, 280);
 
     } else {
-      // Yanlış eşleşme
+      // === YANLIŞ EŞLEŞME ===
       matchCombo = 1;
       document.getElementById('match-combo').textContent = '1x';
 
-      if (leftEl) leftEl.classList.add('wrong-shake');
-      if (rightEl) rightEl.classList.add('wrong-shake');
+      duoIsBusy = true;
+      leftEl.classList.remove('selected');
+      rightEl.classList.remove('selected');
+      leftEl.classList.add('wrong-pair');
+      rightEl.classList.add('wrong-pair');
 
       setTimeout(() => {
-        if (leftEl) {
-          leftEl.classList.remove('wrong-shake');
-          leftEl.classList.remove('selected');
-        }
-        if (rightEl) {
-          rightEl.classList.remove('wrong-shake');
-          rightEl.classList.remove('selected');
-        }
+        if (leftEl) leftEl.classList.remove('wrong-pair');
+        if (rightEl) rightEl.classList.remove('wrong-pair');
         duoSelectedLeftId = null;
         duoSelectedRightId = null;
-      }, 350);
+        duoIsBusy = false;
+      }, 420);
     }
   }
 
