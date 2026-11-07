@@ -1,0 +1,602 @@
+[
+  {
+    "soru_no": 1,
+    "soru": "Fizyoloji biliminin temel inceleme konusu hangisidir?",
+    "secenekler": [
+      "Organların şekli ve yerleşimi",
+      "Canlı yapıların işlevleri",
+      "Hastalık etkenlerinin sınıflandırılması",
+      "İlaçların kimyasal yapısı",
+      "Kalıtsal hastalıkların sıklığı"
+    ],
+    "dogru_cevap": "Canlı yapıların işlevleri"
+  },
+  {
+    "soru_no": 2,
+    "soru": "Homeostaz aşağıdakilerden hangisini ifade eder?",
+    "secenekler": [
+      "Tüm organların aynı hızda çalışmasını",
+      "Vücut sıcaklığının çevreye eşit olmasını",
+      "Hücrelerin enerji tüketmemesini",
+      "İç ortamın belirli sınırlar içinde dengede tutulmasını",
+      "Dış ortam koşullarının değişmemesini"
+    ],
+    "dogru_cevap": "İç ortamın belirli sınırlar içinde dengede tutulmasını"
+  },
+  {
+    "soru_no": 3,
+    "soru": "Vücut sıcaklığı arttığında terlemenin artması hangi mekanizmaya örnektir?",
+    "secenekler": [
+      "Negatif geri bildirim",
+      "Pozitif geri bildirim",
+      "Aktif taşıma",
+      "Kan pıhtılaşması",
+      "Sinaptik iletim"
+    ],
+    "dogru_cevap": "Negatif geri bildirim"
+  },
+  {
+    "soru_no": 4,
+    "soru": "Hücrede ATP üretiminin büyük bölümü hangi organelde gerçekleşir?",
+    "secenekler": [
+      "Lizozom",
+      "Golgi aygıtı",
+      "Ribozom",
+      "Çekirdekçik",
+      "Mitokondri"
+    ],
+    "dogru_cevap": "Mitokondri"
+  },
+  {
+    "soru_no": 5,
+    "soru": "Hücre zarının temel yapısı hangisidir?",
+    "secenekler": [
+      "Tek katlı protein tabakası",
+      "Selüloz lifleri",
+      "Çift katlı fosfolipit tabaka ve proteinler",
+      "DNA ve RNA zincirleri",
+      "Glikojen ve hemoglobin"
+    ],
+    "dogru_cevap": "Çift katlı fosfolipit tabaka ve proteinler"
+  },
+  {
+    "soru_no": 6,
+    "soru": "Basit difüzyonda maddelerin net hareketi nasıldır?",
+    "secenekler": [
+      "Yüksek yoğunluktan düşük yoğunluğa",
+      "Düşük yoğunluktan yüksek yoğunluğa",
+      "Yalnızca ATP kullanılarak",
+      "Yalnızca hücre içine doğru",
+      "Yoğunluk farkından bağımsız"
+    ],
+    "dogru_cevap": "Yalnızca hücre içine doğru"
+  },
+  {
+    "soru_no": 7,
+    "soru": "Vücut yüzeyini örten ve organların iç yüzeylerini döşeyen doku hangisidir?",
+    "secenekler": [
+      "Kas dokusu",
+      "Sinir dokusu",
+      "Kemik dokusu",
+      "Epitel dokusu",
+      "Kıkırdak dokusu"
+    ],
+    "dogru_cevap": "Kıkırdak dokusu"
+  },
+  {
+    "soru_no": 8,
+    "soru": "Uyarılabilir dokuların iki temel örneği hangisidir?",
+    "secenekler": [
+      "Epitel ve yağ dokusu",
+      "Sinir ve kas dokusu",
+      "Kemik ve kıkırdak dokusu",
+      "Yağ ve bağ dokusu",
+      "Epitel ve kemik dokusu"
+    ],
+    "dogru_cevap": "Kemik ve kıkırdak dokusu"
+  },
+  {
+    "soru_no": 9,
+    "soru": "Dinlenim zar potansiyelinde nöronun içi, dışına göre genellikle nasıldır?",
+    "secenekler": [
+      "Daha sıcaktır.",
+      "Elektriksel olarak nötrdür.",
+      "Daha pozitiftir.",
+      "Sürekli aynı iyon yoğunluğundadır.",
+      "Daha negatiftir."
+    ],
+    "dogru_cevap": "Daha negatiftir."
+  },
+  {
+    "soru_no": 10,
+    "soru": "Tipik bir nöronda aksiyon potansiyelinin hızlı depolarizasyon evresinde ne olur?",
+    "secenekler": [
+      "Kalsiyum hücreden çıkar.",
+      "Potasyum hücreye girer.",
+      "Sodyum hücreye girer.",
+      "Sodyum hücreden çıkar.",
+      "Klor hücreden çıkar."
+    ],
+    "dogru_cevap": "Sodyum hücreden çıkar."
+  },
+  {
+    "soru_no": 11,
+    "soru": "Miyelin kılıfın sinir lifindeki temel etkisi nedir?",
+    "secenekler": [
+      "İletim hızını artırmak",
+      "Nörotransmiter üretmek",
+      "Aksonu kas hücresine dönüştürmek",
+      "Aksiyon potansiyelini tamamen engellemek",
+      "Nöronun çekirdeğini korumak"
+    ],
+    "dogru_cevap": "Nörotransmiter üretmek"
+  },
+  {
+    "soru_no": 12,
+    "soru": "Merkezi sinir sistemi hangi yapılardan oluşur?",
+    "secenekler": [
+      "Kafa sinirleri ve spinal sinirler",
+      "Beyin ve periferik gangliyonlar",
+      "Omurilik ve iskelet kasları",
+      "Beyin ve omurilik",
+      "Reseptörler ve motor sinirler"
+    ],
+    "dogru_cevap": "Reseptörler ve motor sinirler"
+  },
+  {
+    "soru_no": 13,
+    "soru": "Duyu (afferent) sinirleri bilgiyi hangi yönde taşır?",
+    "secenekler": [
+      "Merkezi sinir sisteminden kaslara",
+      "Reseptörlerden merkezi sinir sistemine",
+      "Kaslardan doğrudan bezlere",
+      "Yalnızca beyinden omuriliğe",
+      "Yalnızca bir kastan diğerine"
+    ],
+    "dogru_cevap": "Kaslardan doğrudan bezlere"
+  },
+  {
+    "soru_no": 14,
+    "soru": "Kimyasal sinapsta hücreler arasındaki iletişimi doğrudan hangi maddeler sağlar?",
+    "secenekler": [
+      "Hemoglobin",
+      "Pıhtılaşma faktörleri",
+      "Sindirim enzimleri",
+      "Plazma proteinleri",
+      "Nörotransmiterler"
+    ],
+    "dogru_cevap": "Hemoglobin"
+  },
+  {
+    "soru_no": 15,
+    "soru": "Denge ve hareketlerin koordinasyonunda özellikle hangi yapı görev alır?",
+    "secenekler": [
+      "Hipofiz",
+      "Omurilik siniri",
+      "Beyincik",
+      "Tiroid bezi",
+      "Hipokampus"
+    ],
+    "dogru_cevap": "Tiroid bezi"
+  },
+  {
+    "soru_no": 16,
+    "soru": "Sempatik sinir sisteminin etkinleşmesi genellikle hangi yanıtı oluşturur?",
+    "secenekler": [
+      "Kalp hızında artış",
+      "Göz bebeğinde daralma",
+      "Sindirim hareketlerinde artış",
+      "Kalp hızında azalma",
+      "Bronşlarda daralma"
+    ],
+    "dogru_cevap": "Kalp hızında artış"
+  },
+  {
+    "soru_no": 17,
+    "soru": "Sistemik dolaşıma kanı pompalayan kalp boşluğu hangisidir?",
+    "secenekler": [
+      "Sağ atriyum",
+      "Sol atriyum",
+      "Sağ ventrikül",
+      "Sol ventrikül",
+      "Koroner sinüs"
+    ],
+    "dogru_cevap": "Sol ventrikül"
+  },
+  {
+    "soru_no": 18,
+    "soru": "Atardamarları tanımlayan temel özellik hangisidir?",
+    "secenekler": [
+      "Her zaman oksijenli kan taşımaları",
+      "Kanı kalpten uzaklaştırmaları",
+      "Her zaman kapak içermeleri",
+      "Kanı yalnızca akciğere taşımaları",
+      "Gaz alışverişinin ana yeri olmaları"
+    ],
+    "dogru_cevap": "Kanı kalpten uzaklaştırmaları"
+  },
+  {
+    "soru_no": 19,
+    "soru": "Kan ile dokular arasında madde alışverişi başlıca hangi damarlarda gerçekleşir?",
+    "secenekler": [
+      "Aortta",
+      "Ana toplardamarlarda",
+      "Büyük atardamarlarda",
+      "Akciğer toplardamarlarında",
+      "Kılcal damarlarda"
+    ],
+    "dogru_cevap": "Kılcal damarlarda"
+  },
+  {
+    "soru_no": 20,
+    "soru": "Kalbin normal ritmini başlatan doğal uyarı merkezi hangisidir?",
+    "secenekler": [
+      "Atriyoventriküler düğüm",
+      "His demeti",
+      "Sinoatriyal düğüm",
+      "Purkinje lifleri",
+      "Aort kapağı"
+    ],
+    "dogru_cevap": "Sinoatriyal düğüm"
+  },
+  {
+    "soru_no": 21,
+    "soru": "Vücutta benzer görevleri yerine getiren hücrelerin bir araya gelmesiyle hangi yapı oluşur?",
+    "secenekler": [
+      "Organ sistemi",
+      "Organizma",
+      "Doku",
+      "Organel",
+      "Organ"
+    ],
+    "dogru_cevap": "Doku"
+  },
+  {
+    "soru_no": 22,
+    "soru": "Hücrede protein sentezinin doğrudan gerçekleştiği yapı hangisidir?",
+    "secenekler": [
+      "Lizozom",
+      "Ribozom",
+      "Sentrozom",
+      "Mitokondri dış zarı",
+      "Golgi aygıtı"
+    ],
+    "dogru_cevap": "Ribozom"
+  },
+  {
+    "soru_no": 23,
+    "soru": "Aksiyon potansiyeli oluşabilmesi için zar potansiyelinin ulaşması gereken kritik düzeye ne denir?",
+    "secenekler": [
+      "Dinlenim düzeyi",
+      "Denge sıcaklığı",
+      "Eşik değer",
+      "Ozmotik basınç",
+      "Kalp debisi"
+    ],
+    "dogru_cevap": "Eşik değer"
+  },
+  {
+    "soru_no": 24,
+    "soru": "Elin sıcak bir cisimden hızla çekilmesinde refleks yanıtının ilk bütünleştirilmesi başlıca nerede gerçekleşir?",
+    "secenekler": [
+      "Beyincikte",
+      "Hipofizde",
+      "Retinada",
+      "Omurilikte",
+      "İç kulakta"
+    ],
+    "dogru_cevap": "Omurilikte"
+  },
+  {
+    "soru_no": 25,
+    "soru": "Akciğer dolaşımına kanı pompalayan kalp boşluğu hangisidir?",
+    "secenekler": [
+      "Sol atriyum",
+      "Sağ atriyum",
+      "Sol ventrikül",
+      "Sağ ventrikül",
+      "Aort"
+    ],
+    "dogru_cevap": "Sağ ventrikül"
+  },
+  {
+    "soru_no": 26,
+    "soru": "Hücreleri doğrudan çevreleyen ve hücrelerle madde alışverişi yapan sıvı hangisidir?",
+    "secenekler": [
+      "Hücreler arası sıvı",
+      "Hücre içi sıvı",
+      "Safra",
+      "Mide öz suyu",
+      "Çekirdek sıvısı"
+    ],
+    "dogru_cevap": "Hücreler arası sıvı"
+  },
+  {
+    "soru_no": 27,
+    "soru": "Suyun seçici geçirgen bir zardan net geçişi hangi kavramla ifade edilir?",
+    "secenekler": [
+      "Ekzositoz",
+      "Aktif taşıma",
+      "Fagositoz",
+      "Ozmoz",
+      "Endositoz"
+    ],
+    "dogru_cevap": "Ozmoz"
+  },
+  {
+    "soru_no": 28,
+    "soru": "Tipik bir nöronda aksiyon potansiyelinin repolarizasyon evresinde başlıca hangi olay gerçekleşir?",
+    "secenekler": [
+      "Sodyumun hücreye hızlı girişi",
+      "Proteinin hücre dışına çıkışı",
+      "Klorun hücreden çıkışı",
+      "Potasyumun hücreden çıkışı",
+      "Kalsiyumun çekirdeğe girişi"
+    ],
+    "dogru_cevap": "Potasyumun hücreden çıkışı"
+  },
+  {
+    "soru_no": 29,
+    "soru": "Parasempatik sinir sisteminin etkinleşmesi genellikle hangi sonucu oluşturur?",
+    "secenekler": [
+      "Kalp hızında azalma",
+      "Göz bebeğinde genişleme",
+      "Sindirim hareketlerinde azalma",
+      "Kalp hızında artış",
+      "Ter bezlerinin yaygın uyarılması"
+    ],
+    "dogru_cevap": "Kalp hızında azalma"
+  },
+  {
+    "soru_no": 30,
+    "soru": "Kalp kapaklarının temel görevi hangisidir?",
+    "secenekler": [
+      "Kanın tek yönde ilerlemesine yardımcı olmak",
+      "Kalpte elektriksel uyarı üretmek",
+      "Kana oksijen eklemek",
+      "Alyuvar üretmek",
+      "Kanı süzerek idrar oluşturmak"
+    ],
+    "dogru_cevap": "Kanın tek yönde ilerlemesine yardımcı olmak"
+  },
+  {
+    "soru_no": 31,
+    "soru": "Bir homeostatik kontrol sisteminde değişikliği ilk algılayan yapı hangisidir?",
+    "secenekler": [
+      "Efektör",
+      "Kas lifi",
+      "Salgı bezi",
+      "Motor sinir",
+      "Reseptör"
+    ],
+    "dogru_cevap": "Reseptör"
+  },
+  {
+    "soru_no": 32,
+    "soru": "Bir eritrosit hipotonik bir çözeltiye konulduğunda başlangıçta ne olması beklenir?",
+    "secenekler": [
+      "Su kaybederek büzülmesi",
+      "Protein sentezinin durması",
+      "Su alarak şişmesi",
+      "Çekirdeğinin büyümesi",
+      "Zarındaki tüm kanalların kapanması"
+    ],
+    "dogru_cevap": "Su alarak şişmesi"
+  },
+  {
+    "soru_no": 33,
+    "soru": "Tek bir sinir lifinde aksiyon potansiyelinin ya hep ya hiç özelliği ne anlama gelir?",
+    "secenekler": [
+      "Eşik aşılınca tam bir aksiyon potansiyeli oluşması",
+      "Her uyarıda farklı büyüklükte aksiyon potansiyeli oluşması",
+      "Eşik altındaki her uyarının aksiyon potansiyeli oluşturması",
+      "İletim sırasında aksiyon potansiyelinin giderek büyümesi",
+      "Aksiyon potansiyelinin yalnızca beyin hücrelerinde oluşması"
+    ],
+    "dogru_cevap": "Eşik aşılınca tam bir aksiyon potansiyeli oluşması"
+  },
+  {
+    "soru_no": 34,
+    "soru": "Vücut sıcaklığı, açlık ve susuzluğun düzenlenmesinde özellikle hangi beyin bölgesi görev alır?",
+    "secenekler": [
+      "Beyincik",
+      "Pons",
+      "Oksipital korteks",
+      "Omurilik",
+      "Hipotalamus"
+    ],
+    "dogru_cevap": "Hipotalamus"
+  },
+  {
+    "soru_no": 35,
+    "soru": "Kalp debisi hangi iki değişkenin çarpımıyla hesaplanır?",
+    "secenekler": [
+      "Kan basıncı ve vücut sıcaklığı",
+      "Solunum sayısı ve nabız basıncı",
+      "Kan hacmi ve hematokrit",
+      "Kalp hızı ve solunum sayısı",
+      "Kalp hızı ve atım hacmi"
+    ],
+    "dogru_cevap": "Kalp hızı ve atım hacmi"
+  },
+  {
+    "soru_no": 36,
+    "soru": "Bir kontrol sisteminde verilen yanıtı gerçekleştiren kas veya bez hangi adla tanımlanır?",
+    "secenekler": [
+      "Uyarı",
+      "Efektör",
+      "Reseptör",
+      "Kontrol merkezi",
+      "İç ortam"
+    ],
+    "dogru_cevap": "Efektör"
+  },
+  {
+    "soru_no": 37,
+    "soru": "Sodyum-potasyum pompası bir çalışma döngüsünde iyonları nasıl taşır?",
+    "secenekler": [
+      "3 sodyumu dışarı, 2 potasyumu içeri",
+      "2 sodyumu dışarı, 3 potasyumu içeri",
+      "3 sodyumu içeri, 2 potasyumu dışarı",
+      "Sodyum ve potasyumu yalnızca dışarı",
+      "Sodyum ve potasyumu ATP kullanmadan"
+    ],
+    "dogru_cevap": "3 sodyumu dışarı, 2 potasyumu içeri"
+  },
+  {
+    "soru_no": 38,
+    "soru": "Mutlak refrakter dönemde bir nöronda neden ikinci bir aksiyon potansiyeli oluşturulamaz?",
+    "secenekler": [
+      "Tüm potasyum iyonları hücreyi terk ettiği için",
+      "Hücre zarı tamamen parçalandığı için",
+      "ATP üretimi kalıcı olarak durduğu için",
+      "Miyelin kılıf ortadan kalktığı için",
+      "Voltaj kapılı sodyum kanalları henüz yeniden etkinleşebilir duruma dönmediği için"
+    ],
+    "dogru_cevap": "Voltaj kapılı sodyum kanalları henüz yeniden etkinleşebilir duruma dönmediği için"
+  },
+  {
+    "soru_no": 39,
+    "soru": "Motor (efferent) sinirler bilgiyi hangi yönde taşır?",
+    "secenekler": [
+      "Reseptörlerden merkezi sinir sistemine",
+      "Merkezi sinir sisteminden kas veya bezlere",
+      "Yalnızca deriden omuriliğe",
+      "Yalnızca iç kulaktan beyine",
+      "Kaslardan duyu reseptörlerine"
+    ],
+    "dogru_cevap": "Merkezi sinir sisteminden kas veya bezlere"
+  },
+  {
+    "soru_no": 40,
+    "soru": "Ventrikül sistolü sırasında temel olarak hangi olay gerçekleşir?",
+    "secenekler": [
+      "Ventriküller gevşer ve kanla dolar.",
+      "Ventriküller kasılarak kanı damarlara pompalar.",
+      "Kalpteki tüm kapaklar sürekli açık kalır.",
+      "Kan yalnızca atriyumlar arasında dolaşır.",
+      "Sinoatriyal düğüm çalışmayı durdurur."
+    ],
+    "dogru_cevap": "Ventriküller kasılarak kanı damarlara pompalar."
+  },
+  {
+    "soru_no": 41,
+    "soru": "Doğum sırasında rahim kasılmalarının oksitosin salınımını artırması ve bunun kasılmaları güçlendirmesi hangi mekanizmadır?",
+    "secenekler": [
+      "Basit difüzyon",
+      "Negatif geri bildirim",
+      "Ozmoz",
+      "Pozitif geri bildirim",
+      "Filtrasyon"
+    ],
+    "dogru_cevap": "Pozitif geri bildirim"
+  },
+  {
+    "soru_no": 42,
+    "soru": "Hücre içine alınmış maddelerin parçalanmasında özellikle hangi organel görev alır?",
+    "secenekler": [
+      "Ribozom",
+      "Sentrozom",
+      "Çekirdekçik",
+      "Düz endoplazmik retikulum",
+      "Lizozom"
+    ],
+    "dogru_cevap": "Lizozom"
+  },
+  {
+    "soru_no": 43,
+    "soru": "İskelet kasında kalsiyumun troponine bağlanmasının temel sonucu nedir?",
+    "secenekler": [
+      "Miyozinin parçalanması",
+      "Aktin üzerindeki miyozin bağlanma bölgelerinin açılması",
+      "Kas hücresinin bölünmesi",
+      "Asetilkolinin sentezlenmesi",
+      "Kas lifinin çekirdeğini kaybetmesi"
+    ],
+    "dogru_cevap": "Aktin üzerindeki miyozin bağlanma bölgelerinin açılması"
+  },
+  {
+    "soru_no": 44,
+    "soru": "İstemli iskelet kası hareketlerinin başlatılmasında özellikle hangi yapı görev alır?",
+    "secenekler": [
+      "Tiroid bezi",
+      "Beyin-omurilik sıvısı",
+      "Beyin kabuğunun motor alanları",
+      "Akciğer alveolleri",
+      "Duyu gangliyonları"
+    ],
+    "dogru_cevap": "Beyin kabuğunun motor alanları"
+  },
+  {
+    "soru_no": 45,
+    "soru": "Solunum gazlarının kılcal damar duvarından geçişinde temel mekanizma hangisidir?",
+    "secenekler": [
+      "Fagositoz",
+      "Primer aktif taşıma",
+      "Difüzyon",
+      "Ekzositoz",
+      "Protein sentezi"
+    ],
+    "dogru_cevap": "Difüzyon"
+  },
+  {
+    "soru_no": 46,
+    "soru": "Vücuttaki yapım ve yıkım tepkimelerinin tümüne ne ad verilir?",
+    "secenekler": [
+      "Metabolizma",
+      "Homeostaz",
+      "Uyarılabilirlik",
+      "Difüzyon",
+      "İletkenlik"
+    ],
+    "dogru_cevap": "Metabolizma"
+  },
+  {
+    "soru_no": 47,
+    "soru": "Organlara destek sağlayan, dokuları birbirine bağlayan ve hücreler arası maddesi genellikle bol olan doku hangisidir?",
+    "secenekler": [
+      "Epitel dokusu",
+      "Bağ dokusu",
+      "Sinir dokusu",
+      "İskelet kası dokusu",
+      "Kalp kası dokusu"
+    ],
+    "dogru_cevap": "Bağ dokusu"
+  },
+  {
+    "soru_no": 48,
+    "soru": "İskelet kası kasılırken sarkomer için hangisi doğrudur?",
+    "secenekler": [
+      "Aktin filamentleri tamamen kaybolur.",
+      "Miyozin filamentleri uzar.",
+      "Aktin ve miyozin filamentleri birbiri üzerinde kayar.",
+      "Sarkomerin boyu her zaman artar.",
+      "Kasılma için kalsiyum gerekmez."
+    ],
+    "dogru_cevap": "Aktin ve miyozin filamentleri birbiri üzerinde kayar."
+  },
+  {
+    "soru_no": 49,
+    "soru": "Bacak toplardamarlarında kanın kalbe dönüşünü destekleyen mekanizma hangisidir?",
+    "secenekler": [
+      "Atardamar kapaklarının açılması",
+      "Alveollerde gaz alışverişi",
+      "Beyin-omurilik sıvısının dolaşımı",
+      "İskelet kası pompası ve toplardamar kapakları",
+      "Safra kesesinin kasılması"
+    ],
+    "dogru_cevap": "İskelet kası pompası ve toplardamar kapakları"
+  },
+  {
+    "soru_no": 50,
+    "soru": "Soğuk ortamda titremenin başlaması vücut sıcaklığını korumaya nasıl katkı sağlar?",
+    "secenekler": [
+      "Terlemeyi artırarak",
+      "Isı üretimini azaltarak",
+      "Deri yüzeyinden ısı kaybını artırarak",
+      "Vücut sıcaklığını çevre sıcaklığına eşitleyerek",
+      "Kas etkinliğiyle ısı üretimini artırarak"
+    ],
+    "dogru_cevap": "Kas etkinliğiyle ısı üretimini artırarak"
+  }
+]

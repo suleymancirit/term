@@ -84,6 +84,14 @@
         </svg>
         <span>Sözlük & Atlas</span>
       </button>
+
+      <button class="nav-tab-btn" data-tab="lessons" id="tab-lessons">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+        <span>Dersler & Testler</span>
+        <span class="nav-tab-badge" style="background: rgba(14, 165, 233, 0.2); color: #38bdf8;">3 Ders</span>
+      </button>
     </div>
   </nav>
 
@@ -534,6 +542,192 @@
       </div>
     </section>
 
+    <!-- ==================== TAB 6: DERSLER & TESTLER ==================== -->
+    <section class="tab-content" id="tab-content-lessons">
+      <!-- 1. GÖRÜNÜM: DERS SEÇİM MENÜSÜ (HUB) -->
+      <div id="lessons-hub-view" class="lessons-hub-wrapper">
+        <div class="lessons-hero-card">
+          <div class="hero-badge">📚 DERSLER & SORU BANKASI</div>
+          <h2>Ders Seçin ve Çalışmaya Başlayın</h2>
+          <p>Her ders için ister <strong>Soru Çözüm Modu</strong> ile sınav pratiği yapın, ister <strong>Soru Çalışma Modu</strong> ile doğru cevapları vurgulu kartlardan hızlıca ezberleyin.</p>
+        </div>
+
+        <div class="lessons-cards-grid">
+          <!-- Kart 1: Anatomi -->
+          <div class="lesson-course-card" style="--lesson-accent: #0ea5e9;">
+            <div class="lcc-top">
+              <div class="lcc-icon-wrap">🦴</div>
+              <div class="lcc-info">
+                <div class="lcc-tags">
+                  <span class="lcc-tag tag-count">70 Soru</span>
+                  <span class="lcc-tag tag-field">Tıp & Morfoloji</span>
+                </div>
+                <h3 class="lcc-title">Anatomi</h3>
+              </div>
+            </div>
+            <p class="lcc-desc">İnsan vücudunun makroskopik ve mikroskopik yapıları, organ sistemleri, kemik, kas ve dolaşım anatomisi kapsamlı soru havuzu.</p>
+            <div class="lcc-actions">
+              <button class="btn-launch-lesson btn-lcc-quiz" data-lesson="anatomi" data-mode="test">
+                <span>🎯 Soru Çöz (Test)</span>
+              </button>
+              <button class="btn-launch-lesson btn-lcc-study" data-lesson="anatomi" data-mode="study">
+                <span>📖 Soru Çalış (Doğru Cevaplı)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Kart 2: Fizyoloji -->
+          <div class="lesson-course-card" style="--lesson-accent: #10b981;">
+            <div class="lcc-top">
+              <div class="lcc-icon-wrap">🫀</div>
+              <div class="lcc-info">
+                <div class="lcc-tags">
+                  <span class="lcc-tag tag-count">50 Soru</span>
+                  <span class="lcc-tag tag-field">Yaşamsal İşlevler</span>
+                </div>
+                <h3 class="lcc-title">Fizyoloji</h3>
+              </div>
+            </div>
+            <p class="lcc-desc">Hücreden organ sistemlerine homeostaz, kardiyovasküler, solunum, nöronal iletim ve böbrek mekanizmaları soru havuzu.</p>
+            <div class="lcc-actions">
+              <button class="btn-launch-lesson btn-lcc-quiz" data-lesson="fizyoloji" data-mode="test">
+                <span>🎯 Soru Çöz (Test)</span>
+              </button>
+              <button class="btn-launch-lesson btn-lcc-study" data-lesson="fizyoloji" data-mode="study">
+                <span>📖 Soru Çalış (Doğru Cevaplı)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Kart 3: Bilgi Teknolojileri -->
+          <div class="lesson-course-card" style="--lesson-accent: #8b5cf6;">
+            <div class="lcc-top">
+              <div class="lcc-icon-wrap">💻</div>
+              <div class="lcc-info">
+                <div class="lcc-tags">
+                  <span class="lcc-tag tag-count">105 Soru</span>
+                  <span class="lcc-tag tag-field">Bilişim & Yazılım</span>
+                </div>
+                <h3 class="lcc-title">Bilgi Teknolojileri</h3>
+              </div>
+            </div>
+            <p class="lcc-desc">Donanım mimarisi, yazılımlar, işletim sistemleri, internet ağları, enformatik kurallar ve bilgi güvenliği soru havuzu.</p>
+            <div class="lcc-actions">
+              <button class="btn-launch-lesson btn-lcc-quiz" data-lesson="bilgi" data-mode="test">
+                <span>🎯 Soru Çöz (Test)</span>
+              </button>
+              <button class="btn-launch-lesson btn-lcc-study" data-lesson="bilgi" data-mode="study">
+                <span>📖 Soru Çalış (Doğru Cevaplı)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. GÖRÜNÜM: DERS SORU ÇÖZME / ÇALIŞMA OTURUM EKRANI -->
+      <div id="lesson-active-view" class="lesson-session-view" style="display:none;">
+        <!-- Üst Kontrol & Meta Çubuğu -->
+        <div class="lesson-session-bar">
+          <button class="btn-icon-label" id="btn-lesson-back-hub" title="Ders Seçimine Dön">
+            <span>← Dersler</span>
+          </button>
+          <div class="lesson-active-meta">
+            <span class="lesson-icon" id="lesson-active-icon">🦴</span>
+            <span class="lesson-title" id="lesson-active-title">Anatomi</span>
+            <span class="lesson-mode-pill" id="lesson-active-badge">🎯 Soru Çözüm Modu</span>
+          </div>
+          <button class="btn-mode-toggle" id="btn-lesson-switch-mode" title="Modlar Arasında Geçiş Yap">
+            <span>📖 Çalışma Modu</span>
+          </button>
+        </div>
+
+        <!-- İlerleme Çubuğu -->
+        <div class="lesson-progress-wrap">
+          <div class="lesson-progress-track">
+            <div class="lesson-progress-fill" id="lesson-progress-bar"></div>
+          </div>
+          <div class="lesson-counter-label" id="lesson-question-counter">1 / 70</div>
+        </div>
+
+        <!-- Soru Kartı -->
+        <div class="lesson-question-card">
+          <div class="lesson-q-header">
+            <span class="lesson-q-badge" id="lesson-q-num-badge">Soru 1</span>
+          </div>
+          <h3 class="lesson-q-text" id="lesson-q-text">Soru metni yükleniyor...</h3>
+
+          <!-- Seçenekler Listesi (Dinamik) -->
+          <div class="lesson-options-list" id="lesson-options-container">
+            <!-- JS ile şıklar render edilecek -->
+          </div>
+        </div>
+
+        <!-- Mod A (Test Modu) Alt Geri Bildirim ve İleri Çubuğu -->
+        <div class="lesson-test-footer" id="lesson-test-footer" style="display:none;">
+          <div class="test-feedback-text" id="lesson-test-feedback-msg"></div>
+          <button class="btn-test-next" id="btn-test-next">Sonraki Soru →</button>
+        </div>
+
+        <!-- Mod B (Çalışma Modu) Alt Navigasyon Çubuğu -->
+        <div class="lesson-study-footer" id="lesson-study-footer">
+          <button class="btn-study-nav" id="btn-study-prev" title="Önceki Soru (Sol Ok)">
+            <span>← Önceki</span>
+          </button>
+          <div class="study-nav-center">
+            <select class="study-jump-select" id="select-study-jump" title="Soruya Git"></select>
+            <button class="btn-study-shuffle" id="btn-study-shuffle" title="Soruları Karıştır">
+              <span>🔀 Karıştır</span>
+            </button>
+          </div>
+          <button class="btn-study-nav btn-study-next" id="btn-study-next" title="Sonraki Soru (Sağ Ok)">
+            <span>Sonraki →</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 3. GÖRÜNÜM: TEST SONUÇLARI EKRANI -->
+      <div id="lesson-results-view" class="lesson-results-card" style="display:none;">
+        <div class="res-icon-wrap" id="res-lesson-icon">🏆</div>
+        <h2 class="res-title" id="res-lesson-title">Test Tamamlandı!</h2>
+        <p class="res-lesson-sub" id="res-lesson-name">Anatomi Sınavı</p>
+
+        <div class="res-score-badge">
+          <span class="res-score-num" id="res-lesson-score-pct">%100</span>
+          <span class="res-score-lbl">Başarı Oranı</span>
+        </div>
+
+        <div class="res-stats-grid">
+          <div class="res-stat-box stat-correct">
+            <span class="res-stat-lbl">Doğru</span>
+            <span class="res-stat-val" id="res-lesson-correct">0</span>
+          </div>
+          <div class="res-stat-box stat-wrong">
+            <span class="res-stat-lbl">Yanlış</span>
+            <span class="res-stat-val" id="res-lesson-wrong">0</span>
+          </div>
+          <div class="res-stat-box stat-total">
+            <span class="res-stat-lbl">Toplam Soru</span>
+            <span class="res-stat-val" id="res-lesson-total">0</span>
+          </div>
+        </div>
+
+        <!-- Yanlış Yapılan Soruların İnceleme Listesi -->
+        <div class="res-mistakes-container" id="lesson-mistakes-preview" style="display:none;"></div>
+
+        <div class="res-actions">
+          <button class="btn-res-action btn-res-primary" id="btn-test-restart">
+            <span>🔄 Testi Tekrar Çöz</span>
+          </button>
+          <button class="btn-res-action btn-res-warning" id="btn-test-review-mistakes" style="display:none;">
+            <span>❌ Yalnızca Yanlışları Çöz</span>
+          </button>
+          <button class="btn-res-action btn-res-secondary" id="btn-test-back-hub">
+            <span>📚 Dersler Menüsüne Dön</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ==================== MODAL: KLAVYE KISAYOLLARI & REHBER ==================== -->
@@ -638,6 +832,8 @@
 
   <!-- Scriptler -->
   <script src="data.js"></script>
+  <script src="lessons-data.js"></script>
+  <script src="lessons.js"></script>
   <script src="app.js"></script>
 </body>
 

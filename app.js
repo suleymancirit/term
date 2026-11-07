@@ -165,6 +165,15 @@
     updateProfileUI();
     updateFilterCounts();
 
+    // URL parametresi veya hash ile doğrudan sekme açma desteği (örn: ?tab=lessons veya #lessons)
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const initialTab = urlParams.get('tab') || window.location.hash.replace('#', '');
+      if (initialTab && document.getElementById(`tab-content-${initialTab}`)) {
+        switchTab(initialTab);
+      }
+    } catch (_) {}
+
     console.log(`CiritTerm Başlatıldı. Toplam ${allTerms.length} tıbbi terim yüklendi. Aktif Öğrenci: ${activeUser}`);
   });
 
