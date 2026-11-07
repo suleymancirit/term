@@ -544,6 +544,16 @@
 
     <!-- ==================== TAB 6: DERSLER & TESTLER ==================== -->
     <section class="tab-content" id="tab-content-lessons">
+      <!-- Üst Navigasyon Geçişi: Modlar / Tüm Soru Listesi -->
+      <div class="lessons-subnav-bar">
+        <button class="btn-subnav-tab active" id="btn-subnav-hub" data-target="hub">
+          <span>🗂️ Ders Modları (Test & Çalışma)</span>
+        </button>
+        <button class="btn-subnav-tab" id="btn-subnav-list" data-target="list">
+          <span>📋 Tüm Soru Listesi (Gözlü Mod)</span>
+        </button>
+      </div>
+
       <!-- 1. GÖRÜNÜM: DERS SEÇİM MENÜSÜ (HUB) -->
       <div id="lessons-hub-view" class="lessons-hub-wrapper">
         <div class="lessons-hero-card">
@@ -573,6 +583,9 @@
               <button class="btn-launch-lesson btn-lcc-study" data-lesson="anatomi" data-mode="study">
                 <span>📖 Soru Çalış (Doğru Cevaplı)</span>
               </button>
+              <button class="btn-launch-lesson btn-lcc-list" data-lesson="anatomi" data-mode="list">
+                <span>📋 Tüm Soru Listesi (70 Soru)</span>
+              </button>
             </div>
           </div>
 
@@ -596,6 +609,9 @@
               <button class="btn-launch-lesson btn-lcc-study" data-lesson="fizyoloji" data-mode="study">
                 <span>📖 Soru Çalış (Doğru Cevaplı)</span>
               </button>
+              <button class="btn-launch-lesson btn-lcc-list" data-lesson="fizyoloji" data-mode="list">
+                <span>📋 Tüm Soru Listesi (50 Soru)</span>
+              </button>
             </div>
           </div>
 
@@ -618,6 +634,9 @@
               </button>
               <button class="btn-launch-lesson btn-lcc-study" data-lesson="bilgi" data-mode="study">
                 <span>📖 Soru Çalış (Doğru Cevaplı)</span>
+              </button>
+              <button class="btn-launch-lesson btn-lcc-list" data-lesson="bilgi" data-mode="list">
+                <span>📋 Tüm Soru Listesi (105 Soru)</span>
               </button>
             </div>
           </div>
@@ -725,6 +744,71 @@
             <span>📚 Dersler Menüsüne Dön</span>
           </button>
         </div>
+      </div>
+
+      <!-- 4. GÖRÜNÜM: TÜM SORU LİSTESİ (DERS SEÇMELİ VE GÖZLÜ MOD) -->
+      <div id="lesson-question-list-view" class="lesson-qlist-wrapper" style="display:none;">
+        <div class="qlist-header-card">
+          <div class="qlist-header-top">
+            <div>
+              <span class="hero-badge">📋 TÜM SORULAR LİSTESİ</span>
+              <h2 class="qlist-main-title">Ders Soru Havuzu</h2>
+              <p class="qlist-main-desc">Ders seçin, tüm soruları alt alta listeleyin. <strong>Göz ikonuna (👁️)</strong> tıklayarak tüm doğru cevapları anında işaretleyin veya gizleyin.</p>
+            </div>
+            <button class="btn-icon-label" id="btn-qlist-back-hub" title="Ders Seçimine Dön">
+              <span>← Dersler</span>
+            </button>
+          </div>
+
+          <!-- Ders Seçim Çipleri -->
+          <div class="qlist-lesson-selector" id="qlist-lesson-selector">
+            <button class="qlist-chip active" data-qlist-lesson="anatomi">
+              <span class="chip-icon">🦴</span>
+              <span class="chip-title">Anatomi</span>
+              <span class="chip-count">70 Soru</span>
+            </button>
+            <button class="qlist-chip" data-qlist-lesson="fizyoloji">
+              <span class="chip-icon">🫀</span>
+              <span class="chip-title">Fizyoloji</span>
+              <span class="chip-count">50 Soru</span>
+            </button>
+            <button class="qlist-chip" data-qlist-lesson="bilgi">
+              <span class="chip-icon">💻</span>
+              <span class="chip-title">Bilgi Teknolojileri</span>
+              <span class="chip-count">105 Soru</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Akıllı Toolbar: GÖZ BUTONU (Cevapları Göster/Gizle) + Arama + Sayaç -->
+        <div class="qlist-toolbar-sticky" id="qlist-toolbar">
+          <div class="qlist-toolbar-left">
+            <!-- ANA GÖZ BUTONU -->
+            <button class="btn-master-eye" id="btn-master-eye-toggle" title="Tüm Soruların Doğru Cevaplarını Aç veya Kapat">
+              <span class="eye-icon" id="master-eye-icon">👁️</span>
+              <span class="eye-text" id="master-eye-text">Cevapları Göster</span>
+            </button>
+            <span class="qlist-status-badge" id="qlist-status-badge">70 Soru Listeleniyor</span>
+          </div>
+
+          <div class="qlist-toolbar-right">
+            <div class="qlist-search-box">
+              <span class="qlist-search-icon">🔍</span>
+              <input type="text" id="qlist-search-input" placeholder="Sorularda ara (kelime veya no)...">
+              <button id="btn-qlist-clear-search" class="btn-qlist-clear" style="display:none;" title="Aramayı Temizle">✕</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soruların Kartlar Halinde Listelendiği Alan -->
+        <div class="qlist-cards-container" id="qlist-items-container">
+          <!-- JS ile dinamik doldurulacak -->
+        </div>
+
+        <!-- Başa Dön Butonu -->
+        <button class="btn-scroll-top-float" id="btn-qlist-scroll-top" title="Sayfa Başına Dön">
+          <span>↑ Başa Dön</span>
+        </button>
       </div>
     </section>
 

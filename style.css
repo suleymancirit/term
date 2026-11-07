@@ -3292,3 +3292,588 @@ body {
   }
 }
 
+/* ===================================================================
+   DERSLER: TÜM SORU LİSTESİ & GÖZLÜ CEVAP MODU STİLLERİ
+   =================================================================== */
+
+/* Üst Subnav Geçiş Çubuğu */
+.lessons-subnav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--bg-card);
+  padding: 0.4rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-subnav-tab {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-full);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-subnav-tab:hover {
+  color: #fff;
+}
+
+.btn-subnav-tab.active {
+  background: linear-gradient(135deg, var(--primary), #0284c7);
+  color: #fff;
+  box-shadow: 0 4px 14px var(--primary-glow);
+}
+
+/* Karttaki 3. Buton: Tüm Soru Listesi */
+.btn-lcc-list {
+  background: rgba(139, 92, 246, 0.1);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.btn-lcc-list:hover {
+  background: rgba(139, 92, 246, 0.22);
+  border-color: var(--purple);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Soru Listesi Konteyneri & Başlık */
+.lesson-qlist-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.qlist-header-card {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(139, 92, 246, 0.1));
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.qlist-header-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.qlist-main-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.qlist-main-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 650px;
+  line-height: 1.5;
+}
+
+/* Ders Seçici Çipler */
+.qlist-lesson-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.qlist-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  border: 1.5px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 50px;
+  user-select: none;
+}
+
+.qlist-chip:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.qlist-chip.active {
+  background: rgba(14, 165, 233, 0.18);
+  border-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 0 16px var(--primary-glow);
+}
+
+.qlist-chip[data-qlist-lesson="fizyoloji"].active {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: var(--emerald);
+  box-shadow: 0 0 16px var(--emerald-glow);
+}
+
+.qlist-chip[data-qlist-lesson="bilgi"].active {
+  background: rgba(139, 92, 246, 0.18);
+  border-color: var(--purple);
+  box-shadow: 0 0 16px var(--purple-glow);
+}
+
+.chip-icon {
+  font-size: 1.3rem;
+}
+
+.chip-title {
+  flex: 1;
+  text-align: left;
+}
+
+.chip-count {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-dim);
+}
+
+.qlist-chip.active .chip-count {
+  background: var(--primary);
+  color: #fff;
+}
+
+.qlist-chip[data-qlist-lesson="fizyoloji"].active .chip-count {
+  background: var(--emerald);
+  color: #042f2e;
+}
+
+.qlist-chip[data-qlist-lesson="bilgi"].active .chip-count {
+  background: var(--purple);
+  color: #fff;
+}
+
+/* Sticky Toolbar (GÖZ BUTONU + Arama + Sayaç) */
+.qlist-toolbar-sticky {
+  position: sticky;
+  top: 110px;
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+  flex-wrap: wrap;
+}
+
+.qlist-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+/* ANA GÖZ BUTONU */
+.btn-master-eye {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.35rem;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(14, 165, 233, 0.25));
+  border: 1.5px solid var(--primary);
+  color: #38bdf8;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  min-height: 48px;
+  user-select: none;
+  box-shadow: 0 0 14px rgba(14, 165, 233, 0.25);
+}
+
+.btn-master-eye:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: rgba(14, 165, 233, 0.3);
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+}
+
+.btn-master-eye .eye-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+/* Göz Aktifken (Cevaplar Açıkken) */
+.btn-master-eye.active-revealed {
+  background: linear-gradient(135deg, var(--emerald), #059669);
+  border-color: #34d399;
+  color: #042f2e;
+  box-shadow: 0 0 22px rgba(16, 185, 129, 0.6);
+  animation: eyePulse 1.8s infinite alternate;
+}
+
+@keyframes eyePulse {
+  0% { box-shadow: 0 0 14px rgba(16, 185, 129, 0.4); }
+  100% { box-shadow: 0 0 26px rgba(16, 185, 129, 0.8); }
+}
+
+.qlist-status-badge {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+/* Arama Kutusu */
+.qlist-toolbar-right {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+  min-width: 240px;
+}
+
+.qlist-search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.4rem 0.85rem;
+  width: 100%;
+  max-width: 320px;
+  min-height: 44px;
+}
+
+.qlist-search-box:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
+.qlist-search-box input {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-size: 0.88rem;
+  outline: none;
+  width: 100%;
+}
+
+.btn-qlist-clear {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.2rem;
+}
+
+.btn-qlist-clear:hover {
+  color: #fff;
+}
+
+/* Soru Kartları Listesi */
+.qlist-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.qlist-item-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.qlist-item-card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(15, 23, 42, 0.92);
+}
+
+.qlist-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.qlist-num-badge {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--primary);
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+/* Bireysel Soru Göz Butonu */
+.btn-item-eye-toggle {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.btn-item-eye-toggle:hover {
+  background: rgba(14, 165, 233, 0.2);
+  border-color: var(--primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.btn-item-eye-toggle.active {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: var(--emerald);
+  color: var(--emerald);
+}
+
+.qlist-card-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* Soru Şıkları */
+.qlist-card-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.qlist-option-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  font-size: 0.94rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  user-select: none;
+}
+
+.qlist-option-row:hover {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: var(--primary);
+}
+
+.qlist-opt-letter {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.qlist-opt-text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+/* Doğru Cevap Vurgusu (Göz Açıkken) */
+.qlist-option-row.highlight-correct {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(16, 185, 129, 0.1)) !important;
+  border: 1.8px solid var(--emerald) !important;
+  color: #fff !important;
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.3) !important;
+}
+
+.qlist-option-row.highlight-correct .qlist-opt-letter {
+  background: var(--emerald) !important;
+  color: #042f2e !important;
+}
+
+.qlist-option-row.highlight-correct .qlist-opt-text {
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+
+/* Doğru Cevap Rozeti (Varsayılan olarak GİZLİDİR, SADECE highlight-correct durumunda görünür) */
+.qlist-correct-pill {
+  display: none !important;
+}
+
+.qlist-option-row.highlight-correct .qlist-correct-pill {
+  display: inline-block !important;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  background: var(--emerald);
+  color: #042f2e;
+  white-space: nowrap;
+}
+
+/* Soluk Şıklar (Göz açıkken doğru olmayanlar) */
+.qlist-option-row.dimmed {
+  opacity: 0.55;
+  background: rgba(15, 23, 42, 0.4);
+}
+
+/* Kullanıcı Tıklamasında Yanlış Şık */
+.qlist-option-row.user-wrong {
+  border-color: var(--rose) !important;
+  background: rgba(244, 63, 94, 0.2) !important;
+  color: #fff !important;
+}
+
+.qlist-option-row.user-wrong .qlist-opt-letter {
+  background: var(--rose) !important;
+  color: #fff !important;
+}
+
+/* Boş ve Yükleniyor Durumu */
+.qlist-loading,
+.qlist-empty {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Sayfa Başına Dön Butonu */
+.btn-scroll-top-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.15rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease;
+}
+
+.btn-scroll-top-float:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Soru Listesi Mobil Uyumluluk */
+@media (max-width: 768px) {
+  .qlist-header-card {
+    padding: 1.25rem;
+  }
+
+  .qlist-main-title {
+    font-size: 1.35rem;
+  }
+
+  .qlist-lesson-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .qlist-toolbar-sticky {
+    top: 60px;
+    padding: 0.75rem 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .qlist-toolbar-left,
+  .qlist-toolbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-master-eye {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .qlist-search-box {
+    max-width: 100%;
+  }
+
+  .qlist-item-card {
+    padding: 1.25rem;
+  }
+
+  .qlist-card-text {
+    font-size: 1.05rem;
+  }
+
+  .qlist-option-row {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.88rem;
+  }
+
+  .btn-scroll-top-float {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    padding: 0.6rem 0.95rem;
+    font-size: 0.8rem;
+  }
+}
+

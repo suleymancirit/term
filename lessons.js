@@ -57,6 +57,13 @@
   let testAnswers = {}; // { [index]: { selected: '...', correct: '...', isCorrect: true/false } }
   let testAnswerLocked = false;
 
+  // Soru Listesi (Toplu Liste & Gözlü Mod) State
+  let currentListLessonId = 'anatomi';
+  let isMasterEyeRevealed = false; // Göz: true => tüm doğru cevaplar açık, false => gizli
+  let qlistSearchQuery = '';
+  let singleRevealedIndices = new Set();
+  let listUserAnswers = {}; // { [index]: { selected: '...', isCorrect: true/false } }
+
   // Harf etiketleri
   const OPTION_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F'];
 
@@ -105,13 +112,33 @@
   }
 
   function initLessonTabsAndEvents() {
+    // Üst Navigasyon Geçişi (Hub vs Soru Listesi)
+    const btnSubnavHub = document.getElementById('btn-subnav-hub');
+    const btnSubnavList = document.getElementById('btn-subnav-list');
+
+    if (btnSubnavHub) {
+      btnSubnavHub.addEventListener('click', () => {
+        showLessonsHub();
+      });
+    }
+
+    if (btnSubnavList) {
+      btnSubnavList.addEventListener('click', () => {
+        showQuestionListView(currentListLessonId);
+      });
+    }
+
     // Ders Seçim Kartlarındaki Butonlar
     document.querySelectorAll('.btn-launch-lesson').forEach(btn => {
       btn.addEventListener('click', async (e) => {
         e.preventDefault();
         const lesson = btn.getAttribute('data-lesson');
-        const mode = btn.getAttribute('data-mode'); // 'test' veya 'study'
-        await startLessonSession(lesson, mode);
+        const mode = btn.getAttribute('data-mode'); // 'test', 'study' veya 'list'
+        if (mode === 'list') {
+          await showQuestionListView(lesson);
+        } else {
+          await startLessonSession(lesson, mode);
+        }
       });
     });
 
@@ -174,6 +201,58 @@
     }
     if (btnTestBackToHub) {
       btnTestBackToHub.addEventListener('click', showLessonsHub);
+    }
+
+    // Soru Listesi (Gözlü Mod) Buton ve Arama Olayları
+    const btnQlistBack = document.getElementById('btn-qlist-back-hub');
+    if (btnQlistBack) {
+      btnQlistBack.addEventListener('click', showLessonsHub);
+    }
+
+    // Ders Seçim Çipleri
+    document.querySelectorAll('#qlist-lesson-selector .qlist-chip').forEach(chip => {
+      chip.addEventListener('click', async () => {
+        const lesson = chip.getAttribute('data-qlist-lesson');
+        await switchQlistLesson(lesson);
+      });
+    });
+
+    // ANA GÖZ BUTONU (Cevapları Göster / Gizle)
+    const btnMasterEye = document.getElementById('btn-master-eye-toggle');
+    if (btnMasterEye) {
+      btnMasterEye.addEventListener('click', toggleMasterEye);
+    }
+
+    // Arama Kutusu
+    const searchInput = document.getElementById('qlist-search-input');
+    const btnClearSearch = document.getElementById('btn-qlist-clear-search');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        qlistSearchQuery = searchInput.value.trim().toLowerCase();
+        if (btnClearSearch) {
+          btnClearSearch.style.display = qlistSearchQuery ? 'block' : 'none';
+        }
+        renderQuestionList();
+      });
+    }
+
+    if (btnClearSearch) {
+      btnClearSearch.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        qlistSearchQuery = '';
+        btnClearSearch.style.display = 'none';
+        renderQuestionList();
+      });
+    }
+
+    // Başa Dön Butonu
+    const btnScrollTop = document.getElementById('btn-qlist-scroll-top');
+    if (btnScrollTop) {
+      btnScrollTop.addEventListener('click', () => {
+        const target = document.getElementById('tab-content-lessons');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     }
 
     // Klavye Kısayolları (Sol/Sağ Ok Tuşları, vb.)
@@ -552,7 +631,274 @@
   function showLessonsHub() {
     document.getElementById('lesson-active-view').style.display = 'none';
     document.getElementById('lesson-results-view').style.display = 'none';
+    const qlistView = document.getElementById('lesson-question-list-view');
+    if (qlistView) qlistView.style.display = 'none';
     document.getElementById('lessons-hub-view').style.display = 'block';
+
+    // Subnav butonlarını güncelle
+    const btnSubnavHub = document.getElementById('btn-subnav-hub');
+    const btnSubnavList = document.getElementById('btn-subnav-list');
+    if (btnSubnavHub) btnSubnavHub.classList.add('active');
+    if (btnSubnavList) btnSubnavList.classList.remove('active');
+  }
+
+  // ===================================================================
+  // TÜM SORU LİSTESİ (TOPLU LİSTE & GÖZLÜ MOD) MOTORU
+  // ===================================================================
+  async function showQuestionListView(lessonId) {
+    if (lessonId) currentListLessonId = lessonId;
+
+    document.getElementById('lessons-hub-view').style.display = 'none';
+    document.getElementById('lesson-active-view').style.display = 'none';
+    document.getElementById('lesson-results-view').style.display = 'none';
+
+    const qlistView = document.getElementById('lesson-question-list-view');
+    if (qlistView) qlistView.style.display = 'block';
+
+    // Subnav butonlarını güncelle
+    const btnSubnavHub = document.getElementById('btn-subnav-hub');
+    const btnSubnavList = document.getElementById('btn-subnav-list');
+    if (btnSubnavHub) btnSubnavHub.classList.remove('active');
+    if (btnSubnavList) btnSubnavList.classList.add('active');
+
+    // Çipleri güncelle
+    updateQlistChipsUI();
+
+    // Soruları render et
+    await renderQuestionList();
+
+    // Sayfanın en üstüne kaydır
+    document.getElementById('tab-content-lessons').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  async function switchQlistLesson(lessonId) {
+    currentListLessonId = lessonId;
+    updateQlistChipsUI();
+    singleRevealedIndices.clear();
+    listUserAnswers = {};
+    await renderQuestionList();
+  }
+
+  function updateQlistChipsUI() {
+    document.querySelectorAll('#qlist-lesson-selector .qlist-chip').forEach(chip => {
+      const l = chip.getAttribute('data-qlist-lesson');
+      chip.classList.toggle('active', l === currentListLessonId);
+    });
+  }
+
+  // ANA GÖZ BUTONU: Bütün soruların cevaplarını aç veya kapat
+  function toggleMasterEye() {
+    isMasterEyeRevealed = !isMasterEyeRevealed;
+    if (!isMasterEyeRevealed) {
+      singleRevealedIndices.clear();
+      listUserAnswers = {};
+    }
+    updateMasterEyeButtonUI();
+
+    // Tüm kartların görünümünü anında güncelle
+    applyEyeStateToCards();
+
+    showLessonToast(
+      isMasterEyeRevealed 
+        ? '👁️ Bütün doğru cevaplar işaretlendi!' 
+        : '🙈 Bütün cevaplar gizlendi.',
+      isMasterEyeRevealed ? 'success' : 'info'
+    );
+  }
+
+  function updateMasterEyeButtonUI() {
+    const btn = document.getElementById('btn-master-eye-toggle');
+    const icon = document.getElementById('master-eye-icon');
+    const text = document.getElementById('master-eye-text');
+
+    if (!btn) return;
+
+    if (isMasterEyeRevealed) {
+      btn.classList.add('active-revealed');
+      if (icon) icon.textContent = '🙈';
+      if (text) text.textContent = 'Cevapları Gizle';
+    } else {
+      btn.classList.remove('active-revealed');
+      if (icon) icon.textContent = '👁️';
+      if (text) text.textContent = 'Cevapları Göster';
+    }
+  }
+
+  function applyEyeStateToCards() {
+    const cards = document.querySelectorAll('.qlist-item-card');
+    cards.forEach(card => {
+      const qIndex = parseInt(card.getAttribute('data-q-index'), 10);
+      const isCardRevealed = isMasterEyeRevealed || singleRevealedIndices.has(qIndex);
+
+      card.classList.toggle('answers-revealed', isCardRevealed);
+
+      // Kartın kendi küçük göz butonunu güncelle
+      const eyeBtn = card.querySelector('.btn-item-eye-toggle');
+      if (eyeBtn) {
+        eyeBtn.classList.toggle('active', isCardRevealed);
+        eyeBtn.innerHTML = isCardRevealed ? '🙈' : '👁️';
+        eyeBtn.title = isCardRevealed ? 'Cevabı Gizle' : 'Cevabı Göster';
+      }
+
+      // Şıkları güncelle
+      card.querySelectorAll('.qlist-option-row').forEach(opt => {
+        const isCorrect = opt.getAttribute('data-is-correct') === 'true';
+        if (isCardRevealed) {
+          if (isCorrect) {
+            opt.classList.add('highlight-correct');
+            opt.classList.remove('dimmed', 'user-wrong');
+          } else {
+            opt.classList.remove('highlight-correct', 'user-wrong');
+            opt.classList.add('dimmed');
+          }
+        } else {
+          // Eğer kullanıcı kendisi tıklamadıysa nötr haline dön
+          const userAnswer = listUserAnswers[qIndex];
+          if (userAnswer) {
+            const val = opt.getAttribute('data-val');
+            if (isCorrect) opt.classList.add('highlight-correct');
+            if (val === userAnswer.selected && !userAnswer.isCorrect) opt.classList.add('user-wrong');
+            if (!isCorrect && val !== userAnswer.selected) opt.classList.add('dimmed');
+          } else {
+            opt.classList.remove('highlight-correct', 'user-wrong', 'dimmed');
+          }
+        }
+      });
+    });
+  }
+
+  async function renderQuestionList() {
+    const container = document.getElementById('qlist-items-container');
+    const countBadge = document.getElementById('qlist-status-badge');
+    if (!container) return;
+
+    container.innerHTML = '<div class="qlist-loading">Sorular yükleniyor...</div>';
+
+    const questions = await loadLessonData(currentListLessonId);
+    if (!questions || questions.length === 0) {
+      container.innerHTML = '<div class="qlist-empty">Bu ders için soru bulunamadı.</div>';
+      if (countBadge) countBadge.textContent = '0 Soru';
+      return;
+    }
+
+    // Arama filtresi
+    let filtered = questions.map((q, idx) => ({ ...q, originalIndex: idx }));
+    if (qlistSearchQuery) {
+      filtered = filtered.filter(q => {
+        const query = qlistSearchQuery;
+        const noMatch = String(q.soru_no || (q.originalIndex + 1)).includes(query);
+        const textMatch = q.soru.toLowerCase().includes(query);
+        const optMatch = q.secenekler.some(s => s.toLowerCase().includes(query));
+        return noMatch || textMatch || optMatch;
+      });
+    }
+
+    if (countBadge) {
+      countBadge.textContent = `${filtered.length} / ${questions.length} Soru Listeleniyor`;
+    }
+
+    container.innerHTML = '';
+
+    if (filtered.length === 0) {
+      container.innerHTML = `
+        <div class="qlist-empty">
+          <p>🔍 "<strong>${escapeHTML(qlistSearchQuery)}</strong>" aramasına uygun soru bulunamadı.</p>
+        </div>
+      `;
+      return;
+    }
+
+    updateMasterEyeButtonUI();
+
+    filtered.forEach((q) => {
+      const qIndex = q.originalIndex;
+      const isCardRevealed = isMasterEyeRevealed || singleRevealedIndices.has(qIndex);
+
+      const card = document.createElement('div');
+      card.className = `qlist-item-card ${isCardRevealed ? 'answers-revealed' : ''}`;
+      card.setAttribute('data-q-index', qIndex);
+
+      // Başlık & Soru metni
+      let optionsHtml = '';
+      q.secenekler.forEach((secenekText, sIdx) => {
+        const isCorrect = isExactAnswer(secenekText, q.dogru_cevap);
+        const letter = OPTION_LETTERS[sIdx] || (sIdx + 1);
+
+        let extraClass = '';
+        if (isCardRevealed) {
+          extraClass = isCorrect ? 'highlight-correct' : 'dimmed';
+        } else if (listUserAnswers[qIndex]) {
+          const ans = listUserAnswers[qIndex];
+          if (isCorrect) extraClass = 'highlight-correct';
+          if (secenekText === ans.selected && !ans.isCorrect) extraClass = 'user-wrong';
+          if (!isCorrect && secenekText !== ans.selected) extraClass = 'dimmed';
+        }
+
+        optionsHtml += `
+          <div class="qlist-option-row ${extraClass}" data-val="${escapeHTML(secenekText)}" data-is-correct="${isCorrect}">
+            <span class="qlist-opt-letter">${letter}</span>
+            <span class="qlist-opt-text">${escapeHTML(secenekText)}</span>
+            ${isCorrect ? '<span class="qlist-correct-pill">✓ Doğru</span>' : ''}
+          </div>
+        `;
+      });
+
+      card.innerHTML = `
+        <div class="qlist-card-header">
+          <div class="qlist-card-badge-wrap">
+            <span class="qlist-num-badge">Soru #${q.soru_no || (qIndex + 1)}</span>
+          </div>
+          <button class="btn-item-eye-toggle ${isCardRevealed ? 'active' : ''}" data-idx="${qIndex}" title="${isCardRevealed ? 'Bu Sorunun Cevabını Gizle' : 'Bu Sorunun Cevabını Göster'}">
+            ${isCardRevealed ? '🙈' : '👁️'}
+          </button>
+        </div>
+        <h4 class="qlist-card-text">${escapeHTML(q.soru)}</h4>
+        <div class="qlist-card-options">
+          ${optionsHtml}
+        </div>
+      `;
+
+      // Bireysel göz butonu tıklaması
+      const itemEyeBtn = card.querySelector('.btn-item-eye-toggle');
+      if (itemEyeBtn) {
+        itemEyeBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleSingleCardEye(qIndex, card);
+        });
+      }
+
+      // Şıklara tıklama (Cevaplar kapalıyken kullanıcının kendini sınayabilmesi için)
+      card.querySelectorAll('.qlist-option-row').forEach(optRow => {
+        optRow.addEventListener('click', () => {
+          handleListOptionClick(q, optRow.getAttribute('data-val'), card, qIndex);
+        });
+      });
+
+      container.appendChild(card);
+    });
+  }
+
+  // Tekil soru göz butonu toggle
+  function toggleSingleCardEye(qIndex, cardEl) {
+    if (singleRevealedIndices.has(qIndex)) {
+      singleRevealedIndices.delete(qIndex);
+    } else {
+      singleRevealedIndices.add(qIndex);
+    }
+    applyEyeStateToCards();
+  }
+
+  // Şık tıklaması (İnteraktif kendi kendini test etme)
+  function handleListOptionClick(q, selectedVal, cardEl, qIndex) {
+    const isCorrect = isExactAnswer(selectedVal, q.dogru_cevap);
+    listUserAnswers[qIndex] = {
+      selected: selectedVal,
+      isCorrect: isCorrect
+    };
+
+    // Bu soruyu otomatik açık göster
+    singleRevealedIndices.add(qIndex);
+    applyEyeStateToCards();
   }
 
   // Klavye Kısayolları (Sol/Sağ Ok, Enter)
