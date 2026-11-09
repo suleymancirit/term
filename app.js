@@ -124,6 +124,7 @@
   let quizTimeRemaining = 0;
   let quizTimeLimitPerQ = 0;
   let quizAnswerLocked = false;
+  let isQuizRetryMode = false;
 
   // Eşleştirme Oyunu Durumu
   let matchMode = 'duo'; // 'duo' veya 'grid'
@@ -131,6 +132,11 @@
   let matchSeconds = 0;
   let matchScore = 0;
   let matchCombo = 1;
+  let matchMaxCombo = 1;
+  let matchMistakes = [];
+  let matchMistakesCount = 0;
+  let matchTotalTarget = 20;
+  let isMatchRetryMode = false;
   let duoSelectedLeftId = null;
   let duoSelectedRightId = null;
   let duoRemainingPool = [];
@@ -259,6 +265,8 @@
 
     const elUserFavLabel = document.getElementById('user-fav-label');
     if (elUserFavLabel) elUserFavLabel.textContent = activeUser;
+
+    updateQuizCountMaxLabel();
   }
 
   // ==================== PROFİL & KULLANICI SEÇİCİ ====================
@@ -606,34 +614,63 @@
     const btnQuit = document.getElementById('btn-quit-quiz');
     const btnNext = document.getElementById('btn-next-question');
     const btnRestart = document.getElementById('btn-restart-quiz');
+    const btnRetryMistakes = document.getElementById('btn-quiz-retry-mistakes');
     const btnGoFlash = document.getElementById('btn-go-flashcards');
+    const scopeSelect = document.getElementById('quiz-scope');
 
-    if (btnStart) btnStart.addEventListener('click', startQuiz);
+    if (btnStart) btnStart.addEventListener('click', () => startQuiz());
     if (btnQuit) btnQuit.addEventListener('click', finishQuiz);
     if (btnNext) btnNext.addEventListener('click', advanceQuizQuestion);
     if (btnRestart) btnRestart.addEventListener('click', () => {
       document.getElementById('quiz-results-view').style.display = 'none';
       document.getElementById('quiz-setup-view').style.display = 'block';
     });
+    if (btnRetryMistakes) btnRetryMistakes.addEventListener('click', retryQuizMistakes);
     if (btnGoFlash) btnGoFlash.addEventListener('click', () => switchTab('flashcards'));
+
+    if (scopeSelect) {
+      scopeSelect.addEventListener('change', updateQuizCountMaxLabel);
+      updateQuizCountMaxLabel();
+    }
   }
 
-  function startQuiz() {
-    const scope = document.getElementById('quiz-scope').value;
-    const count = parseInt(document.getElementById('quiz-count').value, 10) || 25;
+  function updateQuizCountMaxLabel() {
+    const scopeSelect = document.getElementById('quiz-scope');
+    const maxOpt = document.getElementById('quiz-count-opt-all');
+    if (!scopeSelect || !maxOpt) return;
+    const pool = getFilteredTerms(scopeSelect.value);
+    maxOpt.textContent = `Maksimum Soru (Tüm ${pool.length} Terim)`;
+  }
+
+  function startQuiz(customTermsPool = null) {
+    let selectedTerms = [];
     const type = document.getElementById('quiz-type').value;
     quizTimeLimitPerQ = parseInt(document.getElementById('quiz-timer').value, 10) || 0;
 
-    const pool = getFilteredTerms(scope);
-    if (pool.length < 4) {
-      showToast('Seçilen kapsamda en az 4 terim bulunmalıdır!', 'info');
-      return;
-    }
+    if (customTermsPool && Array.isArray(customTermsPool) && customTermsPool.length > 0) {
+      // Telafi Sınavı Modu (Yalnızca Yanlış Yapılan Sorular)
+      isQuizRetryMode = true;
+      selectedTerms = [...customTermsPool];
+      shuffleArray(selectedTerms);
+      showToast(`🎯 Yanlış yapılan ${selectedTerms.length} soru için telafi testi başladı!`, 'info');
+    } else {
+      isQuizRetryMode = false;
+      const scope = document.getElementById('quiz-scope').value;
+      const countVal = document.getElementById('quiz-count').value;
 
-    // Rastgele soru havuzu oluştur (count kadar veya havuz boyutunda)
-    const shuffled = [...pool];
-    shuffleArray(shuffled);
-    const selectedTerms = shuffled.slice(0, Math.min(count, pool.length));
+      const pool = getFilteredTerms(scope);
+      if (pool.length < 4) {
+        showToast('Seçilen kapsamda en az 4 terim bulunmalıdır!', 'info');
+        return;
+      }
+
+      const count = countVal === 'all' ? pool.length : (parseInt(countVal, 10) || 25);
+
+      // Rastgele soru havuzu oluştur (count kadar veya havuz boyutunda)
+      const shuffled = [...pool];
+      shuffleArray(shuffled);
+      selectedTerms = shuffled.slice(0, Math.min(count, pool.length));
+    }
 
     quizQuestions = selectedTerms.map(termObj => {
       let qType = type;
@@ -820,17 +857,30 @@
     document.getElementById('res-wrong').textContent = wrong;
 
     const iconEl = document.getElementById('results-icon');
+    const subEl = document.getElementById('results-subtitle');
+
+    if (isQuizRetryMode) {
+      if (subEl) subEl.textContent = 'Yanlış Yapılan Soruların Telafi Sınav Sonucu:';
+    } else {
+      if (subEl) subEl.textContent = 'Tıbbi terminoloji sınav sonucunuz:';
+    }
+
     if (pct >= 85) iconEl.textContent = '🏆';
     else if (pct >= 60) iconEl.textContent = '👏';
     else iconEl.textContent = '📚';
 
-    // Yanlışlar Listesi
+    // Yanlışlar Listesi ve Yanlışları Tekrar Çöz Butonu
     const mistakesContainer = document.getElementById('results-mistakes-container');
     const mistakesList = document.getElementById('results-mistakes-list');
+    const btnRetryMistakes = document.getElementById('btn-quiz-retry-mistakes');
     mistakesList.innerHTML = '';
 
     if (quizMistakes.length > 0) {
       mistakesContainer.style.display = 'block';
+      if (btnRetryMistakes) {
+        btnRetryMistakes.style.display = 'inline-flex';
+        btnRetryMistakes.innerHTML = `<span>❌ Yanlışları Tekrar Çöz (${quizMistakes.length})</span>`;
+      }
       quizMistakes.forEach(m => {
         const itemEl = document.createElement('div');
         itemEl.className = 'mistake-item';
@@ -842,6 +892,24 @@
       });
     } else {
       mistakesContainer.style.display = 'none';
+      if (btnRetryMistakes) btnRetryMistakes.style.display = 'none';
+    }
+  }
+
+  // Yalnızca Yanlış Çözülen Soruları Tekrar Çözme
+  function retryQuizMistakes() {
+    if (!quizMistakes || quizMistakes.length === 0) return;
+    const uniqueTerms = [];
+    const seenIds = new Set();
+    quizMistakes.forEach(m => {
+      if (m.item && !seenIds.has(m.item.id)) {
+        seenIds.add(m.item.id);
+        uniqueTerms.push(m.item);
+      }
+    });
+
+    if (uniqueTerms.length > 0) {
+      startQuiz(uniqueTerms);
     }
   }
 
@@ -850,6 +918,7 @@
     const btnDuo = document.getElementById('btn-mode-duo');
     const btnGrid = document.getElementById('btn-mode-grid');
     const btnRestart = document.getElementById('btn-restart-match');
+    const targetSelect = document.getElementById('match-target-select');
 
     if (btnDuo) {
       btnDuo.addEventListener('click', () => {
@@ -873,27 +942,131 @@
       });
     }
 
-    if (btnRestart) btnRestart.addEventListener('click', initMatchGame);
+    if (btnRestart) btnRestart.addEventListener('click', () => initMatchGame());
+
+    if (targetSelect) {
+      targetSelect.addEventListener('change', () => {
+        initMatchGame();
+      });
+    }
+
+    // Sonuç Ekranı Aksiyon Butonları
+    const btnResultRestart = document.getElementById('btn-match-restart');
+    const btnResultRetryMistakes = document.getElementById('btn-match-retry-mistakes');
+    const btnResultToggleMistakes = document.getElementById('btn-match-toggle-mistakes');
+    const btnResultGoFlash = document.getElementById('btn-match-go-flashcards');
+
+    if (btnResultRestart) {
+      btnResultRestart.addEventListener('click', () => {
+        initMatchGame();
+      });
+    }
+
+    if (btnResultRetryMistakes) {
+      btnResultRetryMistakes.addEventListener('click', () => {
+        if (matchMistakes.length > 0) {
+          // Telafi Modu: Sadece hatalı terimlerle yeni oyun
+          initMatchGame([...matchMistakes]);
+        }
+      });
+    }
+
+    if (btnResultToggleMistakes) {
+      btnResultToggleMistakes.addEventListener('click', () => {
+        const container = document.getElementById('match-mistakes-container');
+        if (!container) return;
+        const isHidden = container.style.display === 'none' || !container.style.display;
+        if (isHidden) {
+          container.style.display = 'block';
+          btnResultToggleMistakes.innerHTML = `<span>🙈 Hataları Gizle</span>`;
+        } else {
+          container.style.display = 'none';
+          btnResultToggleMistakes.innerHTML = `<span>👁️ Hataları Gör (${matchMistakes.length})</span>`;
+        }
+      });
+    }
+
+    if (btnResultGoFlash) {
+      btnResultGoFlash.addEventListener('click', () => {
+        switchTab('flashcards');
+      });
+    }
   }
 
-  function initMatchGame() {
+  function initMatchGame(customPool = null) {
     if (matchTimerInterval) clearInterval(matchTimerInterval);
     matchSeconds = 0;
     matchScore = 0;
     matchCombo = 1;
+    matchMaxCombo = 1;
+    matchMistakes = [];
+    matchMistakesCount = 0;
+
+    // Arayüzü oyun ekranına çevir (Sonuç ekranını gizle, panelleri aç)
+    const resultsView = document.getElementById('match-results-view');
+    const statsBar = document.getElementById('match-stats-bar');
+    const duoWrapper = document.getElementById('duo-columns-wrapper');
+    const duoView = document.getElementById('match-duo-view');
+    const gridView = document.getElementById('match-grid-view');
+    const mistakesContainer = document.getElementById('match-mistakes-container');
+
+    if (resultsView) resultsView.style.display = 'none';
+    if (statsBar) statsBar.style.display = 'flex';
+    if (mistakesContainer) mistakesContainer.style.display = 'none';
+
     document.getElementById('match-timer').textContent = '00:00';
     document.getElementById('match-score').textContent = '0';
     document.getElementById('match-combo').textContent = '1x';
 
     startMatchTimer();
 
-    const pool = getFilteredTerms('all').filter(t => t.term && t.meaning && t.term.length <= 30 && t.meaning.length <= 50);
-    const shuffled = [...pool].sort(() => 0.5 - Math.random());
+    let pool = [];
+
+    if (customPool && Array.isArray(customPool) && customPool.length > 0) {
+      // Hataları Çöz (Telafi Modu)
+      isMatchRetryMode = true;
+      let retryPool = [...customPool];
+      matchTotalTarget = retryPool.length;
+
+      // Duolingo 5 kartlık sütun akışı için havuzda en az 5 terim olmasını sağla
+      if (retryPool.length < 5) {
+        const existingIds = new Set(retryPool.map(t => t.id));
+        const fillers = allTerms.filter(t => !existingIds.has(t.id) && t.term && t.meaning);
+        shuffleArray(fillers);
+        while (retryPool.length < 5 && fillers.length > 0) {
+          retryPool.push(fillers.pop());
+        }
+      }
+      shuffleArray(retryPool);
+      pool = retryPool;
+      showToast(`🎯 Hatalı ${matchTotalTarget} terim için telafi modu başladı!`, 'info');
+    } else {
+      isMatchRetryMode = false;
+      const basePool = getFilteredTerms('all').filter(t => t.term && t.meaning && t.term.length <= 30 && t.meaning.length <= 50);
+      const shuffled = [...basePool];
+      shuffleArray(shuffled);
+
+      const targetVal = document.getElementById('match-target-select')?.value || '20';
+      if (targetVal === 'all') {
+        matchTotalTarget = shuffled.length;
+        pool = shuffled;
+      } else {
+        const count = parseInt(targetVal, 10) || 20;
+        matchTotalTarget = Math.min(count, shuffled.length);
+        pool = shuffled.slice(0, matchTotalTarget);
+      }
+    }
 
     if (matchMode === 'duo') {
-      initDuoMode(shuffled);
+      if (duoWrapper) duoWrapper.style.display = 'grid';
+      if (duoView) duoView.style.display = 'grid';
+      if (gridView) gridView.style.display = 'none';
+      initDuoMode(pool);
     } else {
-      initGridMode(shuffled);
+      if (duoWrapper) duoWrapper.style.display = 'none';
+      if (duoView) duoView.style.display = 'none';
+      if (gridView) gridView.style.display = 'grid';
+      initGridMode(pool);
     }
   }
 
@@ -1062,6 +1235,9 @@
       const matchedId = duoSelectedLeftId;
       matchScore++;
       matchCombo++;
+      if (matchCombo > matchMaxCombo) {
+        matchMaxCombo = matchCombo;
+      }
       document.getElementById('match-score').textContent = matchScore;
       document.getElementById('match-combo').textContent = `${matchCombo}x`;
 
@@ -1075,6 +1251,13 @@
       duoIsBusy = true;
 
       setTimeout(() => {
+        // Hedefe ulaşıldı mı kontrol et
+        if (matchScore >= matchTotalTarget) {
+          finishMatchGame();
+          duoIsBusy = false;
+          return;
+        }
+
         // Kuyruktan yeni terim doldur
         if (duoRemainingPool.length > 0) {
           const nextItem = duoRemainingPool.shift();
@@ -1089,10 +1272,9 @@
           duoCurrentRight = duoCurrentRight.filter(x => x.id !== matchedId);
         }
 
-        // Oyun bitti mi?
+        // Kart kalmadıysa bitir
         if (duoCurrentLeft.length === 0) {
-          clearInterval(matchTimerInterval);
-          showToast(`🏆 Tebrikler! ${matchScore} eşleşmeyi ${document.getElementById('match-timer').textContent} sürede tamamladınız!`, 'success');
+          finishMatchGame();
           duoIsBusy = false;
           return;
         }
@@ -1104,8 +1286,20 @@
 
     } else {
       // === YANLIŞ EŞLEŞME ===
+      matchMistakesCount++;
       matchCombo = 1;
       document.getElementById('match-combo').textContent = '1x';
+
+      // Hatalı eşleştirilen terimleri hafızaya al
+      const wrongLeftObj = allTerms.find(t => t.id === duoSelectedLeftId);
+      const wrongRightObj = allTerms.find(t => t.id === duoSelectedRightId);
+
+      if (wrongLeftObj && !matchMistakes.some(m => m.id === wrongLeftObj.id)) {
+        matchMistakes.push(wrongLeftObj);
+      }
+      if (wrongRightObj && !matchMistakes.some(m => m.id === wrongRightObj.id)) {
+        matchMistakes.push(wrongRightObj);
+      }
 
       duoIsBusy = true;
       leftEl.classList.remove('selected');
@@ -1165,6 +1359,7 @@
         // Eşleşti
         matchScore++;
         matchCombo++;
+        if (matchCombo > matchMaxCombo) matchMaxCombo = matchCombo;
         document.getElementById('match-score').textContent = matchScore;
         document.getElementById('match-combo').textContent = `${matchCombo}x`;
 
@@ -1174,13 +1369,19 @@
         gridSecondCard = null;
 
         if (document.querySelectorAll('#match-grid-view .match-tile.matched').length === 12) {
-          clearInterval(matchTimerInterval);
-          showToast(`Tebrikler! Izgara eşleştirmesi tamamlandı!`, 'success');
+          finishMatchGame();
         }
       } else {
         // Hatalı
+        matchMistakesCount++;
         matchCombo = 1;
         document.getElementById('match-combo').textContent = '1x';
+
+        const wrongObj1 = allTerms.find(t => t.id === gridFirstCard.obj.id);
+        const wrongObj2 = allTerms.find(t => t.id === gridSecondCard.obj.id);
+        if (wrongObj1 && !matchMistakes.some(m => m.id === wrongObj1.id)) matchMistakes.push(wrongObj1);
+        if (wrongObj2 && !matchMistakes.some(m => m.id === wrongObj2.id)) matchMistakes.push(wrongObj2);
+
         gridFirstCard.el.classList.add('wrong-shake');
         gridSecondCard.el.classList.add('wrong-shake');
 
@@ -1195,6 +1396,152 @@
           gridSecondCard = null;
         }, 350);
       }
+    }
+  }
+
+  // Eşleştirme Oyununu Tamamla ve Sonuçları Göster
+  function finishMatchGame() {
+    if (matchTimerInterval) clearInterval(matchTimerInterval);
+
+    const statsBar = document.getElementById('match-stats-bar');
+    const duoWrapper = document.getElementById('duo-columns-wrapper');
+    const duoView = document.getElementById('match-duo-view');
+    const gridView = document.getElementById('match-grid-view');
+    const resultsView = document.getElementById('match-results-view');
+    const mistakesContainer = document.getElementById('match-mistakes-container');
+
+    if (statsBar) statsBar.style.display = 'none';
+    if (duoWrapper) duoWrapper.style.display = 'none';
+    if (duoView) duoView.style.display = 'none';
+    if (gridView) gridView.style.display = 'none';
+    if (resultsView) resultsView.style.display = 'block';
+
+    const totalActions = matchScore + matchMistakesCount;
+    const pct = totalActions > 0 ? Math.round((matchScore / totalActions) * 100) : 100;
+    const finalTimer = document.getElementById('match-timer')?.textContent || '00:00';
+
+    document.getElementById('res-match-score-pct').textContent = `%${pct}`;
+    document.getElementById('res-match-score').textContent = matchScore;
+    document.getElementById('res-match-mistakes-count').textContent = matchMistakes.length;
+    document.getElementById('res-match-time').textContent = finalTimer;
+    document.getElementById('res-match-combo').textContent = `🔥 ${matchMaxCombo}x`;
+
+    const titleEl = document.getElementById('res-match-title');
+    const iconEl = document.getElementById('res-match-icon');
+    const subEl = document.getElementById('res-match-subtitle');
+
+    if (isMatchRetryMode) {
+      if (subEl) subEl.textContent = 'Hatalı Terimler Telafi Turu Tamamlandı!';
+    } else {
+      if (subEl) subEl.textContent = 'Duolingo Akışı Eşleştirme Sonucu';
+    }
+
+    if (pct >= 90) {
+      if (iconEl) iconEl.textContent = '🏆';
+      if (titleEl) titleEl.textContent = 'Harika Eşleştirme!';
+    } else if (pct >= 70) {
+      if (iconEl) iconEl.textContent = '👏';
+      if (titleEl) titleEl.textContent = 'Tebrikler, Çok İyi Sonuç!';
+    } else {
+      if (iconEl) iconEl.textContent = '📚';
+      if (titleEl) titleEl.textContent = 'Tur Bitti, Tekrar Deneyin!';
+    }
+
+    const btnRetryMistakes = document.getElementById('btn-match-retry-mistakes');
+    const btnToggleMistakes = document.getElementById('btn-match-toggle-mistakes');
+
+    if (matchMistakes.length > 0) {
+      if (btnRetryMistakes) btnRetryMistakes.style.display = 'inline-flex';
+      if (btnToggleMistakes) {
+        btnToggleMistakes.style.display = 'inline-flex';
+        btnToggleMistakes.innerHTML = `<span>👁️ Hataları Gör (${matchMistakes.length})</span>`;
+      }
+      renderMatchMistakesList();
+    } else {
+      if (btnRetryMistakes) btnRetryMistakes.style.display = 'none';
+      if (btnToggleMistakes) btnToggleMistakes.style.display = 'none';
+      if (mistakesContainer) mistakesContainer.style.display = 'none';
+    }
+
+    showToast(`🏆 Eşleştirme tamamlandı! Başarı: %${pct}`, 'success');
+  }
+
+  function renderMatchMistakesList() {
+    const listEl = document.getElementById('match-mistakes-list');
+    if (!listEl) return;
+    listEl.innerHTML = '';
+
+    matchMistakes.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'match-mistake-card';
+      const isFav = isFavorite(item.id);
+
+      card.innerHTML = `
+        <div class="match-mistake-top">
+          <div class="match-mistake-term-wrap">
+            <span class="match-mistake-term">${escapeHTML(item.term)}</span>
+            ${item.okunus ? `<span class="match-mistake-pronounce">(${escapeHTML(item.okunus)})</span>` : ''}
+          </div>
+          <div class="match-mistake-actions">
+            <button class="match-mistake-btn btn-mistake-speak" title="Telaffuz Dinle">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+              </svg>
+            </button>
+            <button class="match-mistake-btn btn-mistake-star ${isFav ? 'starred' : ''}" title="Yıldızla">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="match-mistake-meaning-box">
+          <span>✓</span>
+          <div><strong>Doğru Anlam:</strong> ${escapeHTML(item.meaning)}</div>
+        </div>
+      `;
+
+      // Telaffuz Dinle
+      const speakBtn = card.querySelector('.btn-mistake-speak');
+      if (speakBtn) {
+        speakBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          speakMedicalTerm(item.term);
+        });
+      }
+
+      // Favori Yıldızla
+      const starBtn = card.querySelector('.btn-mistake-star');
+      if (starBtn) {
+        starBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isNow = toggleFavorite(item.id);
+          starBtn.classList.toggle('starred', isNow);
+          showToast(isNow ? 'Yıldızlılara eklendi!' : 'Yıldızlılardan çıkarıldı.', 'info');
+        });
+      }
+
+      // Karta tıklayınca detay modalı açılsın
+      card.addEventListener('click', () => {
+        openTermDetailModal(item);
+      });
+
+      listEl.appendChild(card);
+    });
+  }
+
+  function speakMedicalTerm(text) {
+    if (!('speechSynthesis' in window)) return;
+    try {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'tr-TR';
+      utterance.rate = 0.9;
+      window.speechSynthesis.speak(utterance);
+    } catch (e) {
+      console.warn('SpeechSynthesis hatası:', e);
     }
   }
 

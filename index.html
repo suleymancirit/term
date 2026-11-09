@@ -276,7 +276,7 @@
             </select>
           </div>
 
-          <!-- Soru Sayısı Seçimi (10, 25, 50, 100, 200) -->
+          <!-- Soru Sayısı Seçimi (10, 25, 50, 100, 200, all) -->
           <div class="setup-field">
             <label for="quiz-count">Soru Sayısı:</label>
             <select class="form-select" id="quiz-count">
@@ -285,6 +285,7 @@
               <option value="50">50 Soru (Kapsamlı Test)</option>
               <option value="100">100 Soru (Büyük Sınav Provası)</option>
               <option value="200">200 Soru (Maraton Sınavı)</option>
+              <option value="all" id="quiz-count-opt-all">Maksimum Soru (Kapsamdaki Tüm Terimler)</option>
             </select>
           </div>
 
@@ -391,6 +392,9 @@
 
         <div class="results-actions">
           <button class="btn-primary-large" id="btn-restart-quiz">Yeniden Sınav Yap</button>
+          <button class="btn-warning-large" id="btn-quiz-retry-mistakes" style="display:none;">
+            <span>❌ Yalnızca Yanlışları Çöz</span>
+          </button>
           <button class="btn-secondary-large" id="btn-go-flashcards">Bilgi Kartlarına Dön</button>
         </div>
       </div>
@@ -408,7 +412,7 @@
       </div>
 
       <!-- Eşleştirme İstatistik Barı -->
-      <div class="match-stats-bar">
+      <div class="match-stats-bar" id="match-stats-bar">
         <div class="mstat-item">
           <span class="mstat-label">Süre</span>
           <span class="mstat-val" id="match-timer">00:00</span>
@@ -421,11 +425,20 @@
           <span class="mstat-label">Seri (Kombo)</span>
           <span class="mstat-val" id="match-combo">0x</span>
         </div>
+        <div class="mstat-item">
+          <span class="mstat-label">Hedef</span>
+          <select id="match-target-select" class="match-target-dropdown" title="Tur Hedefi">
+            <option value="20" selected>20 Çift</option>
+            <option value="35">35 Çift</option>
+            <option value="50">50 Çift</option>
+            <option value="all">Tümü</option>
+          </select>
+        </div>
         <button class="btn-restart-match" id="btn-restart-match" title="Oyunu Yeniden Başlat">Yenile</button>
       </div>
 
       <!-- Mod 1: Duolingo Akışı -->
-      <div class="duo-columns-wrapper">
+      <div class="duo-columns-wrapper" id="duo-columns-wrapper">
         <div class="duo-column-header" style="color: var(--primary);">🔤 Tıbbi Terimler</div>
         <div class="duo-column-header" style="color: var(--emerald);">📖 Türkçe Anlamlar</div>
       </div>
@@ -441,6 +454,64 @@
       <!-- Mod 2: Klasik Izgara -->
       <div class="match-grid-container" id="match-grid-view" style="display:none;">
         <!-- 12 Karo Grid -->
+      </div>
+
+      <!-- EŞLEŞTİRME SONUÇ & ZAFER EKRANI (Diğer derslerdeki gibi) -->
+      <div class="match-results-card" id="match-results-view" style="display:none;">
+        <div class="res-icon-wrap" id="res-match-icon">🏆</div>
+        <h2 class="res-title" id="res-match-title">Eşleştirme Tamamlandı!</h2>
+        <p class="res-lesson-sub" id="res-match-subtitle">Duolingo Akışı Eşleştirme Sonucu</p>
+
+        <!-- Başarı Oranı Rozeti -->
+        <div class="res-score-badge">
+          <span class="res-score-num" id="res-match-score-pct">%100</span>
+          <span class="res-score-lbl">Doğruluk Oranı</span>
+        </div>
+
+        <!-- İstatistik Kutuları -->
+        <div class="res-stats-grid">
+          <div class="res-stat-box stat-correct">
+            <span class="res-stat-lbl">Eşleşen</span>
+            <span class="res-stat-val" id="res-match-score">20</span>
+          </div>
+          <div class="res-stat-box stat-wrong">
+            <span class="res-stat-lbl">Hatalar</span>
+            <span class="res-stat-val" id="res-match-mistakes-count">0</span>
+          </div>
+          <div class="res-stat-box">
+            <span class="res-stat-lbl">Süre</span>
+            <span class="res-stat-val" id="res-match-time">01:15</span>
+          </div>
+          <div class="res-stat-box" style="border-color: rgba(245, 158, 11, 0.3);">
+            <span class="res-stat-lbl">Maks Seri</span>
+            <span class="res-stat-val" id="res-match-combo" style="color: #f59e0b;">🔥 5x</span>
+          </div>
+        </div>
+
+        <!-- Aksiyon Butonları (Tekrar Başla, Hataları Çöz, Hataları Gör) -->
+        <div class="res-actions">
+          <button class="btn-res-action btn-res-primary" id="btn-match-restart">
+            <span>🔄 Tekrar Başla</span>
+          </button>
+          <button class="btn-res-action btn-res-warning" id="btn-match-retry-mistakes" style="display:none;">
+            <span>❌ Hataları Çöz</span>
+          </button>
+          <button class="btn-res-action btn-res-secondary" id="btn-match-toggle-mistakes" style="display:none;">
+            <span>👁️ Hataları Gör</span>
+          </button>
+          <button class="btn-res-action btn-res-subtle" id="btn-match-go-flashcards">
+            <span>🗂️ Bilgi Kartlarına Dön</span>
+          </button>
+        </div>
+
+        <!-- Hatalı Terimler ve Doğru Anlamları Bölümü -->
+        <div class="match-mistakes-section" id="match-mistakes-container" style="display:none;">
+          <h3 class="mistakes-heading">❌ Hatalı Eşleştirilen Terimler ve Doğru Anlamları</h3>
+          <p class="mistakes-sub">Aşağıdaki terimleri inceleyip <strong>"Hataları Çöz"</strong> butonuyla sadece bu terimlerle telafi turu yapabilirsiniz:</p>
+          <div class="match-mistakes-list" id="match-mistakes-list">
+            <!-- Dinamik Render -->
+          </div>
+        </div>
       </div>
     </section>
 
